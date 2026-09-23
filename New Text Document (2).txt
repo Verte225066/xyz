@@ -1,0 +1,738 @@
+Microsoft Windows [Version 10.0.19045.5912]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\plugin-sdk-master\plugin_sa\game_sa>findstr /S /N /I /C:"struct RpClump" /C:"RpClump" "C:\plugin-sdk-master\plugin_sa\game_sa\*"
+C:\plugin-sdk-master\plugin_sa\game_sa\C3dMarkers.cpp:21:RpClump **C3dMarkers::m_pRpClumpArray = (RpClump **)0xC7C6DC;
+C:\plugin-sdk-master\plugin_sa\game_sa\C3dMarkers.cpp:53:// Converted from cdecl RpClump* C3dMarkers::LoadMarker(char const*modelName) 0x722810
+C:\plugin-sdk-master\plugin_sa\game_sa\C3dMarkers.cpp:54:RpClump* C3dMarkers::LoadMarker(char const* modelName) {
+C:\plugin-sdk-master\plugin_sa\game_sa\C3dMarkers.cpp:55:    return plugin::CallAndReturn<RpClump*, 0x722810, char const*>(modelName);
+C:\plugin-sdk-master\plugin_sa\game_sa\C3dMarkers.h:65:    static RpClump **m_pRpClumpArray;
+C:\plugin-sdk-master\plugin_sa\game_sa\C3dMarkers.h:74:    static RpClump* LoadMarker(char const* modelName);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssocGroup.cpp:28:// Converted from thiscall void CAnimBlendAssocGroup::CreateAssociations(char const *AnimName,RpClump *pClump,char ** arg3,int NumAnimations) 0x4CE6E0
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssocGroup.cpp:29:void CAnimBlendAssocGroup::CreateAssociations(char const* AnimName, RpClump* pClump, char** arg3, int NumAnimations) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssocGroup.cpp:30:     plugin::CallMethod<0x4CE6E0, CAnimBlendAssocGroup *, char const*, RpClump*, char**, int>(this, AnimName, pClump, arg3, NumAnimations);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssocGroup.cpp:58:// Converted from thiscall void CAnimBlendAssocGroup::InitEmptyAssociations(RpClump *pClump) 0x4CDFB0
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssocGroup.cpp:59:void CAnimBlendAssocGroup::InitEmptyAssociations(RpClump* pClump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssocGroup.cpp:60:     plugin::CallMethod<0x4CDFB0, CAnimBlendAssocGroup *, RpClump*>(this, pClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssocGroup.h:26:       void CreateAssociations(char const* AnimName, RpClump* pClump, char** arg3, int NumAnimations);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssocGroup.h:32:       void InitEmptyAssociations(RpClump* pClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssociation.cpp:17:int ctor_addr_o(CAnimBlendAssociation, void(RpClump *, CAnimBlendHierarchy *)) = ADDRESS_BY_VERSION(0x4CEFC0, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssociation.cpp:18:int ctor_gaddr_o(CAnimBlendAssociation, void(RpClump *, CAnimBlendHierarchy *)) = GLOBAL_ADDRESS_BY_VERSION(0x4CEFC0, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssociation.cpp:55:int addrof_o(CAnimBlendAssociation::Init, void (CAnimBlendAssociation::*)(RpClump *, CAnimBlendHierarchy *)) = ADDRESS_BY_VERSION(0x4CED50, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssociation.cpp:56:int gaddrof_o(CAnimBlendAssociation::Init, void (CAnimBlendAssociation::*)(RpClump *, CAnimBlendHierarchy *)) = GLOBAL_ADDRESS_BY_VERSION(0x4CED50, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssociation.cpp:58:void CAnimBlendAssociation::Init(RpClump *clump, CAnimBlendHierarchy *hierarchy) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssociation.cpp:59:    plugin::CallMethodDynGlobal<CAnimBlendAssociation *, RpClump *, CAnimBlendHierarchy *>(gaddrof_o(CAnimBlendAssociation::Init, void (CAnimBlendAssociation::*)(RpClump *, CAnimBlendHierarchy *)), this, clump, hierarchy);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendAssociation.h:100:    SUPPORTED_10US void Init(RpClump *clump, CAnimBlendHierarchy *hierarchy);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendStaticAssociation.cpp:14:int ctor_addr_o(CAnimBlendStaticAssociation, void(RpClump *, CAnimBlendHierarchy *)) = ADDRESS_BY_VERSION(0x4CEF60, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendStaticAssociation.cpp:15:int ctor_gaddr_o(CAnimBlendStaticAssociation, void(RpClump *, CAnimBlendHierarchy *)) = GLOBAL_ADDRESS_BY_VERSION(0x4CEF60, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendStaticAssociation.cpp:40:void CAnimBlendStaticAssociation::Init(RpClump *clump, CAnimBlendHierarchy *hierarchy) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendStaticAssociation.cpp:41:    plugin::CallMethodDynGlobal<CAnimBlendStaticAssociation *, RpClump *, CAnimBlendHierarchy *>(gaddrof(CAnimBlendStaticAssociation::Init), this, clump, hierarchy);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimBlendStaticAssociation.h:30:    SUPPORTED_10US void Init(RpClump *clump, CAnimBlendHierarchy *hierarchy);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:69:// Converted from cdecl CAnimBlendAssociation* CAnimManager::AddAnimation(RpClump * clump,int AssocGroupId,int AnimationId) 0x4D3AA0
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:70:CAnimBlendAssociation* CAnimManager::AddAnimation(RpClump* clump, int AssocGroupId, int AnimationId) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:71:     return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D3AA0, RpClump*, int, int>(clump, AssocGroupId, AnimationId);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:74:// Converted from cdecl CAnimBlendAssociation* CAnimManager::AddAnimation(RpClump * clump,CAnimBlendHierarchy * pAnimBlendHier,int clumpAssocFlag) 0x4D4330
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:75:CAnimBlendAssociation* CAnimManager::AddAnimation(RpClump* clump, CAnimBlendHierarchy* pAnimBlendHier, int clumpAssocFlag) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:76:     return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D4330, RpClump*, CAnimBlendHierarchy*, int>(clump, pAnimBlendHier, clumpAssocFlag);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:79:// Converted from cdecl CAnimBlendAssociation* CAnimManager::AddAnimationAndSync(RpClump * clump,CAnimBlendAssociation * pAnimBlendAssoc,int AssocGroupId,int AnimationId) 0x4D3B30
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:80:CAnimBlendAssociation* CAnimManager::AddAnimationAndSync(RpClump* clump, CAnimBlendAssociation* pAnimBlendAssoc, int AssocGroupId, int AnimationId) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:81:     return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D3B30, RpClump*, CAnimBlendAssociation*, int, int>(clump, pAnimBlendAssoc, AssocGroupId, AnimationId);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:149:// Converted from cdecl CAnimBlendAssociation* CAnimManager::BlendAnimation(RpClump * clump,CAnimBlendHierarchy *pAnimBlendHier,int flags,float clumpAssocBlendData) 0x4D4410
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:150:CAnimBlendAssociation* CAnimManager::BlendAnimation(RpClump* clump, CAnimBlendHierarchy* pAnimBlendHier, int flags, float clumpAssocBlendData) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:151:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D4410, RpClump*, CAnimBlendHierarchy*, int, float>(clump, pAnimBlendHier, flags, clumpAssocBlendData);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:154:// Converted from cdecl CAnimBlendAssociation* CAnimManager::BlendAnimation(RpClump * clump,int AssocGroupId,int AnimationId,float clumpAssocBlendData) 0x4D4610
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:155:CAnimBlendAssociation* CAnimManager::BlendAnimation(RpClump* clump, int AssocGroupId, int AnimationId, float clumpAssocBlendData) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.cpp:156:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D4610, RpClump*, int, int, float>(clump, AssocGroupId, AnimationId, clumpAssocBlendData);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.h:28:       static CAnimBlendAssociation* AddAnimation(RpClump* clump, int AssocGroupId, int AnimationId);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.h:29:       static CAnimBlendAssociation* AddAnimation(RpClump* clump, CAnimBlendHierarchy* pAnimBlendHier, int clumpAssocFlag);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.h:30:       static CAnimBlendAssociation* AddAnimationAndSync(RpClump* clump, CAnimBlendAssociation* pAnimBlendAssoc, int AssocGroupId, int AnimationId);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.h:44:       static CAnimBlendAssociation* BlendAnimation(RpClump* clump, CAnimBlendHierarchy* pAnimBlendHier, int flags, float clumpAssocBlendData);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAnimManager.h:45:       static CAnimBlendAssociation* BlendAnimation(RpClump* clump, int AssocGroupId, int AnimationId, float clumpAssocBlendData);
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.h:69:             RpClump* m_pRwClump;
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:49:// Converted from cdecl RwClump* CClothesBuilder::CreateSkinnedClump(RpClump *clump ,RwTexDictionary *dict,CPedClothesDesc &newclothes,CPedClothesDesc const*oldclothes,bool bCutscenePlayer)     0x5A69D0
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:50:RpClump* CClothesBuilder::CreateSkinnedClump(RpClump* clump, RwTexDictionary* dict, CPedClothesDesc& newclothes, CPedClothesDesc const* oldclothes, bool bCutscenePlayer) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:51:    return plugin::CallAndReturn<RpClump*, 0x5A69D0, RpClump*, RwTexDictionary*, CPedClothesDesc&, CPedClothesDesc const*, bool>(clump, dict, newclothes, oldclothes, bCutscenePlayer);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:99:// Converted from cdecl void CClothesBuilder::StoreBoneArray(RpClump *clump,int arg2)     0x5A48B0
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:100:void CClothesBuilder::StoreBoneArray(RpClump* clump, int arg2) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:101:    plugin::Call<0x5A48B0, RpClump*, int>(clump, arg2);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:104:// Converted from cdecl RpGeometry* CClothesBuilder::BlendGeometry(RpClump *clump, char const *arg2, char const *arg3, char const *arg4, float arg5, float arg6, float arg7)    0x5A4940
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:105:RpGeometry* CClothesBuilder::BlendGeometry(RpClump* clump, char const* arg2, char const* arg3, char const* arg4, float arg5, float arg6, float arg7) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:106:    return plugin::CallAndReturn<RpGeometry*, 0x5A4940, RpClump*, char const*, char const*, char const*, float, float, float>(clump, arg2, arg3, arg4, arg5, arg6, arg7);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:109:// Converted from cdecl RpGeometry* CClothesBuilder::BlendGeometry(RpClump *clump, char const *arg2, char const *arg3, float arg4, float arg5)   0x5A4F10
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:110:RpGeometry* CClothesBuilder::BlendGeometry(RpClump* clump, char const* arg2, char const* arg3, float arg4, float arg5) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:111:    return plugin::CallAndReturn<RpGeometry*, 0x5A4F10, RpClump*, char const*, char const*, float, float>(clump, arg2, arg3, arg4, arg5);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:114:// Converted from cdecl RpGeometry* CClothesBuilder::CopyGeometry(RpClump *clump, char const *arg2, char const *arg3)    0x5A5340
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:115:RpGeometry* CClothesBuilder::CopyGeometry(RpClump* clump, char const* arg2, char const* arg3) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.cpp:116:    return plugin::CallAndReturn<RpGeometry*, 0x5A5340, RpClump*, char const*, char const*>(clump, arg2, arg3);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.h:25:    static RpClump* CreateSkinnedClump(RpClump* clump, RwTexDictionary* dict, CPedClothesDesc& newclothes, CPedClothesDesc const* oldclothes, bool bCutscenePlayer);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.h:35:    static void StoreBoneArray(RpClump* clump, int arg2);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.h:36:    static RpGeometry* BlendGeometry(RpClump* clump, char const* arg2, char const* arg3, char const* arg4, float arg5, float arg6, float arg7);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.h:37:    static RpGeometry* BlendGeometry(RpClump* clump, char const* arg2, char const* arg3, float arg4, float arg5);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClothesBuilder.h:38:    static RpGeometry* CopyGeometry(RpClump* clump, char const* arg2, char const* arg3);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:14:void CClumpModelInfo::SetClump(RpClump *clump)
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:16:  ((void (__thiscall *)(CClumpModelInfo *, RpClump *))plugin::GetVMT(this, 16))(this, clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:44:RwFrame *CClumpModelInfo::GetFrameFromId(RpClump *clump, int id)
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:46:  return ((RwFrame *(__cdecl *)(RpClump *, int))0x4C53C0)(clump, id);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:49:RwFrame *CClumpModelInfo::GetFrameFromName(RpClump *clump, const char *name)
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:51:  return ((RwFrame *(__cdecl *)(RpClump *, const char *))0x4C5400)(clump, name);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:54:void CClumpModelInfo::FillFrameArray(RpClump *clump, RwFrame **frames)
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:56:  ((void (__cdecl *)(RpClump *, RwFrame **))0x4C5440)(clump, frames);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.h:14:struct RpClump;
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.h:27:    void SetClump(RpClump *clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.h:38:    static RwFrame *GetFrameFromId(RpClump *clump, int id);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.h:39:    static RwFrame *GetFrameFromName(RpClump *clump, const char *name);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.h:40:    static void FillFrameArray(RpClump *clump, RwFrame **frames);
+C:\plugin-sdk-master\plugin_sa\game_sa\CCustomCarPlateMgr.cpp:66:// Converted from cdecl bool CCustomCarPlateMgr::SetupClumpAfterVehicleUpgrade(RpClump *clump,RpMaterial *plateMaterial,uchar plateType) 0x6FDFE0
+C:\plugin-sdk-master\plugin_sa\game_sa\CCustomCarPlateMgr.cpp:67:bool CCustomCarPlateMgr::SetupClumpAfterVehicleUpgrade(RpClump* clump, RpMaterial* plateMaterial, unsigned char plateType) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CCustomCarPlateMgr.cpp:68:    return plugin::CallAndReturn<bool, 0x6FDFE0, RpClump*, RpMaterial*, unsigned char>(clump, plateMaterial, plateType);
+C:\plugin-sdk-master\plugin_sa\game_sa\CCustomCarPlateMgr.cpp:86:// Converted from cdecl RpMaterial* CCustomCarPlateMgr::SetupClump(RpClump *clump,char *plateText,uchar plateType) 0x6FE0F0
+C:\plugin-sdk-master\plugin_sa\game_sa\CCustomCarPlateMgr.cpp:87:RpMaterial* CCustomCarPlateMgr::SetupClump(RpClump* clump, char* plateText, unsigned char plateType) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CCustomCarPlateMgr.cpp:88:    return plugin::CallAndReturn<RpMaterial*, 0x6FE0F0, RpClump*, char*, unsigned char>(clump, plateText, plateType);
+C:\plugin-sdk-master\plugin_sa\game_sa\CCustomCarPlateMgr.h:31:    static bool SetupClumpAfterVehicleUpgrade(RpClump* clump, RpMaterial* plateMaterial, unsigned char plateType);
+C:\plugin-sdk-master\plugin_sa\game_sa\CCustomCarPlateMgr.h:33:    static RpMaterial* SetupClump(RpClump* clump, char* plateText, unsigned char plateType);
+C:\plugin-sdk-master\plugin_sa\game_sa\CCutsceneMgr.cpp:232:// Converted from cdecl void UpdateCutsceneObjectBoundingBox(RpClump *clump,int modelId) 0x5B01E0
+C:\plugin-sdk-master\plugin_sa\game_sa\CCutsceneMgr.cpp:233:void UpdateCutsceneObjectBoundingBox(RpClump* clump, int modelId) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CCutsceneMgr.cpp:234:    plugin::Call<0x5B01E0, RpClump*, int>(clump, modelId);
+C:\plugin-sdk-master\plugin_sa\game_sa\CCutsceneMgr.h:153:void UpdateCutsceneObjectBoundingBox(RpClump* clump, int modelId);C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.h:25:        struct RpClump *m_pRwClump;
+C:\plugin-sdk-master\plugin_sa\game_sa\CFileLoader.cpp:59:RpClump *CFileLoader::LoadAtomicFile2Return(char const *filename) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CFileLoader.cpp:60:    return plugin::CallAndReturnDynGlobal<RpClump *, char const *>(gaddrof(CFileLoader::LoadAtomicFile2Return), filename);
+C:\plugin-sdk-master\plugin_sa\game_sa\CFileLoader.h:29:    SUPPORTED_10US static RpClump *LoadAtomicFile2Return(char const *filename);
+C:\plugin-sdk-master\plugin_sa\game_sa\CFileLoader.h:86://! @param data clump object (RpClump *)
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:86:AnimBlendFrameData *RpAnimBlendClumpFindFrame(RpClump *clump, char *name)
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:88:   return ((AnimBlendFrameData *(__cdecl *)(RpClump *, char *))0x4D62A0)(clump, name);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:131:// Converted from cdecl RpAtomic* GetFirstAtomic(RpClump *clump) 0x734820
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:132:RpAtomic* GetFirstAtomic(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:133:    return ((RpAtomic* (__cdecl *)(RpClump*))0x734820)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:141:// Converted from cdecl RpAtomic* Get2DEffectAtomic(RpClump *clump) 0x734880
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:142:RpAtomic* Get2DEffectAtomic(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:143:    return ((RpAtomic* (__cdecl *)(RpClump*))0x734880)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:176:// Converted from cdecl RpHAnimHierarchy* GetAnimHierarchyFromSkinClump(RpClump *clump) 0x734A40
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:177:RpHAnimHierarchy* GetAnimHierarchyFromSkinClump(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:178:    return ((RpHAnimHierarchy* (__cdecl *)(RpClump*))0x734A40)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:186:// Converted from cdecl RpHAnimHierarchy* GetAnimHierarchyFromClump(RpClump *clump) 0x734B10
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:187:RpHAnimHierarchy* GetAnimHierarchyFromClump(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:188:    return ((RpHAnimHierarchy* (__cdecl *)(RpClump*))0x734B10)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:206:// Converted from cdecl bool RpClumpConvertGeometryToTL(RpClump *clump) 0x734CB0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:207:bool RpClumpConvertGeometryToTL(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:208:    return ((bool(__cdecl *)(RpClump*))0x734CB0)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:211:// Converted from cdecl bool RpClumpConvertGeometryToTS(RpClump *clump) 0x734D30
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:212:bool RpClumpConvertGeometryToTS(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:213:    return ((bool(__cdecl *)(RpClump*))0x734D30)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:231:// Converted from cdecl bool SetFilterModeOnClumpsTextures(RpClump *clump,RwTextureFilterMode filtering) 0x734DC0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:232:bool SetFilterModeOnClumpsTextures(RpClump* clump, RwTextureFilterMode filtering) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:233:    return ((bool(__cdecl *)(RpClump*, RwTextureFilterMode))0x734DC0)(clump, filtering);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:246:// Converted from cdecl RpClump* RpClumpGetBoundingSphere(RpClump *clump,RwSphere *bound,bool) 0x734FC0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:247:RpClump* RpClumpGetBoundingSphere(RpClump* clump, RwSphere* bound, bool arg2) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:248:    return ((RpClump* (__cdecl *)(RpClump*, RwSphere*, bool))0x734FC0)(clump, bound, arg2);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:251:// Converted from cdecl void SkinGetBonePositions(RpClump *clump) 0x735140
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:252:void SkinGetBonePositions(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:253:    ((void(__cdecl *)(RpClump*))0x735140)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:256:// Converted from cdecl void SkinSetBonePositions(RpClump *clump) 0x7352D0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:257:void SkinSetBonePositions(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:258:    ((void(__cdecl *)(RpClump*))0x7352D0)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:261:// Converted from cdecl void SkinGetBonePositionsToTable(RpClump *clump,RwV3d *table) 0x735360
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:262:void SkinGetBonePositionsToTable(RpClump* clump, RwV3d* table) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:263:    ((void(__cdecl *)(RpClump*, RwV3d*))0x735360)(clump, table);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:396:// Converted from cdecl void RemoveRefsForAtomic(RpClump *clump) 0x7226F0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:397:void RemoveRefsForAtomic(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:398:    plugin::Call<0x7226F0, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:402:// Converted from cdecl CAnimBlendClumpData* RpAnimBlendAllocateData(RpClump *clump) 0x4D5F50
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:403:CAnimBlendClumpData* RpAnimBlendAllocateData(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:404:    return plugin::CallAndReturn<CAnimBlendClumpData*, 0x4D5F50, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:407:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpAddAssociation(RpClump *clump,CAnimBlendAssociation *association,uint flags,float startTime,float blendAmount) 0x4D6790
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:408:CAnimBlendAssociation* RpAnimBlendClumpAddAssociation(RpClump* clump, CAnimBlendAssociation* association, unsigned int flags, float startTime, float blendAmount) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:409:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D6790, RpClump*, CAnimBlendAssociation*, unsigned int, float, float>(clump, association, flags, startTime, blendAmount);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:412:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpExtractAssociations(RpClump *clump) 0x4D6BE0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:413:CAnimBlendAssociation* RpAnimBlendClumpExtractAssociations(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:414:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D6BE0, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:417:// Converted from cdecl void RpAnimBlendClumpFillFrameArray(RpClump *clump,AnimBlendFrameData **frameData) 0x4D64A0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:418:void RpAnimBlendClumpFillFrameArray(RpClump* clump, AnimBlendFrameData** frameData) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:419:    plugin::Call<0x4D64A0, RpClump*, AnimBlendFrameData**>(clump, frameData);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:422:// Converted from cdecl AnimBlendFrameData* RpAnimBlendClumpFindBone(RpClump *clump,uint id) 0x4D6400
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:423:AnimBlendFrameData* RpAnimBlendClumpFindBone(RpClump* clump, unsigned int id) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:424:    return plugin::CallAndReturn<AnimBlendFrameData*, 0x4D6400, RpClump*, unsigned int>(clump, id);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:427:// Converted from cdecl AnimBlendFrameData* RpAnimBlendClumpFindFrame(RpClump *clump,char const*name) 0x4D62A0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:428:AnimBlendFrameData* RpAnimBlendClumpFindFrame(RpClump* clump, char const* name) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:429:    return plugin::CallAndReturn<AnimBlendFrameData*, 0x4D62A0, RpClump*, char const*>(clump, name);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:432:// Converted from cdecl AnimBlendFrameData* RpAnimBlendClumpFindFrameFromHashKey(RpClump *clump,uint key) 0x4D6370
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:433:AnimBlendFrameData* RpAnimBlendClumpFindFrameFromHashKey(RpClump* clump, unsigned int key) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:434:    return plugin::CallAndReturn<AnimBlendFrameData*, 0x4D6370, RpClump*, unsigned int>(clump, key);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:437:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpGetAssociation(RpClump *clump,bool,CAnimBlendHierarchy *hierarchy) 0x4D68E0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:438:CAnimBlendAssociation* RpAnimBlendClumpGetAssociation(RpClump* clump, bool arg1, CAnimBlendHierarchy* hierarchy) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:439:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D68E0, RpClump*, bool, CAnimBlendHierarchy*>(clump, arg1, hierarchy);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:442:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpGetAssociation(RpClump *clump,char const*name) 0x4D6870
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:443:CAnimBlendAssociation* RpAnimBlendClumpGetAssociation(RpClump* clump, char const* name) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:444:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D6870, RpClump*, char const*>(clump, name);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:447:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpGetAssociation(RpClump *clump,uint animId) 0x4D68B0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:448:CAnimBlendAssociation* RpAnimBlendClumpGetAssociation(RpClump* clump, unsigned int animId) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:449:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D68B0, RpClump*, unsigned int>(clump, animId);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:452:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpGetFirstAssociation(RpClump *clump) 0x4D15E0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:453:CAnimBlendAssociation* RpAnimBlendClumpGetFirstAssociation(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:454:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D15E0, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:457:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpGetFirstAssociation(RpClump *clump,uint flags) 0x4D6A70
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:458:CAnimBlendAssociation* RpAnimBlendClumpGetFirstAssociation(RpClump* clump, unsigned int flags) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:459:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D6A70, RpClump*, unsigned int>(clump, flags);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:462:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpGetMainAssociation(RpClump *clump,CAnimBlendAssociation **pAssociation,float *blendAmount) 0x4D6910
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:463:CAnimBlendAssociation* RpAnimBlendClumpGetMainAssociation(RpClump* clump, CAnimBlendAssociation** pAssociation, float* blendAmount) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:464:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D6910, RpClump*, CAnimBlendAssociation**, float*>(clump, pAssociation, blendAmount);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:467:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpGetMainAssociation_N(RpClump *clump,int n) 0x4D6A30
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:468:CAnimBlendAssociation* RpAnimBlendClumpGetMainAssociation_N(RpClump* clump, int n) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:469:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D6A30, RpClump*, int>(clump, n);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:472:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpGetMainPartialAssociation(RpClump *clump) 0x4D69A0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:473:CAnimBlendAssociation* RpAnimBlendClumpGetMainPartialAssociation(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:474:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D69A0, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:477:// Converted from cdecl CAnimBlendAssociation* RpAnimBlendClumpGetMainPartialAssociation_N(RpClump *clump,int n) 0x4D69F0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:478:CAnimBlendAssociation* RpAnimBlendClumpGetMainPartialAssociation_N(RpClump* clump, int n) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:479:    return plugin::CallAndReturn<CAnimBlendAssociation*, 0x4D69F0, RpClump*, int>(clump, n);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:482:// Converted from cdecl uint RpAnimBlendClumpGetNumAssociations(RpClump *clump) 0x4D6B60
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:483:unsigned int RpAnimBlendClumpGetNumAssociations(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:484:    return plugin::CallAndReturn<unsigned int, 0x4D6B60, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:487:// Converted from cdecl uint RpAnimBlendClumpGetNumNonPartialAssociations(RpClump *clump) 0x4D6BB0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:488:unsigned int RpAnimBlendClumpGetNumNonPartialAssociations(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:489:    return plugin::CallAndReturn<unsigned int, 0x4D6BB0, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:492:// Converted from cdecl uint RpAnimBlendClumpGetNumPartialAssociations(RpClump *clump) 0x4D6B80
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:493:unsigned int RpAnimBlendClumpGetNumPartialAssociations(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:494:    return plugin::CallAndReturn<unsigned int, 0x4D6B80, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:497:// Converted from cdecl void RpAnimBlendClumpGiveAssociations(RpClump *clump,CAnimBlendAssociation *association) 0x4D6C30
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:498:void RpAnimBlendClumpGiveAssociations(RpClump* clump, CAnimBlendAssociation* association) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:499:    plugin::Call<0x4D6C30, RpClump*, CAnimBlendAssociation*>(clump, association);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:502:// Converted from cdecl void RpAnimBlendClumpInit(RpClump *clump) 0x4D6720
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:503:void RpAnimBlendClumpInit(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:504:    plugin::Call<0x4D6720, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:507:// Converted from cdecl bool RpAnimBlendClumpIsInitialized(RpClump *clump) 0x4D6760
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:508:bool RpAnimBlendClumpIsInitialized(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:509:    return plugin::CallAndReturn<bool, 0x4D6760, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:512:// Converted from cdecl void RpAnimBlendClumpPauseAllAnimations(RpClump *clump) 0x4D6B00
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:513:void RpAnimBlendClumpPauseAllAnimations(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:514:    plugin::Call<0x4D6B00, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:517:// Converted from cdecl void RpAnimBlendClumpRemoveAllAssociations(RpClump *clump) 0x4D6C00
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:518:void RpAnimBlendClumpRemoveAllAssociations(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:519:    plugin::Call<0x4D6C00, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:522:// Converted from cdecl void RpAnimBlendClumpRemoveAssociations(RpClump *clump,uint flags) 0x4D6820
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:523:void RpAnimBlendClumpRemoveAssociations(RpClump* clump, unsigned int flags) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:524:    plugin::Call<0x4D6820, RpClump*, unsigned int>(clump, flags);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:527:// Converted from cdecl void RpAnimBlendClumpSetBlendDeltas(RpClump *clump,uint flags,float delta) 0x4D67E0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:528:void RpAnimBlendClumpSetBlendDeltas(RpClump* clump, unsigned int flags, float delta) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:529:    plugin::Call<0x4D67E0, RpClump*, unsigned int, float>(clump, flags, delta);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:532:// Converted from cdecl void RpAnimBlendClumpUnPauseAllAnimations(RpClump *clump) 0x4D6B30
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:533:void RpAnimBlendClumpUnPauseAllAnimations(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:534:    plugin::Call<0x4D6B30, RpClump*>(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:537:// Converted from cdecl void RpAnimBlendClumpUpdateAnimations(RpClump *clump,float step,bool onScreen) 0x4D34F0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:538:void RpAnimBlendClumpUpdateAnimations(RpClump* clump, float step, bool onScreen) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:539:    plugin::Call<0x4D34F0, RpClump*, float, bool>(clump, step, onScreen);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:52:#define RpClumpGetAnimBlendClumpData(clump) (*(CAnimBlendClumpData **)(((unsigned int)(clump) + ClumpOffset)))
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:54:AnimBlendFrameData *RpAnimBlendClumpFindFrame(RpClump *clump, char *name);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:69:RpAtomic* GetFirstAtomic(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:71:RpAtomic* Get2DEffectAtomic(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:78:RpHAnimHierarchy* GetAnimHierarchyFromSkinClump(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:80:RpHAnimHierarchy* GetAnimHierarchyFromClump(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:84:bool RpClumpConvertGeometryToTL(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:85:bool RpClumpConvertGeometryToTS(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:89:bool SetFilterModeOnClumpsTextures(RpClump* clump, RwTextureFilterMode filtering);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:92:RpClump* RpClumpGetBoundingSphere(RpClump* clump, RwSphere* bound, bool arg2);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:93:void SkinGetBonePositions(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:94:void SkinSetBonePositions(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:95:void SkinGetBonePositionsToTable(RpClump* clump, RwV3d* table);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:131:void RemoveRefsForAtomic(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:133:CAnimBlendClumpData* RpAnimBlendAllocateData(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:134:CAnimBlendAssociation* RpAnimBlendClumpAddAssociation(RpClump* clump, CAnimBlendAssociation* association, unsigned int flags, float startTime, float blendAmount);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:135:CAnimBlendAssociation* RpAnimBlendClumpExtractAssociations(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:136:void RpAnimBlendClumpFillFrameArray(RpClump* clump, AnimBlendFrameData** frameData);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:137:AnimBlendFrameData* RpAnimBlendClumpFindBone(RpClump* clump, unsigned int id);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:138:AnimBlendFrameData* RpAnimBlendClumpFindFrame(RpClump* clump, char const* name);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:139:AnimBlendFrameData* RpAnimBlendClumpFindFrameFromHashKey(RpClump* clump, unsigned int key);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:140:CAnimBlendAssociation* RpAnimBlendClumpGetAssociation(RpClump* clump, bool arg1, CAnimBlendHierarchy* hierarchy);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:141:CAnimBlendAssociation* RpAnimBlendClumpGetAssociation(RpClump* clump, char const* name);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:142:CAnimBlendAssociation* RpAnimBlendClumpGetAssociation(RpClump* clump, unsigned int animId);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:143:CAnimBlendAssociation* RpAnimBlendClumpGetFirstAssociation(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:144:CAnimBlendAssociation* RpAnimBlendClumpGetFirstAssociation(RpClump* clump, unsigned int flags);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:145:CAnimBlendAssociation* RpAnimBlendClumpGetMainAssociation(RpClump* clump, CAnimBlendAssociation** pAssociation, float* blendAmount);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:146:CAnimBlendAssociation* RpAnimBlendClumpGetMainAssociation_N(RpClump* clump, int n);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:147:CAnimBlendAssociation* RpAnimBlendClumpGetMainPartialAssociation(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:148:CAnimBlendAssociation* RpAnimBlendClumpGetMainPartialAssociation_N(RpClump* clump, int n);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:149:unsigned int RpAnimBlendClumpGetNumAssociations(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:150:unsigned int RpAnimBlendClumpGetNumNonPartialAssociations(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:151:unsigned int RpAnimBlendClumpGetNumPartialAssociations(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:152:void RpAnimBlendClumpGiveAssociations(RpClump* clump, CAnimBlendAssociation* association);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:153:void RpAnimBlendClumpInit(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:154:bool RpAnimBlendClumpIsInitialized(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:155:void RpAnimBlendClumpPauseAllAnimations(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:156:void RpAnimBlendClumpRemoveAllAssociations(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:157:void RpAnimBlendClumpRemoveAssociations(RpClump* clump, unsigned int flags);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:158:void RpAnimBlendClumpSetBlendDeltas(RpClump* clump, unsigned int flags, float delta);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:159:void RpAnimBlendClumpUnPauseAllAnimations(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:160:void RpAnimBlendClumpUpdateAnimations(RpClump* clump, float step, bool onScreen = true);
+C:\plugin-sdk-master\plugin_sa\game_sa\CPed.cpp:260:// Converted from thiscall void CPed::ShoulderBoneRotation(RpClump *clump) 0x5DF560
+C:\plugin-sdk-master\plugin_sa\game_sa\CPed.cpp:261:void CPed::ShoulderBoneRotation(RpClump* clump)
+C:\plugin-sdk-master\plugin_sa\game_sa\CPed.cpp:263:    ((void (__thiscall *)(CPed*, RpClump*))0x5DF560)(this, clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CPed.h:337:    void ShoulderBoneRotation(RpClump* clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CShadowCamera.cpp:64:RwCamera *CShadowCamera::Update(RpClump *object)
+C:\plugin-sdk-master\plugin_sa\game_sa\CShadowCamera.cpp:66:    return ((RwCamera *(__thiscall *)(CShadowCamera *, RpClump *))0x705BF0)(this, object);
+C:\plugin-sdk-master\plugin_sa\game_sa\CShadowCamera.h:30:      RwCamera *Update(RpClump *object);
+C:\plugin-sdk-master\plugin_sa\game_sa\CTaskSimpleJetpack.h:42:    RpClump *m_pJetPackClump;
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:153:// Converted from stdcall void CVehicleModelInfo::SetEditableMaterials(RpClump *clump) 0x4C8430
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:154:void CVehicleModelInfo::SetEditableMaterials(RpClump* clump)
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:156:    ((void(__cdecl *)(RpClump*))0x4C8430)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:159:// Converted from stdcall void CVehicleModelInfo::ResetEditableMaterials(RpClump *clump) 0x4C8460
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:160:void CVehicleModelInfo::ResetEditableMaterials(RpClump* clump)
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:162:    ((void(__cdecl *)(RpClump*))0x4C8460)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.h:222: void SetEditableMaterials(RpClump *clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.h:224: void ResetEditableMaterials(RpClump *clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:59:// Converted from cdecl void CVisibilityPlugins::ClearClumpForAllAtomicsFlag(RpClump *pRpClump,int flag)       0x732350
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:60:void CVisibilityPlugins::ClearClumpForAllAtomicsFlag(RpClump* pRpClump, int flag) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:61:    plugin::Call<0x732350, RpClump*, int>(pRpClump, flag);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:99:// Converted from cdecl bool CVisibilityPlugins::FrustumSphereCB(RpClump *pRpClump)    0x732A40
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:100:bool CVisibilityPlugins::FrustumSphereCB(RpClump* pRpClump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:101:    return plugin::CallAndReturn<bool, 0x732A40, RpClump*>(pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:114:// Converted from cdecl int CVisibilityPlugins::GetClumpAlpha(RpClump *pRpClump)      0x732B20
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:115:int CVisibilityPlugins::GetClumpAlpha(RpClump* pRpClump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:116:    return plugin::CallAndReturn<int, 0x732B20, RpClump*>(pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:119:// Converted from cdecl CClumpModelInfo* CVisibilityPlugins::GetClumpModelInfo(RpClump *pRpClump)     0x732AC0
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:120:CClumpModelInfo* CVisibilityPlugins::GetClumpModelInfo(RpClump* pRpClump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:121:    return plugin::CallAndReturn<CClumpModelInfo*, 0x732AC0, RpClump*>(pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:189:// Converted from cdecl bool CVisibilityPlugins::IsClumpVisible(RpClump *pRpClump)    0x732AE0
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:190:bool CVisibilityPlugins::IsClumpVisible(RpClump* pRpClump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:191:    return plugin::CallAndReturn<bool, 0x732AE0, RpClump*>(pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:229:// Converted from cdecl void CVisibilityPlugins::RenderFadingClump(CBaseModelInfo *pBaseModelInfo,RpClump *pRpClump,int dwAlpha)      0x732680
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:230:void CVisibilityPlugins::RenderFadingClump(CBaseModelInfo* pBaseModelInfo, RpClump* pRpClump, int dwAlpha) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:231:    plugin::Call<0x732680, CBaseModelInfo*, RpClump*, int>(pBaseModelInfo, pRpClump, dwAlpha);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:369:// Converted from cdecl void CVisibilityPlugins::SetClumpAlpha(RpClump *pRpClump,int dwAlpha) 0x732B00
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:370:void CVisibilityPlugins::SetClumpAlpha(RpClump* pRpClump, int dwAlpha) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:371:    plugin::Call<0x732B00, RpClump*, int>(pRpClump, dwAlpha);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:374:// Converted from cdecl void CVisibilityPlugins::SetClumpModelInfo(RpClump *pRpClump,CClumpModelInfo *pClumpModelInfo)        0x733750
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:375:void CVisibilityPlugins::SetClumpModelInfo(RpClump* pRpClump, CClumpModelInfo* pClumpModelInfo) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:376:    plugin::Call<0x733750, RpClump*, CClumpModelInfo*>(pRpClump, pClumpModelInfo);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:394:// Converted from cdecl void CVisibilityPlugins::SetupVehicleVariables(RpClump *pRpClump)     0x733160
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:395:void CVisibilityPlugins::SetupVehicleVariables(RpClump* pRpClump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:396:    plugin::Call<0x733160, RpClump*>(pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:404:// Converted from cdecl bool CVisibilityPlugins::VehicleVisibilityCB(RpClump *pRpClump)       0x7336F0
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:405:bool CVisibilityPlugins::VehicleVisibilityCB(RpClump* pRpClump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:406:    return plugin::CallAndReturn<bool, 0x7336F0, RpClump*>(pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:409:// Converted from cdecl bool CVisibilityPlugins::VehicleVisibilityCB_BigVehicle(RpClump *pRpClump)    0x732AB0
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:410:bool CVisibilityPlugins::VehicleVisibilityCB_BigVehicle(RpClump* pRpClump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.cpp:411:    return plugin::CallAndReturn<bool, 0x732AB0, RpClump*>(pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:64:    static void ClearClumpForAllAtomicsFlag(RpClump *pRpClump, int flag);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:72:    static bool FrustumSphereCB(RpClump *pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:75:    static int GetClumpAlpha(RpClump *pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:76:    static CClumpModelInfo *GetClumpModelInfo(RpClump *pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:90:    static bool IsClumpVisible(RpClump *pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:98:    static void RenderFadingClump(CBaseModelInfo *pBaseModelInfo, RpClump *pRpClump, int dwAlpha);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:126:    static void SetClumpAlpha(RpClump *pRpClump, int dwAlpha);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:127:    static void SetClumpModelInfo(RpClump *pRpClump, CClumpModelInfo *pClumpModelInfo);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:131:    static void SetupVehicleVariables(RpClump *pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:133:    static bool VehicleVisibilityCB(RpClump *pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVisibilityPlugins.h:134:    static bool VehicleVisibilityCB_BigVehicle(RpClump *pRpClump);
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendAssociation.h:505:META_BEGIN_OVERLOADED(CAnimBlendAssociation::Init, void (CAnimBlendAssociation::*)(RpClump *, CAnimBlendHierarchy *))
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendAssociation.h:515:    using def_t = void(CAnimBlendAssociation *, RpClump *, CAnimBlendHierarchy *);
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendAssociation.h:518:    using args_t = ArgPick<ArgTypes<CAnimBlendAssociation *,RpClump *,CAnimBlendHierarchy *>, 0,1,2>;
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendAssociation.h:569:CTOR_META_BEGIN_OVERLOADED(CAnimBlendAssociation, void(RpClump *, CAnimBlendHierarchy *))
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendAssociation.h:580:    using def_t = CAnimBlendAssociation *(CAnimBlendAssociation *, RpClump *, CAnimBlendHierarchy *);
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendAssociation.h:583:    using args_t = ArgPick<ArgTypes<CAnimBlendAssociation *,RpClump *,CAnimBlendHierarchy *>, 0,1,2>;
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendAssociation.h:673:    SUPPORTED_10US stack_object(RpClump *clump, CAnimBlendHierarchy *hier) {
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendAssociation.h:674:        plugin::CallMethodDynGlobal<CAnimBlendAssociation *, RpClump *, CAnimBlendHierarchy *>(ctor_gaddr_o(CAnimBlendAssociation, void(RpClump *, CAnimBlendHierarchy *)), reinterpret_cast<CAnimBlendAssociation *>(objBuff), clump, hier);
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendAssociation.h:708:SUPPORTED_10US inline CAnimBlendAssociation *operator_new<CAnimBlendAssociation>(RpClump *clump, CAnimBlendHierarchy *hier) {
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendAssociation.h:711:    plugin::CallMethodDynGlobal<CAnimBlendAssociation *, RpClump *, CAnimBlendHierarchy *>(ctor_gaddr_o(CAnimBlendAssociation, void(RpClump *, CAnimBlendHierarchy *)), obj, clump, hier);
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendStaticAssociation.h:114:    using def_t = void(CAnimBlendStaticAssociation *, RpClump *, CAnimBlendHierarchy *);
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendStaticAssociation.h:117:    using args_t = ArgPick<ArgTypes<CAnimBlendStaticAssociation *,RpClump *,CAnimBlendHierarchy *>, 0,1,2>;
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendStaticAssociation.h:120:CTOR_META_BEGIN_OVERLOADED(CAnimBlendStaticAssociation, void(RpClump *, CAnimBlendHierarchy *))
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendStaticAssociation.h:129:    using def_t = CAnimBlendStaticAssociation *(CAnimBlendStaticAssociation *, RpClump *, CAnimBlendHierarchy *);
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendStaticAssociation.h:132:    using args_t = ArgPick<ArgTypes<CAnimBlendStaticAssociation *,RpClump *,CAnimBlendHierarchy *>, 0,1,2>;
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendStaticAssociation.h:140:    SUPPORTED_10US stack_object(RpClump *clump, CAnimBlendHierarchy *hierarchy) {
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendStaticAssociation.h:141:        plugin::CallMethodDynGlobal<CAnimBlendStaticAssociation *, RpClump *, CAnimBlendHierarchy *>(ctor_gaddr_o(CAnimBlendStaticAssociation, void(RpClump *, CAnimBlendHierarchy *)), reinterpret_cast<CAnimBlendStaticAssociation *>(objBuff), clump, hierarchy);
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendStaticAssociation.h:165:SUPPORTED_10US inline CAnimBlendStaticAssociation *operator_new<CAnimBlendStaticAssociation>(RpClump *clump, CAnimBlendHierarchy *hierarchy) {
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CAnimBlendStaticAssociation.h:168:    plugin::CallMethodDynGlobal<CAnimBlendStaticAssociation *, RpClump *, CAnimBlendHierarchy *>(ctor_gaddr_o(CAnimBlendStaticAssociation, void(RpClump *, CAnimBlendHierarchy *)), obj, clump, hierarchy);
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CFileLoader.h:129:    using def_t = RpClump *(char const *);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2223:void RpClumpSetFreeListCreateParams(RwInt32 blockSize, RwInt32 numBlocksToPrealloc) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2239:RpClump* RpClumpForAllAtomics(RpClump* clump, RpAtomicCallBack callback, void* pData) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2240:    return ((RpClump*(__cdecl *)(RpClump*, RpAtomicCallBack, void*))0x749B70)(clump, callback, pData);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2243:RpClump* RpClumpForAllLights(RpClump* clump, RpLightCallBack callback, void* pData) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2244:    return ((RpClump*(__cdecl *)(RpClump*, RpLightCallBack, void*))0x749C00)(clump, callback, pData);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2247:RpClump* RpClumpForAllCameras(RpClump* clump, RwCameraCallBack callback, void* pData) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2248:    return ((RpClump*(__cdecl *)(RpClump*, RwCameraCallBack, void*))0x749BB0)(clump, callback, pData);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2255:RpClump* RpClumpCreateSpace(const RwV3d* position, RwReal radius) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2256:    return ((RpClump*(__cdecl *)(const RwV3d*, RwReal))0x749970)(position, radius);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2259:RpClump* RpClumpRender(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2260:    return ((RpClump*(__cdecl *)(RpClump*))0x749B20)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2263:RpClump* RpClumpRemoveAtomic(RpClump* clump, RpAtomic* atomic) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2264:    return ((RpClump*(__cdecl *)(RpClump*, RpAtomic*))0x74A4C0)(clump, atomic);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2267:RpClump* RpClumpAddAtomic(RpClump* clump, RpAtomic* atomic) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2268:    return ((RpClump*(__cdecl *)(RpClump*, RpAtomic*))0x74A490)(clump, atomic);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2271:RpClump* RpClumpRemoveLight(RpClump* clump, RpLight* light) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2272:    return ((RpClump*(__cdecl *)(RpClump*, RpLight*))0x74A520)(clump, light);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2275:RpClump* RpClumpAddLight(RpClump* clump, RpLight* light) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2276:    return ((RpClump*(__cdecl *)(RpClump*, RpLight*))0x74A4F0)(clump, light);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2279:RpClump* RpClumpRemoveCamera(RpClump* clump, RwCamera* camera) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2280:    return ((RpClump*(__cdecl *)(RpClump*, RwCamera*))0x74A580)(clump, camera);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2283:RpClump* RpClumpAddCamera(RpClump* clump, RwCamera* camera) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2284:    return ((RpClump*(__cdecl *)(RpClump*, RwCamera*))0x74A550)(clump, camera);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2287:RwBool RpClumpDestroy(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2288:    return ((RwBool(__cdecl *)(RpClump*))0x74A310)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2291:RpClump* RpClumpCreate(void) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2292:    return ((RpClump*(__cdecl *)(void))0x74A290)();
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2295:RpClump* RpClumpClone(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2296:    return ((RpClump*(__cdecl *)(RpClump*))0x749F70)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2315:RpClump* RpClumpSetCallBack(RpClump* clump, RpClumpCallBack callback) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2316:    return ((RpClump*(__cdecl *)(RpClump*, RpClumpCallBack))0x74A240)(clump, callback);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2319:RpClumpCallBack RpClumpGetCallBack(const RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2320:    return ((RpClumpCallBack(__cdecl *)(const RpClump*))0x74A270)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2323:RwInt32 RpClumpGetNumAtomics(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2324:    return ((RwInt32(__cdecl *)(RpClump*))0x7498E0)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2327:RwInt32 RpClumpGetNumLights(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2328:    return ((RwInt32(__cdecl *)(RpClump*))0x749910)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2331:RwInt32 RpClumpGetNumCameras(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2332:    return ((RwInt32(__cdecl *)(RpClump*))0x749940)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2335:RpClump* RpLightGetClump(const RpLight* light) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2336:    return ((RpClump*(__cdecl *)(const RpLight*))0x749E40)(light);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2339:RpClump* RwCameraGetClump(const RwCamera* camera) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2340:    return ((RpClump*(__cdecl *)(const RwCamera*))0x749E50)(camera);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2355:RwUInt32 RpClumpStreamGetSize(RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2356:    return ((RwUInt32(__cdecl *)(RpClump*))0x74A5E0)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2359:RpClump* RpClumpStreamRead(RwStream* stream) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2360:    return ((RpClump*(__cdecl *)(RwStream*))0x74B420)(stream);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2363:RpClump* RpClumpStreamWrite(RpClump* clump, RwStream* stream) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2364:    return ((RpClump*(__cdecl *)(RpClump*, RwStream*))0x74AA10)(clump, stream);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2367:RpClumpChunkInfo* _rpClumpChunkInfoRead(RwStream* stream, RpClumpChunkInfo* clumpChunkInfo, RwInt32* bytesRead) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2368:    return ((RpClumpChunkInfo*(__cdecl *)(RwStream*, RpClumpChunkInfo*, RwInt32*))0x74BD40)(stream, clumpChunkInfo, bytesRead);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2375:RwInt32 RpClumpRegisterPlugin(RwInt32 size, RwUInt32 pluginID, RwPluginObjectConstructor constructCB, RwPluginObjectDestructor destructCB, RwPluginObjectCopy copyCB) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2391:RwInt32 RpClumpRegisterPluginStream(RwUInt32 pluginID, RwPluginDataChunkReadCallBack readCB, RwPluginDataChunkWriteCallBack writeCB, RwPluginDataChunkGetSizeCallBack getSizeCB) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2395:RwInt32 RpClumpSetStreamAlwaysCallBack(RwUInt32 pluginID, RwPluginDataChunkAlwaysCallBack alwaysCB) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2403:RwInt32 RpClumpGetPluginOffset(RwUInt32 pluginID) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2411:RwBool RpClumpValidatePlugins(const RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2412:    return ((RwBool(__cdecl *)(const RpClump*))0x74BF10)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2467:RpWorld* RpWorldForAllClumps(RpWorld* world, RpClumpCallBack fpCallBack, void* pData) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2468:    return ((RpWorld*(__cdecl *)(RpWorld*, RpClumpCallBack, void*))0x74FB80)(world, fpCallBack, pData);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2707:RpWorld* RpWorldAddClump(RpWorld* world, RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2708:    return ((RpWorld*(__cdecl *)(RpWorld*, RpClump*))0x751300)(world, clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2711:RpWorld* RpWorldRemoveClump(RpWorld* world, RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2712:    return ((RpWorld*(__cdecl *)(RpWorld*, RpClump*))0x751460)(world, clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2715:RpWorld* RpClumpGetWorld(const RpClump* clump) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:2716:    return ((RpWorld*(__cdecl *)(const RpClump*))0x7516B0)(clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2479:#define rpCLUMP 2
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2573: * \ingroup rpclump
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2574: * \struct RpClump
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2576: * considered an opaque type. Use the RpClump API functions to access.
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2578:typedef struct RpClump RpClump;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2581: * \ingroup rpclump
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2582: * RpClumpCallBack represents the function called from
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2598: * \see RpClumpGetCallBack
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2599: * \see RpClumpSetCallBack
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2602:typedef RpClump    *(*RpClumpCallBack) (RpClump * clump, void *data);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2605:struct RpClump
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2620:        RpClumpCallBack     callback;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2658:    RpClump            *clump;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2682: * \ref RpClumpForAllAtomics for all atomics in a given world sector or clump.
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2717:typedef struct RpClumpChunkInfo RpClumpChunkInfo;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2718:typedef struct RpClumpChunkInfo _rpClump;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2721:struct RpClumpChunkInfo
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2836:/* NB "RpClumpSetFrame(clump++, frame)" will break it */
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2837:#if (!defined(RpClumpSetFrameMacro))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2838:#define RpClumpSetFrameMacro(_clump, _frame)                            \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2841:#endif /* (!defined(RpClumpSetFrameMacro)) */
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2843:#if (!defined(RpClumpSetFrameVoidMacro))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2844:#define RpClumpSetFrameVoidMacro(_clump, _frame)                        \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2850:#endif /* (!defined(RpClumpSetFrameVoidMacro)) */
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2852:#define RpClumpGetFrameMacro(_clump)                                    \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2915:#define RpClumpSetFrame(_clump, _frame) \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2916:    RpClumpSetFrameMacro(_clump, _frame)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2918:#define RpClumpGetFrame(_clump) \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2919:    RpClumpGetFrameMacro(_clump)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2943:RpClumpSetFreeListCreateParams( RwInt32 blockSize, RwInt32 numBlocksToPrealloc );
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2956:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2957:RpClumpForAllAtomics(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2961:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2962:RpClumpForAllLights(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2966:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2967:RpClumpForAllCameras(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2977:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2978:RpClumpCreateSpace(const RwV3d * position,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2982:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2983:RpClumpRender(RpClump * clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2985:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2986:RpClumpRemoveAtomic(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2989:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2990:RpClumpAddAtomic(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2993:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2994:RpClumpRemoveLight(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2997:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2998:RpClumpAddLight(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3001:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3002:RpClumpRemoveCamera(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3005:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3006:RpClumpAddCamera(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3011:RpClumpDestroy(RpClump * clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3013:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3014:RpClumpCreate(void);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3016:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3017:RpClumpClone(RpClump * clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3036:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3037:RpClumpSetCallBack(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3038:                   RpClumpCallBack callback);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3040:extern RpClumpCallBack
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3041:RpClumpGetCallBack(const RpClump * clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3045:RpClumpGetNumAtomics(RpClump * clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3048:RpClumpGetNumLights(RpClump * clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3051:RpClumpGetNumCameras(RpClump * clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3054:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3057:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3072:RpClumpStreamGetSize(RpClump * clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3074:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3075:RpClumpStreamRead(RwStream * stream);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3077:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3078:RpClumpStreamWrite(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3081:extern RpClumpChunkInfo *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3082:_rpClumpChunkInfoRead(RwStream * stream,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3083:                      RpClumpChunkInfo * clumpChunkInfo,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3095:RpClumpRegisterPlugin(RwInt32 size,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3119:RpClumpRegisterPluginStream(RwUInt32 pluginID,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3125:RpClumpSetStreamAlwaysCallBack(RwUInt32 pluginID,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3132:RpClumpGetPluginOffset(RwUInt32 pluginID);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3138:RpClumpValidatePlugins(const RpClump * clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3145:RpClumpGetFrame(const RpClump * clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3147:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3148:RpClumpSetFrame(RpClump * clump,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3198:extern RpClump *
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3224:#define RpClumpChunkInfoRead(stream, clumpChunkInfo, bytesRead) \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3225:       _rpClumpChunkInfoRead(stream, clumpChunkInfo, bytesRead)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3382:    /**< RpClump pluginID */
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3560:                                        RpClumpCallBack fpCallBack,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:4196:extern RpWorld *RpWorldAddClump(RpWorld *world, RpClump *clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:4197:extern RpWorld *RpWorldRemoveClump(RpWorld *world, RpClump *clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:4198:extern RpWorld *RpClumpGetWorld(const RpClump *clump);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rtmipk.h:50:extern void RtMipKClumpCalculateKValues(RpClump *clump, RwCamera *camera);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rtworld.h:65:extern RpClump *RtClumpOptimize(RpClump *clump, RwReal dist);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:1940:/**< RpClump chunk. See \ref RpClumpStreamRead. */
+
+C:\plugin-sdk-master\plugin_sa\game_sa>findstr /S /N /I /C:"struct RwObject" /C:"RwObject" "C:\plugin-sdk-master\plugin_sa\game_sa\*"
+C:\plugin-sdk-master\plugin_sa\game_sa\CAutomobile.cpp:426:// Converted from cdecl RpAtomic* GetCurrentAtomicObjectCB(RwObject *object, void *data) 0x6A0750
+C:\plugin-sdk-master\plugin_sa\game_sa\CAutomobile.cpp:427:RpAtomic* GetCurrentAtomicObjectCB(RwObject* object, void* data)
+C:\plugin-sdk-master\plugin_sa\game_sa\CAutomobile.cpp:429:    return ((RpAtomic* (__cdecl *)(RwObject*, void*))0x6A0750)(object, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CAutomobile.h:323:RpAtomic* GetCurrentAtomicObjectCB(RwObject* object, void* data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.cpp:44:void CBaseModelInfo::DeleteRwObject()
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.cpp:54:RwObject *CBaseModelInfo::CreateInstance(RwMatrix *matrix)
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.cpp:56:   return ((RwObject *(__thiscall *)(CBaseModelInfo *, RwMatrix *))plugin::GetVMT(this, 10))(this, matrix);
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.cpp:59:RwObject *CBaseModelInfo::CreateInstance()
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.cpp:61:   return ((RwObject *(__thiscall *)(CBaseModelInfo *))plugin::GetVMT(this, 11))(this);
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.h:68:             RwObject* m_pRwObject;
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.h:82:     void DeleteRwObject();//=0
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.h:84:     struct RwObject *CreateInstance(RwMatrix *matrix);//=0
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.h:85:     struct RwObject *CreateInstance();//=0
+C:\plugin-sdk-master\plugin_sa\game_sa\CBaseModelInfo.h:132:VALIDATE_OFFSET(CBaseModelInfo, m_pRwObject, 0x1C);
+C:\plugin-sdk-master\plugin_sa\game_sa\CBoat.cpp:22:// Converted from cdecl RwObject* GetBoatAtomicObjectCB(RwObject *object,void *data) 0x6F00D0
+C:\plugin-sdk-master\plugin_sa\game_sa\CBoat.cpp:23:RwObject* GetBoatAtomicObjectCB(RwObject* object, void* data) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CBoat.cpp:24:    return ((RwObject* (__cdecl *)(RwObject*, void*))0x6F00D0)(object, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CBoat.h:120:RwObject* GetBoatAtomicObjectCB(RwObject* object, void* data);C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:59:// Converted from thiscall void CClumpModelInfo::SetFrameIds(RwObjectNameIdAssocation *data) 0x4C5460
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:60:void CClumpModelInfo::SetFrameIds(RwObjectNameIdAssocation* data) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.cpp:61:    plugin::CallMethod<0x4C5460, CClumpModelInfo *, RwObjectNameIdAssocation*>(this, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.h:10:#include "RwObjectNameIdAssocation.h"
+C:\plugin-sdk-master\plugin_sa\game_sa\CClumpModelInfo.h:41:    void SetFrameIds(RwObjectNameIdAssocation* data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.cpp:41:void CEntity::CreateRwObject()
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.cpp:46:void CEntity::DeleteRwObject()
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.cpp:184:// Converted from thiscall void CEntity::SetRwObjectAlpha(int alpha) 0x5332C0
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.cpp:185:void CEntity::SetRwObjectAlpha(int alpha)
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.cpp:236:// Converted from thiscall void CEntity::AttachToRwObject(RwObject *object, bool updateEntityMatrix) 0x533ED0
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.cpp:237:void CEntity::AttachToRwObject(RwObject* object, bool updateEntityMatrix)
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.cpp:239: ((void (__thiscall *)(CEntity*, RwObject*, bool))0x533ED0)(this, object, updateEntityMatrix);
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.cpp:242:// Converted from thiscall void CEntity::DetachFromRwObject(void) 0x533FB0
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.cpp:243:void CEntity::DetachFromRwObject()
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.h:24:        struct RwObject *m_pRwObject;
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.h:88:    void CreateRwObject();
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.h:89:    void DeleteRwObject();
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.h:115:    void SetRwObjectAlpha(int alpha);
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.h:122:    void AttachToRwObject(RwObject* object, bool updateEntityMatrix);
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.h:123:    void DetachFromRwObject();
+C:\plugin-sdk-master\plugin_sa\game_sa\CEntity.h:153:VALIDATE_OFFSET(CEntity, m_pRwObject, 0x18);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:146:// Converted from cdecl RwObject* GetFirstObjectCallback(RwObject *object,void *data) 0x7348B0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:147:RwObject* GetFirstObjectCallback(RwObject* object, void* data) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:148:    return ((RwObject* (__cdecl *)(RwObject*, void*))0x7348B0)(object, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:151:// Converted from cdecl RwObject* GetFirstObject(RwFrame *frame) 0x7348C0
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:152:RwObject* GetFirstObject(RwFrame* frame) {
+C:\plugin-sdk-master\plugin_sa\game_sa\common.cpp:153:    return ((RwObject* (__cdecl *)(RwFrame*))0x7348C0)(frame);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:72:RwObject* GetFirstObjectCallback(RwObject* object, void* data);
+C:\plugin-sdk-master\plugin_sa\game_sa\common.h:73:RwObject* GetFirstObject(RwFrame* frame);
+C:\plugin-sdk-master\plugin_sa\game_sa\CPed.cpp:770:// Converted from cdecl RwObject* SetPedAtomicVisibilityCB(RwObject *rwObject,void *data) 0x5F0060
+C:\plugin-sdk-master\plugin_sa\game_sa\CPed.cpp:771:RwObject* SetPedAtomicVisibilityCB(RwObject* rwObject, void* data)
+C:\plugin-sdk-master\plugin_sa\game_sa\CPed.cpp:773:    return ((RwObject* (__cdecl *)(RwObject*, void*))0x5F0060)(rwObject, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CPed.h:210:    RwObject           *m_pWeaponObject;
+C:\plugin-sdk-master\plugin_sa\game_sa\CPed.h:212:    RwObject           *m_pGogglesObject;
+C:\plugin-sdk-master\plugin_sa\game_sa\CPed.h:537:RwObject* SetPedAtomicVisibilityCB(RwObject* rwObject, void* data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CRealTimeShadow.h:26:    unsigned int m_nRwObjectType;
+C:\plugin-sdk-master\plugin_sa\game_sa\CRealTimeShadow.h:54:VALIDATE_OFFSET(CRealTimeShadow, m_nRwObjectType, 0x24);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:56:CLinkList<CEntity*> &CStreaming::ms_rwObjectInstances = *reinterpret_cast<CLinkList<CEntity*> *>(GLOBAL_ADDRESS_BY_VERSION(0x9654F0, 0, 0, 0, 0, 0));
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:129:int addrof(CStreaming::DeleteAllRwObjects) = ADDRESS_BY_VERSION(0x4090A0, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:130:int gaddrof(CStreaming::DeleteAllRwObjects) = GLOBAL_ADDRESS_BY_VERSION(0x4090A0, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:132:void CStreaming::DeleteAllRwObjects() {
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:133:    plugin::CallDynGlobal(gaddrof(CStreaming::DeleteAllRwObjects));
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:136:int addrof(CStreaming::DeleteLeastUsedEntityRwObject) = ADDRESS_BY_VERSION(0x409760, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:137:int gaddrof(CStreaming::DeleteLeastUsedEntityRwObject) = GLOBAL_ADDRESS_BY_VERSION(0x409760, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:139:bool CStreaming::DeleteLeastUsedEntityRwObject(bool bNotOnScreen, unsigned int StreamingFlags) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:140:    return plugin::CallAndReturnDynGlobal<bool, bool, unsigned int>(gaddrof(CStreaming::DeleteLeastUsedEntityRwObject), bNotOnScreen, StreamingFlags);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:143:int addrof(CStreaming::DeleteRwObjectsAfterDeath) = ADDRESS_BY_VERSION(0x409210, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:144:int gaddrof(CStreaming::DeleteRwObjectsAfterDeath) = GLOBAL_ADDRESS_BY_VERSION(0x409210, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:146:void CStreaming::DeleteRwObjectsAfterDeath(CVector const *PlayerPosn) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:147:    plugin::CallDynGlobal<CVector const *>(gaddrof(CStreaming::DeleteRwObjectsAfterDeath), PlayerPosn);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:150:int addrof(CStreaming::DeleteRwObjectsBehindCamera) = ADDRESS_BY_VERSION(0x40D7C0, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:151:int gaddrof(CStreaming::DeleteRwObjectsBehindCamera) = GLOBAL_ADDRESS_BY_VERSION(0x40D7C0, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:153:void CStreaming::DeleteRwObjectsBehindCamera(int memoryToCleanInBytes) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:154:    plugin::CallDynGlobal<int>(gaddrof(CStreaming::DeleteRwObjectsBehindCamera), memoryToCleanInBytes);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:157:int addrof(CStreaming::DeleteRwObjectsBehindCameraInSectorList) = ADDRESS_BY_VERSION(0x409940, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:158:int gaddrof(CStreaming::DeleteRwObjectsBehindCameraInSectorList) = GLOBAL_ADDRESS_BY_VERSION(0x409940, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:160:bool CStreaming::DeleteRwObjectsBehindCameraInSectorList(CPtrList *List, int memoryToCleanInBytes) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:161:    return plugin::CallAndReturnDynGlobal<bool, CPtrList *, int>(gaddrof(CStreaming::DeleteRwObjectsBehindCameraInSectorList), List, memoryToCleanInBytes);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:164:int addrof(CStreaming::DeleteRwObjectsInSectorList) = ADDRESS_BY_VERSION(0x407A70, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:165:int gaddrof(CStreaming::DeleteRwObjectsInSectorList) = GLOBAL_ADDRESS_BY_VERSION(0x407A70, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:167:void CStreaming::DeleteRwObjectsInSectorList(CPtrList *PtrList, int arg2, int arg3) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:168:    plugin::CallDynGlobal<CPtrList *, int, int>(gaddrof(CStreaming::DeleteRwObjectsInSectorList), PtrList, arg2, arg3);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:171:int addrof(CStreaming::DeleteRwObjectsNotInFrustumInSectorList) = ADDRESS_BY_VERSION(0x4099E0, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:172:int gaddrof(CStreaming::DeleteRwObjectsNotInFrustumInSectorList) = GLOBAL_ADDRESS_BY_VERSION(0x4099E0, 0, 0, 0, 0, 0);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:174:char CStreaming::DeleteRwObjectsNotInFrustumInSectorList(CPtrList *List, int memoryToCleanInBytes) {
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.cpp:175:    return plugin::CallAndReturnDynGlobal<char, CPtrList *, int>(gaddrof(CStreaming::DeleteRwObjectsNotInFrustumInSectorList), List, memoryToCleanInBytes);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.h:112:    SUPPORTED_10US static CLinkList<CEntity*> &ms_rwObjectInstances;
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.h:126:    SUPPORTED_10US static void DeleteAllRwObjects();
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.h:127:    SUPPORTED_10US static bool DeleteLeastUsedEntityRwObject(bool bNotOnScreen, unsigned int StreamingFlags);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.h:128:    SUPPORTED_10US static void DeleteRwObjectsAfterDeath(CVector const *PlayerPosn);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.h:129:    SUPPORTED_10US static void DeleteRwObjectsBehindCamera(int memoryToCleanInBytes);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.h:130:    SUPPORTED_10US static bool DeleteRwObjectsBehindCameraInSectorList(CPtrList *List, int memoryToCleanInBytes);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.h:132:    SUPPORTED_10US static void DeleteRwObjectsInSectorList(CPtrList *PtrList, int arg2, int arg3);
+C:\plugin-sdk-master\plugin_sa\game_sa\CStreaming.h:133:    SUPPORTED_10US static char DeleteRwObjectsNotInFrustumInSectorList(CPtrList *List, int memoryToCleanInBytes);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:587:// Converted from stdcall RwObject* SetVehicleAtomicVisibilityCB(RwObject *object,void *data) 0x6D2690
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:588:RwObject* SetVehicleAtomicVisibilityCB(RwObject* object, void* data)
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:590:        return ((RwObject* (__cdecl *)(RwObject*, void*))0x6D2690)(object, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:719:// Converted from stdcall RwObject* RemoveObjectsCB(RwObject *object,void *data) 0x6D33B0
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:720:RwObject* RemoveObjectsCB(RwObject* object, void* data)
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:722:        return ((RwObject* (__cdecl *)(RwObject*, void*))0x6D33B0)(object, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:731:// Converted from stdcall RwObject* CopyObjectsCB(RwObject *object,void *data) 0x6D3450
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:732:RwObject* CopyObjectsCB(RwObject* object, void* data)
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:734:        return ((RwObject* (__cdecl *)(RwObject*, void*))0x6D3450)(object, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:737:// Converted from stdcall RwObject* FindReplacementUpgradeCB(RwObject *object,void *data) 0x6D3490
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:738:RwObject* FindReplacementUpgradeCB(RwObject* object, void* data)
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.cpp:740:        return ((RwObject* (__cdecl *)(RwObject*, void*))0x6D3490)(object, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.h:639:RwObject* RemoveObjectsCB(RwObject* object, void* data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.h:641:RwObject* CopyObjectsCB(RwObject* object, void* data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.h:642:RwObject* FindReplacementUpgradeCB(RwObject* object, void* data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicle.h:645:RwObject* SetVehicleAtomicVisibilityCB(RwObject* object, void* data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:41:RpAtomic * CVehicleModelInfo::MoveObjectsCB(RwObject * object, void * data)
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:43:    return ((RpAtomic* (__cdecl *)(RwObject*, void*))0x4C7700)(object, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:96:RwObject * CVehicleModelInfo::SetAtomicFlagCB(RwObject * object, void * data)
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:98:    return ((RwObject* (__cdecl *)(RwObject*, void*))0x4C7B90)(object, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:101:// Converted from stdcall RwObject* CVehicleModelInfo::ClearAtomicFlagCB(RwObject *object, void *data) 0x4C7BB0
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:102:RwObject* CVehicleModelInfo::ClearAtomicFlagCB(RwObject* object, void* data)
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.cpp:104:    return ((RwObject* (__cdecl *)(RwObject*, void*))0x4C7BB0)(object, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.h:13:#include "RwObjectNameIdAssocation.h"
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.h:126: // static RwObjectNameIdAssocation ms_vehicleDescs[12];
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.h:127: static RwObjectNameIdAssocation *ms_vehicleDescs;
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.h:175: static RpAtomic *MoveObjectsCB(RwObject *object, void *data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.h:198: static RwObject *SetAtomicFlagCB(RwObject *object, void *data);
+C:\plugin-sdk-master\plugin_sa\game_sa\CVehicleModelInfo.h:200: static RwObject *ClearAtomicFlagCB(RwObject *object, void *data);
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CStreaming.h:183:META_BEGIN(CStreaming::DeleteRwObjectsInSectorList)
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CStreaming.h:963:META_BEGIN(CStreaming::DeleteAllRwObjects)
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CStreaming.h:981:META_BEGIN(CStreaming::DeleteRwObjectsAfterDeath)
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CStreaming.h:1112:META_BEGIN(CStreaming::DeleteLeastUsedEntityRwObject)
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CStreaming.h:1129:META_BEGIN(CStreaming::DeleteRwObjectsBehindCameraInSectorList)
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CStreaming.h:1156:META_BEGIN(CStreaming::DeleteRwObjectsNotInFrustumInSectorList)
+C:\plugin-sdk-master\plugin_sa\game_sa\meta\meta.CStreaming.h:2016:META_BEGIN(CStreaming::DeleteRwObjectsBehindCamera)
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:1333:RwFrame* RwFrameForAllObjects(RwFrame* frame, RwObjectCallBack callBack, void* data) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:1334:    return ((RwFrame*(__cdecl *)(RwFrame*, RwObjectCallBack, void*))0x7F1200)(frame, callBack, data);
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:1445:void _rwObjectHasFrameReleaseFrame(void) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:3488:void _rwObjectHasFrameSetFrame(void *object, RwFrame *frame) {
+C:\plugin-sdk-master\plugin_sa\game_sa\RenderWare.cpp:3492:void _rwObjectHasFrameReleaseFrame(void *object) {
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpcollis.h:631: *                 \ref RwObjectGetType to distinguish between the two.
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpspline.h:72:    RwObject        tType;                      /**< Internal Use */
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:1309:     * These above flags were stored in the flags field in an RwObject, they
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:1416:    RwObject            object;     /* Generic type */
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2244:        RwObjectHasFrame    object; /**< object */
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2306:    (rwObjectHasFrameSetFrame((_light), (_frame)), (_light))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2309:    ((RwFrame *)rwObjectGetParent((_light)))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2312:    ((RpLightType)rwObjectGetSubType((_light)))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2315:    ((rwObjectSetFlags((_light), (_flags))), (_light))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2318:    (rwObjectGetFlags((_light)))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2607:        RwObject            object;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2645:    RwObjectHasFrame    object;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2834:    ((RwFrame *) rwObjectGetParent(_atomic))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2839:    (rwObjectSetParent(_clump, _frame),                                 \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2847:    rwObjectSetParent(_clump, _frame);                                  \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2853:    ((RwFrame *) rwObjectGetParent(_clump))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2858:    (rwObjectSetFlags(_atomic, _flags),                                 \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2863:    (rwObjectGetFlags(_atomic))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3246:/* RpWorld private flags (in RwObject) */
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3274:     * These above flags were stored in the flags field in an RwObject, they
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:3457:    RwObject            object;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:2380:    RwObject            object; /* Homogeneous type */
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:3906:    RwObject            object;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:3954:#define RwFrameGetParentMacro(_f)   ((RwFrame *)rwObjectGetParent(_f))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:3979:                     RwObjectCallBack callBack,
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4142:typedef struct RwObjectHasFrame RwObjectHasFrame;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4143:typedef RwObjectHasFrame * (*RwObjectHasFrameSyncFunction)(RwObjectHasFrame *object);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4146:struct RwObjectHasFrame
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4148:    RwObject                     object;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4150:    RwObjectHasFrameSyncFunction sync;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4164:extern void _rwObjectHasFrameSetFrame(void *object, RwFrame *frame);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4165:extern void _rwObjectHasFrameReleaseFrame(void *object);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4168:#define rwObjectHasFrameInitialize(o, type, subtype, syncFunc)  \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4171:    rwObjectInitialize(o, type, subtype);                       \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4172:    ((RwObjectHasFrame *)o)->sync = syncFunc;                   \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4176:#define rwObjectHasFrameSync(o) \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4177:    ((RwObjectHasFrame *)(o))->sync(o)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4185:#define rwObjectHasFrameSetFrame(object, frame) \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4186:        _rwObjectHasFrameSetFrame(object, frame)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4187:#define rwObjectHasFrameReleaseFrame(object) \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4188:        _rwObjectHasFrameReleaseFrame(object)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4517:    (_rwObjectHasFrameSetFrame((_camera), (_frame)), (_camera))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4522:    _rwObjectHasFrameSetFrame((_camera), (_frame));     \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4528:    ((RwFrame *)rwObjectGetParent((_camera)))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4663:        RwObjectHasFrame    object;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2115:typedef struct RwObject RwObject;
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2118: * \ingroup rwobject
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2119: * \struct RwObject
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2121: * the RwObject API functions to access.
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2124:struct RwObject
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2135: * \ingroup rwobject
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2136: * \ref RwObjectCallBack
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2149:typedef RwObject *(*RwObjectCallBack)(RwObject *object, void *data);
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2164:#define rwObjectCopy(d,s)                               \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2167:    ((RwObject *)(d))->type =                           \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2168:        ((const RwObject *)(s))->type;                  \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2169:    ((RwObject *)(d))->subType =                        \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2170:        ((const RwObject *)(s))->subType;               \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2171:    ((RwObject *)(d))->flags =                          \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2172:        ((const RwObject *)(s))->flags;                 \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2173:    ((RwObject *)(d))->privateFlags =                   \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2174:        ((const RwObject *)(s))->privateFlags;          \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2175:    ((RwObject *)(d))->parent =                         \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2180:#define rwObjectInitialize(o, t, s)                     \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2183:    ((RwObject *)(o))->type = (RwUInt8)(t);             \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2184:    ((RwObject *)(o))->subType = (RwUInt8)(s);          \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2185:    ((RwObject *)(o))->flags = 0;                       \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2186:    ((RwObject *)(o))->privateFlags = 0;                \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2187:    ((RwObject *)(o))->parent = NULL;                   \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2192:#define RwObjectGetType(o)                  (((const RwObject *)(o))->type)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2194:#define rwObjectSetType(o, t)               (((RwObject *)(o))->type) = (RwUInt8)(t)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2197:#define rwObjectGetSubType(o)               (((const RwObject *)(o))->subType)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2198:#define rwObjectSetSubType(o, t)            (((RwObject *)(o))->subType) = (RwUInt8)(t)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2201:#define rwObjectGetFlags(o)                 (((const RwObject *)(o))->flags)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2202:#define rwObjectSetFlags(o, f)              (((RwObject *)(o))->flags) = (RwUInt8)(f)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2203:#define rwObjectTestFlags(o, f)             ((((const RwObject *)(o))->flags) & (RwUInt8)(f))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2206:#define rwObjectGetPrivateFlags(c)          (((const RwObject *)(c))->privateFlags)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2207:#define rwObjectSetPrivateFlags(c,f)        (((RwObject *)(c))->privateFlags) = (RwUInt8)(f)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2208:#define rwObjectTestPrivateFlags(c,flag)    ((((const RwObject *)(c))->privateFlags) & (RwUInt8)(flag))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2211:#define rwObjectGetParent(object)           (((const RwObject *)(object))->parent)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2212:#define rwObjectSetParent(c,p)              (((RwObject *)(c))->parent) = (void *)(p)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:6365:   RWASSERT((((const RwObject *)(_f))->type)==(_t))
+C:\plugin-sdk-master\plugin_sa\game_sa\RwObjectNameIdAssocation.h:11:struct PLUGIN_API RwObjectNameIdAssocation
+C:\plugin-sdk-master\plugin_sa\game_sa\RwObjectNameIdAssocation.h:17:VALIDATE_OFFSET(RwObjectNameIdAssocation, m_pName, 0x0);
+C:\plugin-sdk-master\plugin_sa\game_sa\RwObjectNameIdAssocation.h:18:VALIDATE_OFFSET(RwObjectNameIdAssocation, m_dwHierarchyId, 0x4);
+C:\plugin-sdk-master\plugin_sa\game_sa\RwObjectNameIdAssocation.h:19:VALIDATE_OFFSET(RwObjectNameIdAssocation, m_dwFlags, 0x8);
+C:\plugin-sdk-master\plugin_sa\game_sa\RwObjectNameIdAssocation.h:20:VALIDATE_SIZE(RwObjectNameIdAssocation, 0xC);
+C:\plugin-sdk-master\plugin_sa\game_sa>findstr /S /N /I /C:"parent" "C:\plugin-sdk-master\plugin_sa\game_sa\*.h" | findstr /I "RwObject RpClump RenderWare"
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2309:    ((RwFrame *)rwObjectGetParent((_light)))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2834:    ((RwFrame *) rwObjectGetParent(_atomic))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2839:    (rwObjectSetParent(_clump, _frame),                                 \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2847:    rwObjectSetParent(_clump, _frame);                                  \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rpworld.h:2853:    ((RwFrame *) rwObjectGetParent(_clump))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:3954:#define RwFrameGetParentMacro(_f)   ((RwFrame *)rwObjectGetParent(_f))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwcore.h:4528:    ((RwFrame *)rwObjectGetParent((_camera)))
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2175:    ((RwObject *)(d))->parent =                         \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2187:    ((RwObject *)(o))->parent = NULL;                   \
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2211:#define rwObjectGetParent(object)           (((const RwObject *)(object))->parent)
+C:\plugin-sdk-master\plugin_sa\game_sa\rw\rwplcore.h:2212:#define rwObjectSetParent(c,p)              (((RwObject *)(c))->parent) = (void *)(p)
+
+C:\plugin-sdk-master\plugin_sa\game_sa>
