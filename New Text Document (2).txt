@@ -1,826 +1,901 @@
-CAEWeaponAudioEntity.cpp:14:// Converted from thiscall void CAEWeaponAudioEntity::WeaponReload(eWeaponType weaptype,CPhysical *entity,int AudioEventId)	0x503690	
-CAEWeaponAudioEntity.cpp:15:void CAEWeaponAudioEntity::WeaponReload(eWeaponType weaptype, CPhysical* entity, int AudioEventId) {
-CAEWeaponAudioEntity.cpp:16:	plugin::CallMethod<0x503690, CAEWeaponAudioEntity *, eWeaponType, CPhysical*, int>(this, weaptype, entity, AudioEventId);
-CAEWeaponAudioEntity.cpp:19:// Converted from thiscall void CAEWeaponAudioEntity::WeaponFire(eWeaponType weaptype,CPhysical *entity,int AudioEventId)	0x504F80	
-CAEWeaponAudioEntity.cpp:20:void CAEWeaponAudioEntity::WeaponFire(eWeaponType weaptype, CPhysical* entity, int AudioEventId) {
-CAEWeaponAudioEntity.cpp:21:	plugin::CallMethod<0x504F80, CAEWeaponAudioEntity *, eWeaponType, CPhysical*, int>(this, weaptype, entity, AudioEventId);
-CAEWeaponAudioEntity.cpp:39:// Converted from thiscall void CAEWeaponAudioEntity::ReportStealthKill(eWeaponType weaptype,CPhysical *entity,int AudioEventId)	0x503B20	
-CAEWeaponAudioEntity.cpp:40:void CAEWeaponAudioEntity::ReportStealthKill(eWeaponType weaptype, CPhysical* entity, int AudioEventId) {
-CAEWeaponAudioEntity.cpp:41:	plugin::CallMethod<0x503B20, CAEWeaponAudioEntity *, eWeaponType, CPhysical*, int>(this, weaptype, entity, AudioEventId);
-CAEWeaponAudioEntity.h:12:#include "eWeaponType.h"
-CAEWeaponAudioEntity.h:37:	void WeaponReload(eWeaponType weaptype, CPhysical* entity, int AudioEventId);
-CAEWeaponAudioEntity.h:38:	void WeaponFire(eWeaponType weaptype, CPhysical* entity, int AudioEventId);
-CAEWeaponAudioEntity.h:42:	void ReportStealthKill(eWeaponType weaptype, CPhysical* entity, int AudioEventId);
-CAutomobile.cpp:108:// Converted from thiscall void CAutomobile::SetRandomDamage(bool) 0x6A2530
-CAutomobile.cpp:109:void CAutomobile::SetRandomDamage(bool arg0)
-CAutomobile.cpp:114:// Converted from thiscall void CAutomobile::SetTotalDamage(bool) 0x6A27F0
-CAutomobile.cpp:115:void CAutomobile::SetTotalDamage(bool arg0)
-CAutomobile.cpp:234:// Converted from thiscall CPed* CAutomobile::KnockPedOutCar(eWeaponType, ushort, CPed *) 0x6A44C0
-CAutomobile.cpp:235:CPed* CAutomobile::KnockPedOutCar(eWeaponType arg0, unsigned short arg1, CPed* arg2)
-CAutomobile.cpp:237:    return ((CPed* (__thiscall *)(CAutomobile*, eWeaponType, unsigned short, CPed*))0x6A44C0)(this, arg0, arg1, arg2);
-CAutomobile.cpp:282:// Converted from thiscall void CAutomobile::dmgDrawCarCollidingParticles(CVector const& position, float force, eWeaponType weapon) 0x6A6DC0
-CAutomobile.cpp:283:void CAutomobile::dmgDrawCarCollidingParticles(CVector const& position, float force, eWeaponType weapon)
-CAutomobile.cpp:285:    ((void(__thiscall *)(CAutomobile*, CVector const&, float, eWeaponType))0x6A6DC0)(this, position, force, weapon);
-CAutomobile.cpp:384:// Converted from thiscall void CAutomobile::SetBumperDamage(ePanels panel, bool withoutVisualEffect) 0x6B1350
-CAutomobile.cpp:385:void CAutomobile::SetBumperDamage(ePanels panel, bool withoutVisualEffect)
-CAutomobile.cpp:390:// Converted from thiscall void CAutomobile::SetPanelDamage(ePanels panel, bool createWindowGlass) 0x6B1480
-CAutomobile.cpp:391:void CAutomobile::SetPanelDamage(ePanels panel, bool createWindowGlass)
-CAutomobile.cpp:396:// Converted from thiscall void CAutomobile::SetDoorDamage(eDoors door, bool withoutVisualEffect) 0x6B1600
-CAutomobile.cpp:397:void CAutomobile::SetDoorDamage(eDoors door, bool withoutVisualEffect)
-CAutomobile.h:11:#include "CDamageManager.h"
-CAutomobile.h:53:    CDamageManager  m_damageManager;
-CAutomobile.h:78:        bool bDoesNotGetDamagedUpsideDown : 1;
-CAutomobile.h:79:        bool bCanBeVisiblyDamaged : 1;
-CAutomobile.h:122:    float m_fCumulativeDamage; // previously m_fUpDownLightAngle[1]
-CAutomobile.h:170:    // Set random damage to vehicle. Called when generating a vehicle @CCarCtrl::GenerateOneRandomCar
-CAutomobile.h:171:    void SetRandomDamage(bool arg0);
-CAutomobile.h:172:    // Make a vehicle fully damaged
-CAutomobile.h:173:    void SetTotalDamage(bool arg0);
-CAutomobile.h:207:    CPed* KnockPedOutCar(eWeaponType arg0, unsigned short arg1, CPed* arg2);
-CAutomobile.h:217:    void dmgDrawCarCollidingParticles(CVector const&, float force, eWeaponType weapon);
-CAutomobile.h:237:    void SetBumperDamage(ePanels panel, bool withoutVisualEffect);
-CAutomobile.h:238:    void SetPanelDamage(ePanels panel, bool createWindowGlass);
-CAutomobile.h:239:    void SetDoorDamage(eDoors door, bool withoutVisualEffect);
-CAutomobile.h:245:VALIDATE_OFFSET(CAutomobile, m_damageManager, 0x5A0);
-CAutomobile.h:293:VALIDATE_OFFSET(CAutomobile, m_fCumulativeDamage, 0x95C);
-CBaseModelInfo.cpp:14:CBaseModelInfo *CBaseModelInfo::AsDamageAtomicModelInfoPtr()
-CBaseModelInfo.h:76:	class CBaseModelInfo *AsDamageAtomicModelInfoPtr();
-CBike.cpp:19:// Converted from thiscall void CBike::dmgDrawCarCollidingParticles(CVector const& position,float power,eWeaponType weaponType) 0x6B5A00
-CBike.cpp:20:void CBike::dmgDrawCarCollidingParticles(CVector const& position, float power, eWeaponType weaponType) {
-CBike.cpp:21:    ((void(__thiscall *)(CBike*, CVector const&, float, eWeaponType))0x6B5A00)(this, position, power, weaponType);
-CBike.cpp:24:// Converted from cdecl bool CBike::DamageKnockOffRider(CVehicle *,float,ushort,CEntity *,CVector &,CVector &) 0x6B5A10
-CBike.cpp:25:bool CBike::DamageKnockOffRider(CVehicle* arg0, float arg1, unsigned short arg2, CEntity* arg3, CVector& arg4, CVector& arg5) {
-CBike.cpp:29:// Converted from thiscall CPed* CBike::KnockOffRider(eWeaponType,uchar,CPed *,bool) 0x6B5F40
-CBike.cpp:30:CPed* CBike::KnockOffRider(eWeaponType arg0, unsigned char arg1, CPed* arg2, bool arg3) {
-CBike.cpp:31:    return ((CPed* (__thiscall *)(CBike*, eWeaponType, unsigned char, CPed*, bool))0x6B5F40)(this, arg0, arg1, arg2, arg3);
-CBike.h:94:    CEntity*    m_pDamager;
-CBike.h:110:    void dmgDrawCarCollidingParticles(CVector const& position, float power, eWeaponType weaponType); // dummy function
-CBike.h:111:    static bool DamageKnockOffRider(CVehicle* arg0, float arg1, unsigned short arg2, CEntity* arg3, CVector& arg4, CVector& arg5);
-CBike.h:112:    CPed* KnockOffRider(eWeaponType arg0, unsigned char arg1, CPed* arg2, bool arg3); // dummy function
-CBike.h:167:VALIDATE_OFFSET(CBike, m_pDamager, 0x800);
-CBulletInfo.cpp:24:// Converted from cdecl bool CBulletInfo::AddBullet(CEntity *creator,eWeaponType weaponType,CVector position,CVector velocity) 0x736010
-CBulletInfo.cpp:25:bool CBulletInfo::AddBullet(CEntity* creator, eWeaponType weaponType, CVector position, CVector velocity) {
-CBulletInfo.cpp:26:    return plugin::CallAndReturn<bool, 0x736010, CEntity*, eWeaponType, CVector, CVector>(creator, weaponType, position, velocity);
-CBulletInfo.h:11:#include "eWeaponType.h"
-CBulletInfo.h:16:    eWeaponType m_nWeaponType;
-CBulletInfo.h:25:    short    m_nDamage;
-CBulletInfo.h:32:    static bool AddBullet(CEntity* creator, eWeaponType weaponType, CVector position, CVector velocity);
-CBulletInfo.h:35:VALIDATE_OFFSET(CBulletInfo, m_nWeaponType, 0x0);
-CBulletInfo.h:41:VALIDATE_OFFSET(CBulletInfo, m_nDamage, 0x28);
-CBulletTraces.cpp:13:// Converted from cdecl void CBulletTraces::AddTrace(CVector * start,CVector * end,int weaponType,CEntity * entity) 0x573D40
-CBulletTraces.cpp:14:void CBulletTraces::AddTrace(CVector* start, CVector* end, int weaponType, CEntity* entity) {
-CBulletTraces.cpp:15:    plugin::Call<0x726AF0, CVector*, CVector*, int, CEntity*>(start, end, weaponType, entity);
-CBulletTraces.h:18:	static void AddTrace(CVector *start, CVector *end, int weaponType, CEntity *entity);
-CDamageAtomicModelInfo.cpp:7:#include "CDamageAtomicModelInfo.h"
-CDamageAtomicModelInfo.cpp:9:bool& CDamageAtomicModelInfo::ms_bCreateDamagedVersion = *(bool*)0xA9B0B0;
-CDamageAtomicModelInfo.h:11:class CDamageAtomicModelInfo : public CAtomicModelInfo {
-CDamageAtomicModelInfo.h:13:    RpAtomic* m_pDamagedAtomic;
-CDamageAtomicModelInfo.h:14:    static bool& ms_bCreateDamagedVersion;
-CDamageAtomicModelInfo.h:17:VALIDATE_OFFSET(CDamageAtomicModelInfo, m_pDamagedAtomic, 0x20);
-CDamageAtomicModelInfo.h:18:VALIDATE_SIZE(CDamageAtomicModelInfo, 0x24);
-CDamageManager.cpp:7:#include "CDamageManager.h"
-CDamageManager.cpp:9:// Converted from thiscall bool CDamageManager::GetComponentGroup(tComponent component, tComponentGroup* group, uchar *damageCompId) 0x6C2040
-CDamageManager.cpp:10:bool CDamageManager::GetComponentGroup(tComponent component, tComponentGroup* group, unsigned char* damageCompId)
-CDamageManager.cpp:12:    return ((bool(__thiscall *)(CDamageManager*, tComponent, tComponentGroup*, unsigned char*))0x6C2040)(this, component, group, damageCompId);
-CDamageManager.cpp:15:// Converted from thiscall void CDamageManager::ResetDamageStatus(void) 0x6C20E0
-CDamageManager.cpp:16:void CDamageManager::ResetDamageStatus()
-CDamageManager.cpp:18:    ((void(__thiscall *)(CDamageManager*))0x6C20E0)(this);
-CDamageManager.cpp:21:// Converted from thiscall void CDamageManager::SetLightStatus(eLights light, uint status) 0x6C2100
-CDamageManager.cpp:22:void CDamageManager::SetLightStatus(eLights light, unsigned int status)
-CDamageManager.cpp:24:    ((void(__thiscall *)(CDamageManager*, eLights, unsigned int))0x6C2100)(this, light, status);
-CDamageManager.cpp:27:// Converted from thiscall uint CDamageManager::GetLightStatus(eLights light) 0x6C2130
-CDamageManager.cpp:28:unsigned int CDamageManager::GetLightStatus(eLights light)
-CDamageManager.cpp:30:    return ((unsigned int(__thiscall *)(CDamageManager*, eLights))0x6C2130)(this, light);
-CDamageManager.cpp:33:// Converted from thiscall void CDamageManager::SetPanelStatus(int panel, uint status) 0x6C2150
-CDamageManager.cpp:34:void CDamageManager::SetPanelStatus(int panel, unsigned int status)
-CDamageManager.cpp:36:    ((void(__thiscall *)(CDamageManager*, int, unsigned int))0x6C2150)(this, panel, status);
-CDamageManager.cpp:39:// Converted from thiscall uint CDamageManager::GetPanelStatus(int) 0x6C2180
-CDamageManager.cpp:40:unsigned int CDamageManager::GetPanelStatus(int arg0)
-CDamageManager.cpp:42:    return ((unsigned int(__thiscall *)(CDamageManager*, int))0x6C2180)(this, arg0);
-CDamageManager.cpp:45:// Converted from thiscall void CDamageManager::SetWheelStatus(int wheel, uint status) 0x6C21A0
-CDamageManager.cpp:46:void CDamageManager::SetWheelStatus(int wheel, unsigned int status)
-CDamageManager.cpp:48:    ((void(__thiscall *)(CDamageManager*, int, unsigned int))0x6C21A0)(this, wheel, status);
-CDamageManager.cpp:51:// Converted from thiscall uint CDamageManager::GetWheelStatus(int wheel) 0x6C21B0
-CDamageManager.cpp:52:unsigned int CDamageManager::GetWheelStatus(int wheel)
-CDamageManager.cpp:54:    return ((unsigned int(__thiscall *)(CDamageManager*, int))0x6C21B0)(this, wheel);
-CDamageManager.cpp:57:// Converted from thiscall void CDamageManager::SetDoorStatus(eDoors door, uint status) 0x6C21C0
-CDamageManager.cpp:58:void CDamageManager::SetDoorStatus(eDoors door, unsigned int status)
-CDamageManager.cpp:60:    ((void(__thiscall *)(CDamageManager*, eDoors, unsigned int))0x6C21C0)(this, door, status);
-CDamageManager.cpp:63:// Converted from thiscall void CDamageManager::SetDoorStatus(int doorNodeIndex, uint status) 0x6C21E0
-CDamageManager.cpp:64:void CDamageManager::SetDoorStatus(int doorNodeIndex, unsigned int status)
-CDamageManager.cpp:66:    ((void(__thiscall *)(CDamageManager*, int, unsigned int))0x6C21E0)(this, doorNodeIndex, status);
-CDamageManager.cpp:69:// Converted from thiscall uint CDamageManager::GetDoorStatus(int doorNodeIndex) 0x6C2230
-CDamageManager.cpp:70:unsigned int CDamageManager::GetDoorStatus(int doorNodeIndex)
-CDamageManager.cpp:72:    return ((unsigned int(__thiscall *)(CDamageManager*, int))0x6C2250)(this, doorNodeIndex);
-CDamageManager.cpp:75:// Converted from thiscall uint CDamageManager::GetDoorStatus(eDoors door) 0x6C2250
-CDamageManager.cpp:76:unsigned int CDamageManager::GetDoorStatus(eDoors door)
-CDamageManager.cpp:78:    return ((unsigned int(__thiscall *)(CDamageManager*, eDoors))0x6C2230)(this, door);
-CDamageManager.cpp:81:// Converted from thiscall void CDamageManager::SetEngineStatus(uint status) 0x6C22A0
-CDamageManager.cpp:82:void CDamageManager::SetEngineStatus(unsigned int status)
-CDamageManager.cpp:84:    ((void(__thiscall *)(CDamageManager*, unsigned int))0x6C22A0)(this, status);
-CDamageManager.cpp:87:// Converted from thiscall uint CDamageManager::GetEngineStatus(void) 0x6C22C0
-CDamageManager.cpp:88:unsigned int CDamageManager::GetEngineStatus()
-CDamageManager.cpp:90:    return ((unsigned int(__thiscall *)(CDamageManager*))0x6C22C0)(this);
-CDamageManager.cpp:93:// Converted from thiscall void CDamageManager::SetAeroplaneCompStatus(int component, uint status) 0x6C22D0
-CDamageManager.cpp:94:void CDamageManager::SetAeroplaneCompStatus(int component, unsigned int status)
-CDamageManager.cpp:96:    ((void(__thiscall *)(CDamageManager*, int, unsigned int))0x6C22D0)(this, component, status);
-CDamageManager.cpp:99:// Converted from thiscall uint CDamageManager::GetAeroplaneCompStatus(int component) 0x6C2300
-CDamageManager.cpp:100:unsigned int CDamageManager::GetAeroplaneCompStatus(int component)
-CDamageManager.cpp:102:    return ((unsigned int(__thiscall *)(CDamageManager*, int))0x6C2300)(this, component);
-CDamageManager.cpp:105:// Converted from thiscall bool CDamageManager::ProgressDoorDamage(uchar damageCompId, CAutomobile *car) 0x6C2320
-CDamageManager.cpp:106:bool CDamageManager::ProgressDoorDamage(unsigned char damageCompId, CAutomobile* car)
-CDamageManager.cpp:108:    return ((bool(__thiscall *)(CDamageManager*, unsigned char, CAutomobile*))0x6C2320)(this, damageCompId, car);
-CDamageManager.cpp:111:// Converted from thiscall bool CDamageManager::ProgressEngineDamage(float) 0x6C23B0
-CDamageManager.cpp:112:bool CDamageManager::ProgressEngineDamage(float arg0)
-CDamageManager.cpp:114:    return ((bool(__thiscall *)(CDamageManager*, float))0x6C23B0)(this, arg0);
-CDamageManager.cpp:117:// Converted from thiscall bool CDamageManager::ProgressPanelDamage(uchar panel) 0x6C23C0
-CDamageManager.cpp:118:bool CDamageManager::ProgressPanelDamage(unsigned char panel)
-CDamageManager.cpp:120:    return ((bool(__thiscall *)(CDamageManager*, unsigned char))0x6C23C0)(this, panel);
-CDamageManager.cpp:123:// Converted from thiscall bool CDamageManager::ProgressWheelDamage(uchar wheel) 0x6C2440
-CDamageManager.cpp:124:bool CDamageManager::ProgressWheelDamage(unsigned char wheel)
-CDamageManager.cpp:126:    return ((bool(__thiscall *)(CDamageManager*, unsigned char))0x6C2440)(this, wheel);
-CDamageManager.cpp:129:// Converted from thiscall bool CDamageManager::ProgressAeroplaneDamage(uchar component) 0x6C2460
-CDamageManager.cpp:130:bool CDamageManager::ProgressAeroplaneDamage(unsigned char component)
-CDamageManager.cpp:132:    return ((bool(__thiscall *)(CDamageManager*, unsigned char))0x6C2460)(this, component);
-CDamageManager.cpp:135:// Converted from thiscall bool CDamageManager::ApplyDamage(CAutomobile *car, tComponent component, float intensity, float) 0x6C24B0
-CDamageManager.cpp:136:bool CDamageManager::ApplyDamage(CAutomobile* car, tComponent component, float intensity, float arg3)
-CDamageManager.cpp:138:    return ((bool(__thiscall *)(CDamageManager*, CAutomobile*, tComponent, float, float))0x6C24B0)(this, car, component, intensity, arg3);
-CDamageManager.cpp:141:// Converted from thiscall void CDamageManager::FuckCarCompletely(bool skipWheels) 0x6C25D0
-CDamageManager.cpp:142:void CDamageManager::FuckCarCompletely(bool skipWheels)
-CDamageManager.cpp:144:    ((void(__thiscall *)(CDamageManager*, bool))0x6C25D0)(this, skipWheels);
-CDamageManager.cpp:147:// Converted from thiscall int CDamageManager::GetCarNodeIndexFromPanel(ePanels panel) 0x6C26A0
-CDamageManager.cpp:148:int CDamageManager::GetCarNodeIndexFromPanel(ePanels panel)
-CDamageManager.cpp:150:    return ((int(__thiscall *)(CDamageManager*, ePanels))0x6C26A0)(this, panel);
-CDamageManager.cpp:153:// Converted from thiscall int CDamageManager::GetCarNodeIndexFromDoor(eDoors door) 0x6C26F0
-CDamageManager.cpp:154:int CDamageManager::GetCarNodeIndexFromDoor(eDoors door)
-CDamageManager.cpp:156:    return ((int(__thiscall *)(CDamageManager*, eDoors))0x6C26F0)(this, door);
-CDamageManager.cpp:159:// Converted from thiscall void CDamageManager::Reset(void) 0x6A04E0
-CDamageManager.cpp:160:void CDamageManager::Reset()
-CDamageManager.cpp:162:    ((void(__thiscall *)(CDamageManager*))0x6A04E0)(this);
-CDamageManager.h:13:enum PLUGIN_API eDamageState {
-CDamageManager.h:16:    DAMSTATE_DAMAGED = 2,
-CDamageManager.h:17:    DAMSTATE_OPENED_DAMAGED = 3,
-CDamageManager.h:84:class PLUGIN_API CDamageManager {
-CDamageManager.h:86:    float m_fWheelDamageEffect;
-CDamageManager.h:121:    // damageCompId - eLights/ePanel/... id for this component
-CDamageManager.h:122:    bool GetComponentGroup(tComponent component, tComponentGroup* group, unsigned char* damageCompId);
-CDamageManager.h:123:    void ResetDamageStatus();
-CDamageManager.h:140:    // damageCompId - eLights/ePanel/... id for this component
-CDamageManager.h:141:    bool ProgressDoorDamage(unsigned char damageCompId, CAutomobile* car);
-CDamageManager.h:143:    bool ProgressEngineDamage(float arg0);
-CDamageManager.h:144:    // Set next level of damage to panel
-CDamageManager.h:145:    bool ProgressPanelDamage(unsigned char panel);
-CDamageManager.h:146:    // Set next level of damage to panel
-CDamageManager.h:147:    bool ProgressWheelDamage(unsigned char wheel);
-CDamageManager.h:148:    // Set next level of damage to aeroplane component
-CDamageManager.h:149:    bool ProgressAeroplaneDamage(unsigned char component);
-CDamageManager.h:150:    bool ApplyDamage(CAutomobile* car, tComponent component, float intensity, float arg3);
-CDamageManager.h:158:VALIDATE_OFFSET(CDamageManager, m_fWheelDamageEffect, 0x0);
-CDamageManager.h:159:VALIDATE_OFFSET(CDamageManager, m_nEngineStatus, 0x4);
-CDamageManager.h:160:VALIDATE_OFFSET(CDamageManager, m_anWheelsStatus, 0x5);
-CDamageManager.h:161:VALIDATE_OFFSET(CDamageManager, m_nRightRearWheelsStatus, 0x5);
-CDamageManager.h:162:VALIDATE_OFFSET(CDamageManager, m_nRightFrontWheelsStatus, 0x6);
-CDamageManager.h:163:VALIDATE_OFFSET(CDamageManager, m_nLeftRearWheelsStatus, 0x7);
-CDamageManager.h:164:VALIDATE_OFFSET(CDamageManager, m_nLeftFrontWheelsStatus, 0x8);
-CDamageManager.h:165:VALIDATE_OFFSET(CDamageManager, m_anDoorsStatus, 0x9);
-CDamageManager.h:166:VALIDATE_OFFSET(CDamageManager, m_nBonnetStatus, 0x9);
-CDamageManager.h:167:VALIDATE_OFFSET(CDamageManager, m_nBootStatus, 0xA);
-CDamageManager.h:168:VALIDATE_OFFSET(CDamageManager, m_nLeftFrontDoorStatus, 0xB);
-CDamageManager.h:169:VALIDATE_OFFSET(CDamageManager, m_nRightFrontDoorStatus, 0xC);
-CDamageManager.h:170:VALIDATE_OFFSET(CDamageManager, m_nLeftRearDoorStatus, 0xD);
-CDamageManager.h:171:VALIDATE_OFFSET(CDamageManager, m_nRightRearDoorStatus, 0xE);
-CDamageManager.h:172:VALIDATE_OFFSET(CDamageManager, m_nLightsStatus, 0x10);
-CDamageManager.h:173:VALIDATE_OFFSET(CDamageManager, m_nPanelsStatus, 0x14);
-CDamageManager.h:174:VALIDATE_SIZE(CDamageManager, 0x18);
-CDarkel.cpp:12:eWeaponType& CDarkel::InterruptedWeaponType = *(eWeaponType*)0x96A6D8;
-CDarkel.cpp:13:eWeaponType& CDarkel::InterruptedWeaponTypeSelected = *(eWeaponType*)0x96A6DC;
-CDarkel.cpp:16:eWeaponType& CDarkel::WeaponType = *(eWeaponType*)0x96A700;
-CDarkel.cpp:54:// Converted from cdecl void CDarkel::StartFrenzy(eWeaponType weapontype,int Timelimit,ushort KillsNeeded,int ModelToKill,ushort *pStartMessage,int ModelToKill2, int ModelToKill3,int ModelToKill4,bool bStandardSoundAndMessages, bool bNeedHeadShot) 0x43D3B0 
-CDarkel.cpp:55:void CDarkel::StartFrenzy(eWeaponType weapontype, int Timelimit, unsigned short KillsNeeded, int ModelToKill, unsigned short* pStartMessage, int ModelToKill2, int ModelToKill3, int ModelToKill4, bool bStandardSoundAndMessages, bool bNeedHeadShot) {
-CDarkel.cpp:56:	plugin::Call<0x43D3B0, eWeaponType, int, unsigned short, int, unsigned short*, int, int, int, bool, bool>(weapontype, Timelimit, KillsNeeded, ModelToKill, pStartMessage, ModelToKill2, ModelToKill3, ModelToKill4, bStandardSoundAndMessages, bNeedHeadShot);
-CDarkel.cpp:79:// Converted from cdecl bool CDarkel::CheckDamagedWeaponType(int damageWeaponID, int expectedDamageWeaponID) 0x43D9E0 
-CDarkel.cpp:80:bool CDarkel::CheckDamagedWeaponType(int damageWeaponID, int expectedDamageWeaponID) {
-CDarkel.cpp:81:	return plugin::CallAndReturn<bool, 0x43D9E0, int, int>(damageWeaponID, expectedDamageWeaponID);
-CDarkel.cpp:99:// Converted from cdecl void CDarkel::RegisterKillByPlayer(CPed const*pKilledPed,eWeaponType damageWeaponID,bool bHeadShotted,int arg4) 0x43DCD0 
-CDarkel.cpp:100:void CDarkel::RegisterKillByPlayer(CPed const* pKilledPed, eWeaponType damageWeaponID, bool bHeadShotted, int arg4) {
-CDarkel.cpp:101:	plugin::Call<0x43DCD0, CPed const*, eWeaponType, bool, int>(pKilledPed, damageWeaponID, bHeadShotted, arg4);
-CDarkel.h:17:	static eWeaponType& InterruptedWeaponType;				
-CDarkel.h:18:	static eWeaponType& InterruptedWeaponTypeSelected;		
-CDarkel.h:21:	static eWeaponType& WeaponType;				
-CDarkel.h:31:	static void StartFrenzy(eWeaponType weapontype, int Timelimit, unsigned short KillsNeeded, int ModelToKill, unsigned short* pStartMessage, int ModelToKill2, int ModelToKill3, int ModelToKill4, bool bStandardSoundAndMessages, bool bNeedHeadShot);
-CDarkel.h:36:	static bool CheckDamagedWeaponType(int damageWeaponID, int expectedDamageWeaponID);
-CDarkel.h:40:	static void RegisterKillByPlayer(CPed const* pKilledPed, eWeaponType damageWeaponID, bool bHeadShotted, int arg4);
-CEntity.h:39:    bool bRenderDamaged : 1;       // use damaged LOD models for objects with applicable damage
-CExplosion.h:39:    float          m_fDamagePercentage;
-CExplosion.h:75:VALIDATE_OFFSET(CExplosion, m_fDamagePercentage, 0x24);
-CFileLoader.cpp:371:int addrof(GetNameAndDamage) = ADDRESS_BY_VERSION(0x5370A0, 0, 0, 0, 0, 0);
-CFileLoader.cpp:372:int gaddrof(GetNameAndDamage) = GLOBAL_ADDRESS_BY_VERSION(0x5370A0, 0, 0, 0, 0, 0);
-CFileLoader.cpp:374:void GetNameAndDamage(char const *nodeName, char *outName, bool &outDamage) {
-CFileLoader.cpp:375:    plugin::CallDynGlobal<char const *, char *, bool &>(gaddrof(GetNameAndDamage), nodeName, outName, outDamage);
-CFileLoader.h:83:SUPPORTED_10US void GetNameAndDamage(char const *nodeName, char *outName, bool &outDamage);
-CModelInfo.cpp:28:CDamageAtomicModelInfo* CModelInfo::AddDamageAtomicModel(int modelId) {
-CModelInfo.cpp:29:    return ((CDamageAtomicModelInfo* (__cdecl*)(int))0x4C6650)(modelId);
-CModelInfo.h:12:#include "CDamageAtomicModelInfo.h"
-CModelInfo.h:34:    static CDamageAtomicModelInfo* AddDamageAtomicModel(int modelId);
-CObject.cpp:151:// Converted from thiscall void CObject::ObjectDamage(float damage,CVector *fxOrigin,CVector *fxDirection,CEntity *damager,eWeaponType weaponType) 0x5A0D90
-CObject.cpp:152:void CObject::ObjectDamage(float damage, CVector* fxOrigin, CVector* fxDirection, CEntity* damager, eWeaponType weaponType) {
-CObject.cpp:153:    ((void(__thiscall *)(CObject*, float, CVector*, CVector*, CEntity*, eWeaponType))0x5A0D90)(this, damage, fxOrigin, fxDirection, damager, weaponType);
-CObject.cpp:161:// Converted from thiscall void CObject::ObjectFireDamage(float damage,CEntity *damager) 0x5A1580
-CObject.cpp:162:void CObject::ObjectFireDamage(float damage, CEntity* damager) {
-CObject.cpp:163:    ((void(__thiscall *)(CObject*, float, CEntity*))0x5A1580)(this, damage, damager);
-CObject.h:65:    unsigned char   m_nColDamageEffect;
-CObject.h:66:    unsigned char   m_nStoredColDamageEffect;
-CObject.h:69:    unsigned char   m_nLastWeaponDamage;
-CObject.h:85:    float           m_fBurnDamage;
-CObject.h:118:    void ObjectDamage(float damage, CVector* fxOrigin, CVector* fxDirection, CEntity* damager, eWeaponType weaponType);
-CObject.h:120:    void ObjectFireDamage(float damage, CEntity* damager);
-CObject.h:141:VALIDATE_OFFSET(CObject, m_nColDamageEffect, 0x144);
-CObject.h:142:VALIDATE_OFFSET(CObject, m_nStoredColDamageEffect, 0x145);
-CObject.h:145:VALIDATE_OFFSET(CObject, m_nLastWeaponDamage, 0x148);
-CObject.h:159:VALIDATE_OFFSET(CObject, m_fBurnDamage, 0x178);
-CObjectInfo.h:21:	float          m_fColDamageMultiplier;
-CObjectInfo.h:22:	unsigned char  m_nColDamageEffect;
-CObjectInfo.h:41:VALIDATE_OFFSET(CObjectInfo, m_fColDamageMultiplier, 0x18);
-CObjectInfo.h:42:VALIDATE_OFFSET(CObjectInfo, m_nColDamageEffect, 0x1C);
-CPed.cpp:212:// Converted from thiscall int CPed::GetWeaponSlot(eWeaponType weaponType) 0x5DF200
-CPed.cpp:213:int CPed::GetWeaponSlot(eWeaponType weaponType)
-CPed.cpp:215:	return ((int (__thiscall *)(CPed*, eWeaponType))0x5DF200)(this, weaponType);
-CPed.cpp:218:// Converted from thiscall void CPed::GrantAmmo(eWeaponType weaponType,uint ammo) 0x5DF220
-CPed.cpp:219:void CPed::GrantAmmo(eWeaponType weaponType, unsigned int ammo)
-CPed.cpp:221:	((void (__thiscall *)(CPed*, eWeaponType, unsigned int))0x5DF220)(this, weaponType, ammo);
-CPed.cpp:224:// Converted from thiscall void CPed::SetAmmo(eWeaponType weaponType,uint ammo) 0x5DF290
-CPed.cpp:225:void CPed::SetAmmo(eWeaponType weaponType, unsigned int ammo)
-CPed.cpp:227:	((void (__thiscall *)(CPed*, eWeaponType, unsigned int))0x5DF290)(this, weaponType, ammo);
-CPed.cpp:230:// Converted from thiscall bool CPed::DoWeHaveWeaponAvailable(eWeaponType weaponType) 0x5DF300
-CPed.cpp:231:bool CPed::DoWeHaveWeaponAvailable(eWeaponType weaponType)
-CPed.cpp:233:	return ((bool (__thiscall *)(CPed*, eWeaponType))0x5DF300)(this, weaponType);
-CPed.cpp:476:// Converted from thiscall char CPed::GetWeaponSkill(eWeaponType weaponType) 0x5E3B60
-CPed.cpp:477:char CPed::GetWeaponSkill(eWeaponType weaponType)
-CPed.cpp:479:	return ((char (__thiscall *)(CPed*, eWeaponType))0x5E3B60)(this, weaponType);
-CPed.cpp:482:// Converted from thiscall void CPed::SetWeaponSkill(eWeaponType weaponType,char skill) 0x5E3C10
-CPed.cpp:483:void CPed::SetWeaponSkill(eWeaponType weaponType, char skill)
-CPed.cpp:485:	((void (__thiscall *)(CPed*, eWeaponType, char))0x5E3C10)(this, weaponType, skill);
-CPed.cpp:572:// Converted from thiscall void CPed::GiveWeapon(eWeaponType weaponType,uint ammo,bool likeUnused) 0x5E6080
-CPed.cpp:573:void CPed::GiveWeapon(eWeaponType weaponType, unsigned int ammo, bool likeUnused)
-CPed.cpp:575:	((void (__thiscall *)(CPed*, eWeaponType, unsigned int, bool))0x5E6080)(this, weaponType, ammo, likeUnused);
-CPed.cpp:584:// Converted from thiscall void CPed::SetCurrentWeapon(eWeaponType weaponType) 0x5E6280
-CPed.cpp:585:void CPed::SetCurrentWeapon(eWeaponType weaponType)
-CPed.cpp:587:	((void (__thiscall *)(CPed*, eWeaponType))0x5E6280)(this, weaponType);
-CPed.cpp:590:// Converted from thiscall void CPed::ClearWeapon(eWeaponType weaponType) 0x5E62B0
-CPed.cpp:591:void CPed::ClearWeapon(eWeaponType weaponType)
-CPed.cpp:593:	((void (__thiscall *)(CPed*, eWeaponType))0x5E62B0)(this, weaponType);
-CPed.cpp:662:// Converted from thiscall CEntity* CPed::AttachPedToEntity(CEntity *entity,CVector offset,ushort,float,eWeaponType weaponType) 0x5E7CB0
-CPed.cpp:663:CEntity* CPed::AttachPedToEntity(CEntity* entity, CVector offset, unsigned short arg2, float arg3, eWeaponType weaponType)
-CPed.cpp:665:	return ((CEntity* (__thiscall *)(CPed*, CEntity*, CVector, unsigned short, float, eWeaponType))0x5E7CB0)(this, entity, offset, arg2, arg3, weaponType);
-CPed.cpp:668:// Converted from thiscall CEntity* CPed::AttachPedToBike(CEntity *entity,CVector offset,ushort,float,float,eWeaponType weaponType) 0x5E7E60
-CPed.cpp:669:CEntity* CPed::AttachPedToBike(CEntity* entity, CVector offset, unsigned short arg2, float arg3, float arg4, eWeaponType weaponType)
-CPed.cpp:671:	return ((CEntity* (__thiscall *)(CPed*, CEntity*, CVector, unsigned short, float, float, eWeaponType))0x5E7E60)(this, entity, offset, arg2, arg3, arg4, weaponType);
-CPed.cpp:698:// Converted from thiscall void CPed::GiveDelayedWeapon(eWeaponType weaponType,uint ammo) 0x5E89B0
-CPed.cpp:699:void CPed::GiveDelayedWeapon(eWeaponType weaponType, unsigned int ammo)
-CPed.cpp:701:	((void (__thiscall *)(CPed*, eWeaponType, unsigned int))0x5E89B0)(this, weaponType, ammo);
-CPed.h:26:#include "eWeaponType.h"
-CPed.h:39:    STYLE_KNIFE,
-CPed.h:135:    bool bPushedAlongByCar : 1; // ped is getting pushed along by car collision (so don't take damage from horz velocity)
-CPed.h:150:    bool bKilledByStealth : 1;
-CPed.h:178:    bool bUpperBodyDamageAnimsOnly : 1;
-CPed.h:222:    eMoveState          m_nSwimmingMoveState; // used for swimming in CTaskSimpleSwim::ProcessPed
-CPed.h:244:    eWeaponType         m_nSavedWeapon; // when we need to hide ped weapon, we save it temporary here
-CPed.h:245:    eWeaponType         m_nDelayedWeapon; // 'delayed' weapon is like an additional weapon, f.e., simple cop has a nitestick as current and pistol as delayed weapons
-CPed.h:272:    eWeaponType         m_nLastWeaponDamage;
-CPed.h:273:    CEntity*            m_pLastEntityDamage;
-CPed.h:329:    int GetWeaponSlot(eWeaponType weaponType);
-CPed.h:330:    void GrantAmmo(eWeaponType weaponType, unsigned int ammo);
-CPed.h:331:    void SetAmmo(eWeaponType weaponType, unsigned int ammo);
-CPed.h:332:    bool DoWeHaveWeaponAvailable(eWeaponType weaponType);
-CPed.h:376:    char GetWeaponSkill(eWeaponType weaponType);
-CPed.h:377:    void SetWeaponSkill(eWeaponType weaponType, char skill);
-CPed.h:393:    void GiveWeapon(eWeaponType weaponType, unsigned int ammo, bool likeUnused);
-CPed.h:395:    void SetCurrentWeapon(eWeaponType weaponType);
-CPed.h:396:    void ClearWeapon(eWeaponType weaponType);
-CPed.h:408:    CEntity* AttachPedToEntity(CEntity* entity, CVector offset, unsigned short arg2, float arg3, eWeaponType weaponType);
-CPed.h:409:    CEntity* AttachPedToBike(CEntity* entity, CVector offset, unsigned short arg2, float arg3, float arg4, eWeaponType weaponType);
-CPed.h:414:    void GiveDelayedWeapon(eWeaponType weaponType, unsigned int ammo);
-CPed.h:520:VALIDATE_OFFSET(CPed, m_nLastWeaponDamage, 0x760);
-CPed.h:521:VALIDATE_OFFSET(CPed, m_pLastEntityDamage, 0x764);
-CPedDamageResponse.h:10:class CPedDamageResponse {
-CPedDamageResponse.h:12:    float m_fDamageHealth;
-CPedDamageResponse.h:13:    float m_fDamageArmor;
-CPedDamageResponse.h:16:    bool  m_bDamageCalculated;
-CPedDamageResponse.h:19:    inline CPedDamageResponse() {
-CPedDamageResponse.h:20:        m_fDamageHealth = 0.0f;
-CPedDamageResponse.h:21:        m_fDamageArmor = 0.0f;
-CPedDamageResponse.h:24:        m_bDamageCalculated = false;
-CPedDamageResponse.h:28:VALIDATE_OFFSET(CPedDamageResponse, m_fDamageHealth, 0x0);
-CPedDamageResponse.h:29:VALIDATE_OFFSET(CPedDamageResponse, m_fDamageArmor, 0x4);
-CPedDamageResponse.h:30:VALIDATE_OFFSET(CPedDamageResponse, m_bHealthZero, 0x8);
-CPedDamageResponse.h:31:VALIDATE_OFFSET(CPedDamageResponse, m_bForceDeath, 0x9);
-CPedDamageResponse.h:32:VALIDATE_OFFSET(CPedDamageResponse, m_bDamageCalculated, 0xA);
-CPedDamageResponse.h:33:VALIDATE_OFFSET(CPedDamageResponse, m_bCheckIfAffectsPed, 0xB);
-CPedDamageResponse.h:34:VALIDATE_SIZE(CPedDamageResponse, 0xC);CPedDamageResponseCalculator.cpp:7:#include "CPedDamageResponseCalculator.h"
-CPedDamageResponseCalculator.cpp:9:float& CPedDamageResponseCalculator::ms_damageFactor = *(float*)0x8A6260; // 5555.5498
-CPedDamageResponseCalculator.cpp:12:CPedDamageResponseCalculator::CPedDamageResponseCalculator(CEntity* entity, float fDamage, eWeaponType weaponType, uint8_t bodyPart, bool bSpeak) {
-CPedDamageResponseCalculator.cpp:13:    ((void(__thiscall*)(CPedDamageResponseCalculator*, CEntity*, float, eWeaponType, uint8_t, bool))0x4AD3F0)(this, entity, fDamage, weaponType, bodyPart, bSpeak);
-CPedDamageResponseCalculator.cpp:17:void CPedDamageResponseCalculator::AccountForPedDamageStats(CPed* ped, CPedDamageResponse& response) {
-CPedDamageResponseCalculator.cpp:18:    plugin::CallMethod<0x4AD430, CPedDamageResponseCalculator*, CPed*, CPedDamageResponse&>(this, ped, response);
-CPedDamageResponseCalculator.cpp:22:void CPedDamageResponseCalculator::AccountForPedArmour(CPed* ped, CPedDamageResponse& response) {
-CPedDamageResponseCalculator.cpp:23:    plugin::CallMethod<0x4AD550, CPedDamageResponseCalculator*, CPed*, CPedDamageResponse&>(this, ped, response);
-CPedDamageResponseCalculator.cpp:27:bool CPedDamageResponseCalculator::ComputeWillForceDeath(CPed* ped, CPedDamageResponse& response) {
-CPedDamageResponseCalculator.cpp:28:    return plugin::CallMethodAndReturn<bool, 0x4AD610, CPedDamageResponseCalculator*, CPed*, CPedDamageResponse&>(this, ped, response);
-CPedDamageResponseCalculator.cpp:32:void CPedDamageResponseCalculator::ComputeWillKillPed(CPed* ped, CPedDamageResponse& response, bool bSpeak) {
-CPedDamageResponseCalculator.cpp:33:    plugin::CallMethod<0x4B3210, CPedDamageResponseCalculator*>(this, ped, response, bSpeak);
-CPedDamageResponseCalculator.cpp:37:void CPedDamageResponseCalculator::ComputeDamageResponse(CPed* ped, CPedDamageResponse& response, bool bSpeak)
-CPedDamageResponseCalculator.cpp:39:    plugin::CallMethod<0x4B5AC0, CPedDamageResponseCalculator*, CPed*, CPedDamageResponse&, bool>(this, ped, response, bSpeak);
-CPedDamageResponseCalculator.h:10:#include "CPedDamageResponse.h"
-CPedDamageResponseCalculator.h:11:#include "eWeaponType.h"
-CPedDamageResponseCalculator.h:16:class PLUGIN_API CPedDamageResponseCalculator
-CPedDamageResponseCalculator.h:19:    const CEntity* m_pDamager;
-CPedDamageResponseCalculator.h:20:    float          m_fDamageFactor;
-CPedDamageResponseCalculator.h:22:    eWeaponType    m_weaponType;
-CPedDamageResponseCalculator.h:25:    static float& ms_damageFactor;
-CPedDamageResponseCalculator.h:27:    CPedDamageResponseCalculator(CEntity* entity, float fDamage, eWeaponType weaponType, uint8_t bodyPart, bool bSpeak);
-CPedDamageResponseCalculator.h:30:    void AccountForPedDamageStats(CPed* ped, CPedDamageResponse& response);
-CPedDamageResponseCalculator.h:31:    void AccountForPedArmour(CPed* ped, CPedDamageResponse& response);
-CPedDamageResponseCalculator.h:32:    bool ComputeWillForceDeath(CPed* ped, CPedDamageResponse& response);
-CPedDamageResponseCalculator.h:33:    void ComputeWillKillPed(CPed* ped, CPedDamageResponse& response, bool bSpeak);
-CPedDamageResponseCalculator.h:34:    void ComputeDamageResponse(CPed* ped, CPedDamageResponse& response, bool bSpeak);
-CPedDamageResponseCalculator.h:36:VALIDATE_OFFSET(CPedDamageResponseCalculator, m_pDamager, 0x0);
-CPedDamageResponseCalculator.h:37:VALIDATE_OFFSET(CPedDamageResponseCalculator, m_fDamageFactor, 0x4);
-CPedDamageResponseCalculator.h:38:VALIDATE_OFFSET(CPedDamageResponseCalculator, m_bodyPart, 0x8);
-CPedDamageResponseCalculator.h:39:VALIDATE_OFFSET(CPedDamageResponseCalculator, m_weaponType, 0xC);
-CPedDamageResponseCalculator.h:40:VALIDATE_OFFSET(CPedDamageResponseCalculator, m_bSpeak, 0x10);
-CPedDamageResponseCalculator.h:41:VALIDATE_SIZE(CPedDamageResponseCalculator, 0x14);CPedIntelligence.cpp:81:// Converted from thiscall CTaskSimpleFight* CPedIntelligence::GetTaskFighting(void) 0x600F30 
-CPedIntelligence.cpp:82:CTaskSimpleFight* CPedIntelligence::GetTaskFighting() {
-CPedIntelligence.cpp:83:	return plugin::CallMethodAndReturn<CTaskSimpleFight*, 0x600F30, CPedIntelligence *>(this);
-CPedIntelligence.cpp:216:// Converted from thiscall bool CPedIntelligence::TestForStealthKill(CPed *pPed,bool arg2) 0x601E00 
-CPedIntelligence.cpp:217:bool CPedIntelligence::TestForStealthKill(CPed* pPed, bool arg2) {
-CPedIntelligence.h:11:#include "CTaskManager.h"
-CPedIntelligence.h:21:#include "CTaskSimpleFight.h"
-CPedIntelligence.h:33:    CTaskManager       m_TaskMgr;
-CPedIntelligence.h:56:    CVector            m_vecLastPedPosDuringDamageEntity;
-CPedIntelligence.h:73:    CTaskSimpleFight* GetTaskFighting();
-CPedIntelligence.h:100:    bool TestForStealthKill(CPed* pPed, bool arg2);
-CPedIntelligence.h:137:VALIDATE_OFFSET(CPedIntelligence, m_vecLastPedPosDuringDamageEntity, 0x27C);
-CPhysical.cpp:32:// Converted from thiscall void CPhysical::SetDamagedPieceRecord(float damageIntensity,CEntity *damagingEntity,CColPoint &colPoint,float distanceMult) 0x5428C0
-CPhysical.cpp:33:void CPhysical::SetDamagedPieceRecord(float damageIntensity, CEntity* damagingEntity, CColPoint& colPoint, float distanceMult)
-CPhysical.cpp:35:	((void (__thiscall *)(CPhysical*, float, CEntity*, CColPoint&, float))0x5428C0)(this, damageIntensity, damagingEntity, colPoint, distanceMult);
-CPhysical.cpp:125:bool CPhysical::ApplyCollision(CEntity* entity, CColPoint& colPoint, float& outDamageIntensity)
-CPhysical.cpp:127:	return ((bool (__thiscall *)(CPhysical*, CEntity*, CColPoint&, float&))0x5435C0)(this, entity, colPoint, outDamageIntensity);
-CPhysical.cpp:131:bool CPhysical::ApplySoftCollision(CEntity* entity, CColPoint& colPoint, float& outDamageIntensity)
-CPhysical.cpp:133:	return ((bool (__thiscall *)(CPhysical*, CEntity*, CColPoint&, float&))0x543890)(this, entity, colPoint, outDamageIntensity);
-CPhysical.cpp:190:// Converted from thiscall bool CPhysical::CanPhysicalBeDamaged(eWeaponType weapon,bool *) 0x5448B0
-CPhysical.cpp:191:bool CPhysical::CanPhysicalBeDamaged(eWeaponType weapon, bool* bDamagedDueToFireOrExplosionOrBullet)
-CPhysical.cpp:193:	return ((bool (__thiscall *)(CPhysical*, eWeaponType, bool*))0x5448B0)(this, weapon, bDamagedDueToFireOrExplosionOrBullet);
-CPhysical.h:15:#include "eWeaponType.h"
-CPhysical.h:81:    float            m_fDamageIntensity;
-CPhysical.h:82:    CEntity*         m_pDamageEntity;
-CPhysical.h:103:    void SetDamagedPieceRecord(float damageIntensity, CEntity* damagingEntity, CColPoint& colPoint, float distanceMult);
-CPhysical.h:122:    bool ApplyCollision(CEntity* entity, CColPoint& colPoint, float& outDamageIntensity);
-CPhysical.h:123:    bool ApplySoftCollision(CEntity* entity, CColPoint& colPoint, float& outDamageIntensity);
-CPhysical.h:134:    bool CanPhysicalBeDamaged(eWeaponType weapon, bool* bDamagedDueToFireOrExplosionOrBullet);
-CPhysical.h:137:    bool ApplyCollisionAlt(CPhysical* entity, CColPoint& colPoint, float& damageIntensity, CVector& outVecMoveSpeed, CVector& outVecTurnSpeed);
-CPhysical.h:182:VALIDATE_OFFSET(CPhysical, m_fDamageIntensity, 0xD8);
-CPhysical.h:183:VALIDATE_OFFSET(CPhysical, m_pDamageEntity, 0xDC);
-CPickups.cpp:76:// Converted from cdecl int CPickups::GenerateNewOne_WeaponType(CVector coors,eWeaponType weaponType,uchar pickupType,uint ammo,bool isEmpty,char *message) 0x457380
-CPickups.cpp:77:int CPickups::GenerateNewOne_WeaponType(CVector coors, eWeaponType weaponType, unsigned char pickupType, unsigned int ammo, bool isEmpty, char* message) {
-CPickups.cpp:78:    return plugin::CallAndReturn<int, 0x457380, CVector, eWeaponType, unsigned char, unsigned int, bool, char*>(coors, weaponType, pickupType, ammo, isEmpty, message);
-CPickups.cpp:116:// Converted from cdecl int CPickups::ModelForWeapon(eWeaponType weaponType) 0x454AC0
-CPickups.cpp:117:int CPickups::ModelForWeapon(eWeaponType weaponType) {
-CPickups.cpp:118:    return plugin::CallAndReturn<int, 0x454AC0, eWeaponType>(weaponType);
-CPickups.cpp:141:// Converted from cdecl bool CPickups::PlayerCanPickUpThisWeaponTypeAtThisMoment(eWeaponType weaponType) 0x4554C0
-CPickups.cpp:142:bool CPickups::PlayerCanPickUpThisWeaponTypeAtThisMoment(eWeaponType weaponType) {
-CPickups.cpp:143:    return plugin::CallAndReturn<bool, 0x4554C0, eWeaponType>(weaponType);
-CPickups.cpp:191:// Converted from cdecl bool CPickups::TryToMerge_WeaponType(CVector posn,eWeaponType weaponType,uchar pickupType,uint ammo, bool) 0x4555A0
-CPickups.cpp:192:bool CPickups::TryToMerge_WeaponType(CVector posn, eWeaponType weaponType, unsigned char pickupType, unsigned int ammo, bool _IGNORED_ arg4) {
-CPickups.cpp:193:    return plugin::CallAndReturn<bool, 0x4555A0, CVector, eWeaponType, unsigned char, unsigned int, bool>(posn, weaponType, pickupType, ammo, arg4);
-CPickups.h:11:#include "eWeaponType.h"
-CPickups.h:45:    static int GenerateNewOne_WeaponType(CVector coors, eWeaponType weaponType, unsigned char pickupType, unsigned int ammo, bool isEmpty, char* message);
-CPickups.h:58:    static int ModelForWeapon(eWeaponType weaponType);
-CPickups.h:63:    static bool PlayerCanPickUpThisWeaponTypeAtThisMoment(eWeaponType weaponType);
-CPickups.h:77:    static bool TryToMerge_WeaponType(CVector posn, eWeaponType weaponType, unsigned char pickupType, unsigned int ammo, bool _IGNORED_ arg4);
-CPickups.h:80:    // returns weapon type (see eWeaponType)
-CPlane.cpp:21:float &PLANE_DAMAGE_WAVE_COUNTER_VAR             = *(float *)0x8D33E0;
-CPlane.cpp:22:float &PLANE_DAMAGE_THRESHHOLD                   = *(float *)0x8D33E4;
-CPlane.cpp:23:float &PLANE_DAMAGE_SCALE_MASS                   = *(float *)0x8D33E8;
-CPlane.cpp:24:float &PLANE_DAMAGE_DESTROY_THRESHHOLD           = *(float *)0x8D33EC;
-CPlane.h:134:extern float &PLANE_DAMAGE_WAVE_COUNTER_VAR;
-CPlane.h:135:extern float &PLANE_DAMAGE_THRESHHOLD;
-CPlane.h:136:extern float &PLANE_DAMAGE_SCALE_MASS;
-CPlane.h:137:extern float &PLANE_DAMAGE_DESTROY_THRESHHOLD;
-CPlayerData.h:42:    unsigned int m_bCanBeDamaged : 1;
-CPlayerPed.cpp:53:// Converted from thiscall bool CPlayerPed::DoesPlayerWantNewWeapon(eWeaponType weaponType, bool) 0x609710
-CPlayerPed.cpp:54:bool CPlayerPed::DoesPlayerWantNewWeapon(eWeaponType weaponType, bool arg1) {
-CPlayerPed.cpp:55:    return plugin::CallMethodAndReturn<bool, 0x609710, CPlayerPed *, eWeaponType, bool>(this, weaponType, arg1);
-CPlayerPed.cpp:153:// Converted from thiscall void CPlayerPed::MakeGroupRespondToPlayerTakingDamage(CEventDamage const& damageEvent) 0x60A110
-CPlayerPed.cpp:154:void CPlayerPed::MakeGroupRespondToPlayerTakingDamage(CEventDamage const& damageEvent) {
-CPlayerPed.cpp:155:    plugin::CallMethod<0x60A110, CPlayerPed *, CEventDamage const&>(this, damageEvent);
-CPlayerPed.cpp:208:// Converted from thiscall void CPlayerPed::MakeChangesForNewWeapon(eWeaponType weaponType) 0x60B460
-CPlayerPed.cpp:209:void CPlayerPed::MakeChangesForNewWeapon(eWeaponType weaponType) {
-CPlayerPed.cpp:210:    plugin::CallMethod<0x60B460, CPlayerPed *, eWeaponType>(this, weaponType);
-CPlayerPed.h:11:#include "eWeaponType.h"
-CPlayerPed.h:15:class CEventDamage;
-CPlayerPed.h:37:    bool DoesPlayerWantNewWeapon(eWeaponType weaponType, bool arg1);
-CPlayerPed.h:58:    void MakeGroupRespondToPlayerTakingDamage(CEventDamage const& damageEvent);
-CPlayerPed.h:69:    void MakeChangesForNewWeapon(eWeaponType weaponType);
-CProjectileInfo.cpp:34:// Converted from cdecl void CProjectileInfo::RemoveNotAdd(CEntity *creator,eWeaponType weaponType,CVector posn) 0x737C00
-CProjectileInfo.cpp:35:void CProjectileInfo::RemoveNotAdd(CEntity* creator, eWeaponType weaponType, CVector posn) {
-CProjectileInfo.cpp:36:    plugin::Call<0x737C00, CEntity*, eWeaponType, CVector>(creator, weaponType, posn);
-CProjectileInfo.cpp:39:// Converted from cdecl bool CProjectileInfo::AddProjectile(CEntity *creator,eWeaponType weaponType,CVector posn,float force,CVector *direction,CEntity *victim) 0x737C80
-CProjectileInfo.cpp:40:bool CProjectileInfo::AddProjectile(CEntity* creator, eWeaponType weaponType, CVector posn, float force, CVector* direction, CEntity* victim) {
-CProjectileInfo.cpp:41:    return plugin::CallAndReturn<bool, 0x737C80, CEntity*, eWeaponType, CVector, float, CVector*, CEntity*>(creator, weaponType, posn, force, direction, victim);
-CProjectileInfo.h:9:#include "eWeaponType.h"
-CProjectileInfo.h:17:	unsigned int  m_nWeaponType; // see eWeaponType
-CProjectileInfo.h:34:    static void RemoveNotAdd(CEntity* creator, eWeaponType weaponType, CVector posn);
-CProjectileInfo.h:35:    static bool AddProjectile(CEntity* creator, eWeaponType eWeaponType, CVector posn, float force, CVector* direction, CEntity* victim);
-CProjectileInfo.h:43:VALIDATE_OFFSET(CProjectileInfo, m_nWeaponType, 0x0);
-CRunningScript.h:11:#include "eWeaponType.h"
-CShotInfo.cpp:23:// Converted from cdecl bool CShotInfo::AddShot(CEntity *creator,eWeaponType weaponType,CVector origin,CVector target) 0x739C30
-CShotInfo.cpp:24:bool CShotInfo::AddShot(CEntity* creator, eWeaponType weaponType, CVector origin, CVector target) {
-CShotInfo.cpp:25:    return plugin::CallAndReturn<bool, 0x739C30, CEntity*, eWeaponType, CVector, CVector>(creator, weaponType, origin, target);
-CShotInfo.h:11:#include "eWeaponType.h"
-CShotInfo.h:17:    int      m_nWeaponType;
-CShotInfo.h:34:    static bool AddShot(CEntity* creator, eWeaponType weaponType, CVector origin, CVector target);
-CShotInfo.h:38:VALIDATE_OFFSET(CShotInfo, m_nWeaponType, 0x0);
-CSpecialFX.cpp:15:// Converted from cdecl void CSpecialFX::AddWeaponStreak(int weaponType) 0x7233F0
-CSpecialFX.cpp:16:void CSpecialFX::AddWeaponStreak(int weaponType) {
-CSpecialFX.cpp:17:    plugin::Call<0x7233F0, int>(weaponType);
-CSpecialFX.h:18:    // unused function; for 'weaponType', see eWeaponType
-CSpecialFX.h:19:    static void AddWeaponStreak(int weaponType);
-CStats.cpp:35:unsigned int &CStats::m_LastWeaponTypeFired = *(unsigned int*)0xB79514;
-CStats.cpp:262:// Converted from cdecl void CStats::UpdateStatsWhenWeaponHit(int weaponType) 0x55CEB0
-CStats.cpp:263:void CStats::UpdateStatsWhenWeaponHit(int weaponType) {
-CStats.cpp:264:    plugin::Call<0x55CEB0, int>(weaponType);
-CStats.h:70:    static unsigned int &m_LastWeaponTypeFired;
-CStats.h:117:    static void UpdateStatsWhenWeaponHit(int weaponType);
-CTaskComplexDie.cpp:9:CTaskComplexDie::CTaskComplexDie(eWeaponType nWeaponType, int animGroup, int animID, float fBlendDelta,
-CTaskComplexDie.cpp:10:    float fAnimSpeed, bool bBeingKilledByStealth, bool bFallingToDeath, int nFallToDeathDir, bool bFallToDeathOverRailing)
-CTaskComplexDie.cpp:13:    plugin::CallMethod<0x630040, CTaskComplexDie*, eWeaponType, int, int, float, float, bool, bool, int, bool>
-CTaskComplexDie.cpp:14:        (this, nWeaponType, animGroup, animID, fBlendDelta, fAnimSpeed, bBeingKilledByStealth,
-CTaskComplexDie.h:10:#include "eWeaponType.h"
-CTaskComplexDie.h:17:    eWeaponType m_nWeaponType; // Means Of Death
-CTaskComplexDie.h:28:            unsigned int bBeingKilledByStealth : 1;
-CTaskComplexDie.h:37:    CTaskComplexDie(eWeaponType nWeaponType/*=WEAPONTYPE_UNARMED*/, int animGroup/*ANIM_STD_PED*/, int animID/*ANIM_STD_KO_FRONT*/,
-CTaskComplexDie.h:38:        float fBlendDelta, float fAnimSpeed, bool bBeingKilledByStealth, bool bFallingToDeath, int nFallToDeathDir, bool bFallToDeathOverRailing);
-CTaskComplexDie.h:41:VALIDATE_OFFSET(CTaskComplexDie, m_nWeaponType, 0xC);
-CTaskManager.cpp:7:#include "CTaskManager.h"
-CTaskManager.cpp:9:// Converted from thiscall void CTaskManager::CTaskManager(CPed *ped) 0x6816A0
-CTaskManager.cpp:10:CTaskManager::CTaskManager(CPed* ped) {
-CTaskManager.cpp:11:    ((void(__thiscall *)(CTaskManager*, CPed*))0x6816A0)(this, ped);
-CTaskManager.cpp:14:// Converted from thiscall void CTaskManager::~CTaskManager() 0x6816D0
-CTaskManager.cpp:15:CTaskManager::~CTaskManager() {
-CTaskManager.cpp:16:    ((void(__thiscall *)(CTaskManager*))0x6816D0)(this);
-CTaskManager.cpp:19:// Converted from thiscall CTask* CTaskManager::GetActiveTask(void) 0x681720
-CTaskManager.cpp:20:CTask* CTaskManager::GetActiveTask() {
-CTaskManager.cpp:21:    return ((CTask* (__thiscall *)(CTaskManager*))0x681720)(this);
-CTaskManager.cpp:24:// Converted from thiscall CTask* CTaskManager::FindActiveTaskByType(int taskType) 0x681740
-CTaskManager.cpp:25:CTask* CTaskManager::FindActiveTaskByType(int taskType) {
-CTaskManager.cpp:26:    return ((CTask* (__thiscall *)(CTaskManager*, int))0x681740)(this, taskType);
-CTaskManager.cpp:29:// Converted from thiscall CTask* CTaskManager::FindTaskByType(int taskIndex,int taskType) 0x6817D0
-CTaskManager.cpp:30:CTask* CTaskManager::FindTaskByType(int taskIndex, int taskType) {
-CTaskManager.cpp:31:    return ((CTask* (__thiscall *)(CTaskManager*, int, int))0x6817D0)(this, taskIndex, taskType);
-CTaskManager.cpp:34:// Converted from thiscall CTask* CTaskManager::GetTaskSecondary(int taskIndex) 0x681810
-CTaskManager.cpp:35:CTask* CTaskManager::GetTaskSecondary(int taskIndex) {
-CTaskManager.cpp:36:    return ((CTask* (__thiscall *)(CTaskManager*, int))0x681810)(this, taskIndex);
-CTaskManager.cpp:39:// Converted from thiscall bool CTaskManager::HasTaskSecondary(CTask const*task) 0x681820
-CTaskManager.cpp:40:bool CTaskManager::HasTaskSecondary(CTask const* task) {
-CTaskManager.cpp:41:    return ((bool(__thiscall *)(CTaskManager*, CTask const*))0x681820)(this, task);
-CTaskManager.cpp:44:// Converted from thiscall void CTaskManager::Flush(void) 0x681850
-CTaskManager.cpp:45:void CTaskManager::Flush() {
-CTaskManager.cpp:46:    ((void(__thiscall *)(CTaskManager*))0x681850)(this);
-CTaskManager.cpp:49:// Converted from thiscall void CTaskManager::FlushImmediately(void) 0x6818A0
-CTaskManager.cpp:50:void CTaskManager::FlushImmediately() {
-CTaskManager.cpp:51:    ((void(__thiscall *)(CTaskManager*))0x6818A0)(this);
-CTaskManager.cpp:54:// Converted from thiscall void CTaskManager::SetNextSubTask(CTask *task) 0x681920
-CTaskManager.cpp:55:void CTaskManager::SetNextSubTask(CTask* task) {
-CTaskManager.cpp:56:    ((void(__thiscall *)(CTaskManager*, CTask*))0x681920)(this, task);
-CTaskManager.cpp:59:// Converted from thiscall CTask* CTaskManager::GetSimplestTask(CTask *task) 0x681970
-CTaskManager.cpp:60:CTask* CTaskManager::GetSimplestTask(CTask* task) {
-CTaskManager.cpp:64:// Converted from thiscall void CTaskManager::StopTimers(CEvent const*_event) 0x6819A0
-CTaskManager.cpp:65:void CTaskManager::StopTimers(CEvent const* _event) {
-CTaskManager.cpp:66:    ((void(__thiscall *)(CTaskManager*, CEvent const*))0x6819A0)(this, _event);
-CTaskManager.cpp:69:// Converted from thiscall CTask* CTaskManager::GetSimplestActiveTask(void) 0x6819D0
-CTaskManager.cpp:70:CTask* CTaskManager::GetSimplestActiveTask() {
-CTaskManager.cpp:71:    return ((CTask* (__thiscall *)(CTaskManager*))0x6819D0)(this);
-CTaskManager.cpp:74:// Converted from thiscall CTask* CTaskManager::GetSimplestTask(int taskIndex) 0x681A00
-CTaskManager.cpp:75:CTask* CTaskManager::GetSimplestTask(int taskIndex) {
-CTaskManager.cpp:76:    return ((CTask* (__thiscall *)(CTaskManager*, int))0x681A00)(this, taskIndex);
-CTaskManager.cpp:79:// Converted from thiscall void CTaskManager::AddSubTasks(CTask *task) 0x681A30
-CTaskManager.cpp:80:void CTaskManager::AddSubTasks(CTask* task) {
-CTaskManager.cpp:81:    ((void(__thiscall *)(CTaskManager*, CTask*))0x681A30)(this, task);
-CTaskManager.cpp:84:// Converted from thiscall void CTaskManager::ParentsControlChildren(CTask *task) 0x681A80
-CTaskManager.cpp:85:void CTaskManager::ParentsControlChildren(CTask* task) {
-CTaskManager.cpp:86:    ((void(__thiscall *)(CTaskManager*, CTask*))0x681A80)(this, task);
-CTaskManager.cpp:89:// Converted from thiscall void CTaskManager::SetTask(CTask *task,int taskIndex,bool) 0x681AF0
-CTaskManager.cpp:90:void CTaskManager::SetTask(CTask* task, int taskIndex, bool arg2) {
-CTaskManager.cpp:91:    ((void(__thiscall *)(CTaskManager*, CTask*, int, bool))0x681AF0)(this, task, taskIndex, arg2);
-CTaskManager.cpp:94:// Converted from thiscall void CTaskManager::SetTaskSecondary(CTask *task,int taskIndex) 0x681B60
-CTaskManager.cpp:95:void CTaskManager::SetTaskSecondary(CTask* task, int taskIndex) {
-CTaskManager.cpp:96:    ((void(__thiscall *)(CTaskManager*, CTask*, int))0x681B60)(this, task, taskIndex);
-CTaskManager.cpp:99:// Converted from thiscall void CTaskManager::ClearTaskEventResponse(void) 0x681BD0
-CTaskManager.cpp:100:void CTaskManager::ClearTaskEventResponse() {
-CTaskManager.cpp:101:    ((void(__thiscall *)(CTaskManager*))0x681BD0)(this);
-CTaskManager.cpp:104:// Converted from thiscall void CTaskManager::ManageTasks(void) 0x681C10
-CTaskManager.cpp:105:void CTaskManager::ManageTasks() {
-CTaskManager.cpp:106:    ((void(__thiscall *)(CTaskManager*))0x681C10)(this);
-CTaskManager.h:33:class PLUGIN_API CTaskManager {
-CTaskManager.h:39:    CTaskManager(CPed* ped);
-CTaskManager.h:40:    ~CTaskManager();
-CTaskManager.h:60:VALIDATE_OFFSET(CTaskManager, m_aPrimaryTasks, 0x0);
-CTaskManager.h:61:VALIDATE_OFFSET(CTaskManager, m_aSecondaryTasks, 0x14);
-CTaskManager.h:62:VALIDATE_OFFSET(CTaskManager, m_pPed, 0x2C);
-CTaskManager.h:63:VALIDATE_SIZE(CTaskManager, 0x30);CTaskSimple.cpp:9:bool CTaskSimple::ProcessPed(class CPed *ped)
-CTaskSimple.h:17:	virtual bool ProcessPed(class CPed *ped);//=0
-CTaskSimpleFight.cpp:7:#include "CTaskSimpleFight.h"
-CTaskSimpleFight.cpp:9:CTaskSimpleFight::CTaskSimpleFight(CEntity *pTargetEntity, int nCommand, unsigned int nIdlePeriod)
-CTaskSimpleFight.cpp:12:    plugin::CallMethod<0x61C470, CTaskSimpleFight*, CEntity*, int, unsigned int>(this, pTargetEntity, nCommand, nIdlePeriod);
-CTaskSimpleFight.h:15:class PLUGIN_API CTaskSimpleFight : public CTaskSimple {
-CTaskSimpleFight.h:17:    CTaskSimpleFight(plugin::dummy_func_t a) : CTaskSimple(a) {}
-CTaskSimpleFight.h:46:   CTaskSimpleFight(CEntity *pTargetEntity, int nCommand, unsigned int nIdlePeriod = 10000);
-CTaskSimpleFight.h:48:VALIDATE_OFFSET(CTaskSimpleFight, m_bIsFinished, 0x8);
-CTaskSimpleFight.h:49:VALIDATE_OFFSET(CTaskSimpleFight, m_bIsInControl, 0x9);
-CTaskSimpleFight.h:50:VALIDATE_OFFSET(CTaskSimpleFight, m_bAnimsReferenced, 0xA);
-CTaskSimpleFight.h:51:VALIDATE_OFFSET(CTaskSimpleFight, m_nRequiredAnimGroup, 0xC);
-CTaskSimpleFight.h:52:VALIDATE_OFFSET(CTaskSimpleFight, m_nIdlePeriod, 0x10);
-CTaskSimpleFight.h:53:VALIDATE_OFFSET(CTaskSimpleFight, m_nIdleCounter, 0x12);
-CTaskSimpleFight.h:54:VALIDATE_OFFSET(CTaskSimpleFight, m_nContinueStrike, 0x14);
-CTaskSimpleFight.h:55:VALIDATE_OFFSET(CTaskSimpleFight, m_nChainCounter, 0x15);
-CTaskSimpleFight.h:56:VALIDATE_OFFSET(CTaskSimpleFight, m_pTargetEntity, 0x18);
-CTaskSimpleFight.h:57:VALIDATE_OFFSET(CTaskSimpleFight, m_pAnim, 0x1C);
-CTaskSimpleFight.h:58:VALIDATE_OFFSET(CTaskSimpleFight, m_pIdleAnim, 0x20);
-CTaskSimpleFight.h:59:VALIDATE_OFFSET(CTaskSimpleFight, m_nComboSet, 0x24);
-CTaskSimpleFight.h:60:VALIDATE_OFFSET(CTaskSimpleFight, m_nCurrentMove, 0x25);
-CTaskSimpleFight.h:61:VALIDATE_OFFSET(CTaskSimpleFight, m_nNextCommand, 0x26);
-CTaskSimpleFight.h:62:VALIDATE_OFFSET(CTaskSimpleFight, m_nLastCommand, 0x27);
-CTaskSimpleFight.h:63:VALIDATE_SIZE(CTaskSimpleFight, 0x28);
-CTaskSimpleStealthKill.cpp:7:#include "CTaskSimpleStealthKill.h"
-CTaskSimpleStealthKill.cpp:9:CTaskSimpleStealthKill::CTaskSimpleStealthKill(bool bKeepTargetAlive, CPed *pTarget, int nAssocGroupId) : CTaskSimple(plugin::dummy)
-CTaskSimpleStealthKill.cpp:11:    plugin::CallMethod<0x6225F0, CTaskSimpleStealthKill*, bool, CPed*, int>(this, bKeepTargetAlive, pTarget, nAssocGroupId);
-CTaskSimpleStealthKill.h:13:class CTaskSimpleStealthKill : public CTaskSimple
-CTaskSimpleStealthKill.h:16:    CTaskSimpleStealthKill(plugin::dummy_func_t a) : CTaskSimple(a) {}
-CTaskSimpleStealthKill.h:32:    CTaskSimpleStealthKill(bool bKeepTargetAlive,CPed *pTarget,int nAssocGroupId);
-CTaskSimpleStealthKill.h:34:VALIDATE_OFFSET(CTaskSimpleStealthKill, m_bKeepTargetAlive, 0x8);
-CTaskSimpleStealthKill.h:35:VALIDATE_OFFSET(CTaskSimpleStealthKill, m_pTarget, 0xC);
-CTaskSimpleStealthKill.h:36:VALIDATE_OFFSET(CTaskSimpleStealthKill, m_nAssocGroupId, 0x10);
-CTaskSimpleStealthKill.h:37:VALIDATE_OFFSET(CTaskSimpleStealthKill, b_bIsAborting, 0x14);
-CTaskSimpleStealthKill.h:38:VALIDATE_OFFSET(CTaskSimpleStealthKill, b_bIsFinished, 0x15);
-CTaskSimpleStealthKill.h:39:VALIDATE_OFFSET(CTaskSimpleStealthKill, m_pAnim, 0x18);
-CTaskSimpleStealthKill.h:40:VALIDATE_OFFSET(CTaskSimpleStealthKill, m_nTime, 0x1C);
-CTaskSimpleStealthKill.h:41:VALIDATE_SIZE(CTaskSimpleStealthKill, 0x20);
-CTaskUtilityLineUpPedWithCar.cpp:18:// Converted from thiscall void CTaskUtilityLineUpPedWithCar::ProcessPed(CPed *pPed,CVehicle *pVehicle,CAnimBlendAssociation *pAnimBlendAssoc) 0x6513A0 
-CTaskUtilityLineUpPedWithCar.cpp:19:void CTaskUtilityLineUpPedWithCar::ProcessPed(CPed* pPed, CVehicle* pVehicle, CAnimBlendAssociation* pAnimBlendAssoc) {
-CTaskUtilityLineUpPedWithCar.h:27:    void ProcessPed(CPed* pPed, CVehicle* pVehicle, CAnimBlendAssociation* pAnimBlendAssoc);
-CVehicle.cpp:41:float &fDamagePosSpeedShift                     = *(float *)0x8D3510;
-CVehicle.cpp:177:// Converted from void CVehicle::BlowUpCar(CEntity *damager,bool bHideExplosion) 0x871F24
-CVehicle.cpp:178:void CVehicle::BlowUpCar(CEntity* damager, bool bHideExplosion)
-CVehicle.cpp:180:	((void (__thiscall *)(CVehicle*, CEntity*, bool))(*(void ***)this)[41])(this, damager, bHideExplosion);
-CVehicle.cpp:239:// Converted from void CVehicle::SetupDamageAfterLoad(void) 0x871F4C
-CVehicle.cpp:240:void CVehicle::SetupDamageAfterLoad()
-CVehicle.cpp:269:// Converted from void CVehicle::VehicleDamage(float damageIntensity,ushort collisionComponent,CEntity *damager,CVector *vecCollisionCoors,CVector *vecCollisionDirection,eWeaponType weapon) 0x871F60
-CVehicle.cpp:270:void CVehicle::VehicleDamage(float damageIntensity, unsigned short collisionComponent, CEntity* damager, CVector* vecCollisionCoors, CVector* vecCollisionDirection, eWeaponType weapon)
-CVehicle.cpp:272:	((void (__thiscall *)(CVehicle*, float, unsigned short, CEntity*, CVector*, CVector*, eWeaponType))(*(void ***)this)[56])(this, damageIntensity, collisionComponent, damager, vecCollisionCoors, vecCollisionDirection, weapon);
-CVehicle.cpp:407:// Converted from thiscall bool CVehicle::CanVehicleBeDamaged(CEntity *damager,eWeaponType weapon,uchar *) 0x6D1280
-CVehicle.cpp:408:bool CVehicle::CanVehicleBeDamaged(CEntity* damager, eWeaponType weapon, unsigned char* arg2)
-CVehicle.cpp:410:	return ((bool (__thiscall *)(CVehicle*, CEntity*, eWeaponType, unsigned char*))0x6D1280)(this, damager, weapon, arg2);
-CVehicle.cpp:509:// Converted from thiscall bool CVehicle::CanDoorsBeDamaged(void) 0x6D1E60
-CVehicle.cpp:510:bool CVehicle::CanDoorsBeDamaged()
-CVehicle.cpp:641:// Converted from thiscall void CVehicle::AddDamagedVehicleParticles(void) 0x6D2A80
-CVehicle.cpp:642:void CVehicle::AddDamagedVehicleParticles()
-CVehicle.cpp:749:// Converted from thiscall RpAtomic* CVehicle::CreateUpgradeAtomic(CBaseModelInfo *model,UpgradePosnDesc const*upgradePosn,RwFrame *parentComponent,bool isDamaged) 0x6D3510
-CVehicle.cpp:750:RpAtomic* CVehicle::CreateUpgradeAtomic(CBaseModelInfo* model, UpgradePosnDesc const* upgradePosn, RwFrame* parentComponent, bool isDamaged)
-CVehicle.cpp:752:	return ((RpAtomic* (__thiscall *)(CVehicle*, CBaseModelInfo*, UpgradePosnDesc const*, RwFrame*, bool))0x6D3510)(this, model, upgradePosn, parentComponent, isDamaged);
-CVehicle.cpp:767:// Converted from thiscall RpAtomic* CVehicle::CreateReplacementAtomic(CBaseModelInfo *model,RwFrame *component,int,bool bDamaged,bool bIsWheel) 0x6D3700
-CVehicle.cpp:768:RpAtomic* CVehicle::CreateReplacementAtomic(CBaseModelInfo* model, RwFrame* component, int arg2, bool bDamaged, bool bIsWheel)
-CVehicle.cpp:770:	return ((RpAtomic* (__thiscall *)(CVehicle*, CBaseModelInfo*, RwFrame*, int, bool, bool))0x6D3700)(this, model, component, arg2, bDamaged, bIsWheel);
-CVehicle.cpp:951:// Converted from thiscall void CVehicle::ReactToVehicleDamage(CPed *ped) 0x6D5490
-CVehicle.cpp:952:void CVehicle::ReactToVehicleDamage(CPed* ped)
-CVehicle.cpp:999:// Converted from thiscall void CVehicle::InflictDamage(CEntity *damager,eWeaponType weapon,float intensity,CVector coords) 0x6D7C90
-CVehicle.cpp:1000:void CVehicle::InflictDamage(CEntity* damager, eWeaponType weapon, float intensity, CVector coords)
-CVehicle.cpp:1002:	((void (__thiscall *)(CVehicle*, CEntity*, eWeaponType, float, CVector))0x6D7C90)(this, damager, weapon, intensity, coords);
-CVehicle.h:10:#include "CDamageManager.h"
-CVehicle.h:70:    VEHICLE_LIGHTS_IGNORE_DAMAGE = 4,
-CVehicle.h:166:    bool bTakeLessDamage : 1;       // this vehicle is stronger (takes about 1/4 of damage)
-CVehicle.h:168:    bool bIsDamaged : 1;            // this vehicle has been damaged and is displaying all its components
-CVehicle.h:173:    bool bCanBeDamaged : 1;         // set to FALSE during cut scenes to avoid explosions
-CVehicle.h:183:    bool bIsDrowning : 1;           // is vehicle occupants taking damage in water (i.e. vehicle is dead in water)
-CVehicle.h:285:    unsigned char m_nLastWeaponDamageType; // see eWeaponType, -1 if no damage
-CVehicle.h:286:    CEntity*      m_pLastDamageEntity;
-CVehicle.h:362:    void BlowUpCar(CEntity* damager, bool bHideExplosion);
-CVehicle.h:365:    // returns false if it's not possible to burst vehicle's tyre or it is already damaged. bPhysicalEffect=true applies random moving force to vehicle
-CVehicle.h:374:    void SetupDamageAfterLoad();
-CVehicle.h:379:    void VehicleDamage(float damageIntensity, unsigned short collisionComponent, CEntity* damager, CVector* vecCollisionCoors, CVector* vecCollisionDirection, eWeaponType weapon);
-CVehicle.h:412:    bool CanVehicleBeDamaged(CEntity* damager, eWeaponType weapon, unsigned char* arg2);
-CVehicle.h:431:    bool CanDoorsBeDamaged();
-CVehicle.h:449:    void AddDamagedVehicleParticles();
-CVehicle.h:460:    RpAtomic* CreateUpgradeAtomic(CBaseModelInfo* model, UpgradePosnDesc const* upgradePosn, RwFrame* parentComponent, bool isDamaged);
-CVehicle.h:464:    RpAtomic* CreateReplacementAtomic(CBaseModelInfo* model, RwFrame* component, int arg2, bool bDamaged, bool bIsWheel);
-CVehicle.h:495:    void ReactToVehicleDamage(CPed* ped);
-CVehicle.h:504:    void InflictDamage(CEntity* damager, eWeaponType weapon, float intensity, CVector coords);
-CVehicle.h:608:VALIDATE_OFFSET(CVehicle, m_nLastWeaponDamageType, 0x508);
-CVehicle.h:609:VALIDATE_OFFSET(CVehicle, m_pLastDamageEntity, 0x50C);
-CVehicle.h:665:extern float &fDamagePosSpeedShift; // 0.4
-CVehicleModelInfo.cpp:46:RpAtomic * CVehicleModelInfo::HideDamagedAtomicCB(RpAtomic * atomic, void * data)
-CVehicleModelInfo.h:178:	static RpAtomic *HideDamagedAtomicCB(RpAtomic *atomic, void *data);
-CWeapon.cpp:47:// Converted from cdecl void CWeapon::GenerateDamageEvent(CPed *victim,CEntity *creator,eWeaponType weaponType,int damageFactor,ePedPieceTypes pedPiece,int direction) 0x73A530
-CWeapon.cpp:48:void CWeapon::GenerateDamageEvent(CPed* victim, CEntity* creator, eWeaponType weaponType, int damageFactor, ePedPieceTypes pedPiece, int direction) {
-CWeapon.cpp:49:    plugin::Call<0x73A530, CPed*, CEntity*, eWeaponType, int, ePedPieceTypes, int>(victim, creator, weaponType, damageFactor, pedPiece, direction);
-CWeapon.cpp:87:// Converted from cdecl bool CWeapon::CanBeUsedFor2Player(eWeaponType weaponType) 0x73B240
-CWeapon.cpp:88:bool CWeapon::CanBeUsedFor2Player(eWeaponType weaponType) {
-CWeapon.cpp:89:    return plugin::CallAndReturn<bool, 0x73B240, eWeaponType>(weaponType);
-CWeapon.cpp:97:// Converted from cdecl bool CWeapon::ProcessLineOfSight(CVector const&startPoint,CVector const&endPoint,CColPoint &outColPoint,CEntity *&outEntity,eWeaponType weaponType,CEntity *,bool buildings,bool vehicles,bool peds,bool objects,bool dummies,bool,bool doIgnoreCameraCheck) 0x73B300
-CWeapon.cpp:98:bool CWeapon::ProcessLineOfSight(CVector const& startPoint, CVector const& endPoint, CColPoint& outColPoint, CEntity*& outEntity, eWeaponType weaponType, CEntity* arg5, bool buildings, bool vehicles, bool peds, bool objects, bool dummies, bool arg11, bool doIgnoreCameraCheck) {
-CWeapon.cpp:99:    return plugin::CallAndReturn<bool, 0x73B300, CVector const&, CVector const&, CColPoint&, CEntity*&, eWeaponType, CEntity*, bool, bool, bool, bool, bool, bool, bool>(startPoint, endPoint, outColPoint, outEntity, weaponType, arg5, buildings, vehicles, peds, objects, dummies, arg11, doIgnoreCameraCheck);
-CWeapon.cpp:112:// Converted from thiscall void CWeapon::CWeapon(eWeaponType weaponType,int ammo) 0x73B430
-CWeapon.cpp:113:CWeapon::CWeapon(eWeaponType weaponType, int ammo) {
-CWeapon.cpp:114:    plugin::CallMethod<0x73B430, CWeapon *, eWeaponType, int>(this, weaponType, ammo);
-CWeapon.cpp:117:// Converted from thiscall void CWeapon::Initialise(eWeaponType weaponType,int ammo,CPed *owner) 0x73B4A0
-CWeapon.cpp:118:void CWeapon::Initialise(eWeaponType weaponType, int ammo, CPed* owner) {
-CWeapon.cpp:119:    plugin::CallMethod<0x73B4A0, CWeapon *, eWeaponType, int, CPed*>(this, weaponType, ammo, owner);
-CWeapon.cpp:192:// Converted from cdecl bool CWeapon::CheckForShootingVehicleOccupant(CEntity **pCarEntity,CColPoint *colPoint,eWeaponType weaponType,CVector const&origin,CVector const&target) 0x73F480
-CWeapon.cpp:193:bool CWeapon::CheckForShootingVehicleOccupant(CEntity** pCarEntity, CColPoint* colPoint, eWeaponType weaponType, CVector const& origin, CVector const& target) {
-CWeapon.cpp:194:    return plugin::CallAndReturn<bool, 0x73F480, CEntity**, CColPoint*, eWeaponType, CVector const&, CVector const&>(pCarEntity, colPoint, weaponType, origin, target);
-CWeapon.h:10:#include "eWeaponType.h"
-CWeapon.h:31:    eWeaponType m_eWeaponType;
-CWeapon.h:47:    CWeapon(eWeaponType weaponType, int ammo);
-CWeapon.h:58:    void Initialise(eWeaponType weaponType, int ammo, CPed* owner);
-CWeapon.h:78:    static void GenerateDamageEvent(CPed* victim, CEntity* creator, eWeaponType weaponType, int damageFactor, ePedPieceTypes pedPiece, int direction);
-CWeapon.h:79:    static bool CanBeUsedFor2Player(eWeaponType weaponType);
-CWeapon.h:86:    static bool CheckForShootingVehicleOccupant(CEntity** pCarEntity, CColPoint* colPoint, eWeaponType weaponType, CVector const& origin, CVector const& target);
-CWeapon.h:88:    static bool ProcessLineOfSight(CVector const& startPoint, CVector const& endPoint, CColPoint& outColPoint, CEntity*& outEntity, eWeaponType weaponType, CEntity* arg5, bool buildings, bool vehicles, bool peds, bool objects, bool dummies, bool arg11, bool doIgnoreCameraCheck);
-CWeapon.h:92:VALIDATE_OFFSET(CWeapon, m_eWeaponType, 0x0);
-CWeaponInfo.cpp:26:CWeaponInfo *CWeaponInfo::GetWeaponInfo(eWeaponType weaponType, unsigned char skill)
-CWeaponInfo.cpp:28:	return ((CWeaponInfo *(__cdecl *)(eWeaponType, unsigned char))0x743C60)(weaponType, skill);
-CWeaponInfo.cpp:31:eWeaponType CWeaponInfo::FindWeaponType(char *name)
-CWeaponInfo.cpp:33:	return ((eWeaponType (__cdecl *)(char *))0x743D10)(name);
-CWeaponInfo.h:11:#include "eWeaponType.h"
-CWeaponInfo.h:62:	unsigned short m_nDamage; // damage inflicted per hit
-CWeaponInfo.h:64:	unsigned int   m_nSkillLevel; // what's the skill level of this weapontype
-CWeaponInfo.h:97:	static CWeaponInfo *GetWeaponInfo(eWeaponType weaponType, unsigned char skill = 0);
-CWeaponInfo.h:99:	static eWeaponType FindWeaponType(char *name);
-CWeaponInfo.h:116:VALIDATE_OFFSET(CWeaponInfo, m_nDamage, 0x22);
-CWeaponModelInfo.h:10:#include "eWeaponType.h"
-CWeaponModelInfo.h:14:	eWeaponType m_weaponInfo;
-CWorld.cpp:70:// Converted from cdecl void CWorld::ProcessPedsAfterPreRender(void) 0x563430
-CWorld.cpp:71:void CWorld::ProcessPedsAfterPreRender() {
-CWorld.cpp:290:// Converted from cdecl void CWorld::SetAllCarsCanBeDamaged(bool enable) 0x5668F0
-CWorld.cpp:291:void CWorld::SetAllCarsCanBeDamaged(bool enable) {
-CWorld.cpp:335:// Converted from cdecl void CWorld::TriggerExplosionSectorList(CPtrList &ptrList,CVector const&point,float radius,float visibleDistance,CEntity *victim,CEntity *creator,bool processVehicleBombTimer,float damage) 0x567750
-CWorld.cpp:336:void CWorld::TriggerExplosionSectorList(CPtrList& ptrList, CVector const& point, float radius, float visibleDistance, CEntity* victim, CEntity* creator, bool processVehicleBombTimer, float damage) {
-CWorld.cpp:337:	plugin::Call<0x567750, CPtrList&, CVector const&, float, float, CEntity*, CEntity*, bool, float>(ptrList, point, radius, visibleDistance, victim, creator, processVehicleBombTimer, damage);
-CWorld.cpp:420:// Converted from cdecl void CWorld::TriggerExplosion(CVector const&point,float radius,float visibleDistance,CEntity *victim,CEntity *creator,bool processVehicleBombTimer,float damage) 0x56B790
-CWorld.cpp:421:void CWorld::TriggerExplosion(CVector const& point, float radius, float visibleDistance, CEntity* victim, CEntity* creator, bool processVehicleBombTimer, float damage) {
-CWorld.cpp:422:	plugin::Call<0x56B790, CVector const&, float, float, CEntity*, CEntity*, bool, float>(point, radius, visibleDistance, victim, creator, processVehicleBombTimer, damage);
-CWorld.h:79:	static void ProcessPedsAfterPreRender();
-CWorld.h:127:	static void SetAllCarsCanBeDamaged(bool enable);
-CWorld.h:136:	static void TriggerExplosionSectorList(CPtrList& ptrList, CVector const& point, float radius, float visibleDistance, CEntity* victim, CEntity* creator, bool processVehicleBombTimer, float damage);
-CWorld.h:154:	static void TriggerExplosion(CVector const& point, float radius, float visibleDistance, CEntity* victim, CEntity* creator, bool processVehicleBombTimer, float damage);
-enums\eAnimations.h:50:    ANIM_GROUP_KNIFE_1 = 39,
-enums\eAnimations.h:98:    ANIM_GROUP_STEALTH_KN = 87,
-enums\eAnimations.h:751:// [GROUP] i = 39 | GroupName : knife_1 | Group ID: 39 | Total Animations: 10
-enums\eAnimations.h:752:enum eknife_1AnimGroup
-enums\eAnimations.h:754:    ANIM_KNIFE_1_KNIFE_1 = 214,
-enums\eAnimations.h:755:    ANIM_KNIFE_1_KNIFE_2 = 215,
-enums\eAnimations.h:756:    ANIM_KNIFE_1_KNIFE_3 = 216,
-enums\eAnimations.h:757:    ANIM_KNIFE_1_KNIFE_G = 217,
-enums\eAnimations.h:758:    ANIM_KNIFE_1_KNIFE_PART = 218,
-enums\eAnimations.h:759:    ANIM_KNIFE_1_KNIFE_HIT_1 = 219,
-enums\eAnimations.h:760:    ANIM_KNIFE_1_KNIFE_HIT_2 = 220,
-enums\eAnimations.h:761:    ANIM_KNIFE_1_KNIFE_HIT_3 = 221,
-enums\eAnimations.h:762:    ANIM_KNIFE_1_KNIFE_BLOCK = 222,
-enums\eAnimations.h:763:    ANIM_KNIFE_1_WEAPON_KNIFEIDLE = 223,
-enums\eAnimations.h:1257:// [GROUP] i = 87 | GroupName : stealth_kn | Group ID: 87 | Total Animations: 4
-enums\eAnimations.h:1258:enum estealth_knAnimGroup
-enums\eAnimations.h:1260:    ANIM_STEALTH_KN_KILL_PARTIAL = 347,
-enums\eAnimations.h:1261:    ANIM_STEALTH_KN_KILL_KNIFE_PLAYER = 348,
-enums\eAnimations.h:1262:    ANIM_STEALTH_KN_KILL_KNIFE_PED_DAMAGE = 349,
-enums\eAnimations.h:1263:    ANIM_STEALTH_KN_KILL_KNIFE_PED_DIE = 350,
-enums\eAudioEvents.h:168:    AE_WEAPON_STEALTH_KILL = 0x9C,
-enums\eCrimeType.h:11:    CRIME_DAMAGED_PED = 2,
-enums\eCrimeType.h:13:    CRIME_DAMAGE_CAR = 4,
-enums\eCrimeType.h:14:    CRIME_DAMAGE_COP_CAR = 5,
-enums\eDecisionMakerEvents.h:12:    DM_EVENT_DAMAGE,
-enums\eDecisionMakerEvents.h:26:    DM_EVENT_VEHICLE_DAMAGE_WEAPON,
-enums\eDecisionMakerEvents.h:47:    DM_EVENT_VEHICLE_DAMAGE_COLLISION,
-enums\eEventType.h:18:    EVENT_DAMAGE = 9,
-enums\eEventType.h:47:    EVENT_VEHICLE_DAMAGE_WEAPON = 41,
-enums\eEventType.h:79:    EVENT_VEHICLE_DAMAGE_COLLISION = 73,
-enums\eModelID.h:333:    MODEL_KNIFECUR,
-enums\eModelID.h:425:    MODEL_HOTKNIFE,
-enums\ePedState.h:67:	PEDSTATE_DIE_BY_STEALTH,
-enums\eScriptCommands.h:691:    COMMAND_SET_CHAR_ONLY_DAMAGED_BY_PLAYER = 0x02A9,
-enums\eScriptCommands.h:692:    COMMAND_SET_CAR_ONLY_DAMAGED_BY_PLAYER = 0x02AA,
-enums\eScriptCommands.h:807:    COMMAND_HAS_CHAR_BEEN_DAMAGED_BY_WEAPON = 0x031D,
-enums\eScriptCommands.h:808:    COMMAND_HAS_CAR_BEEN_DAMAGED_BY_WEAPON = 0x031E,
-enums\eScriptCommands.h:880:    COMMAND_HAS_OBJECT_BEEN_DAMAGED = 0x0366,
-enums\eScriptCommands.h:979:    COMMAND_IS_CAR_VISIBLY_DAMAGED = 0x03C9,
-enums\eScriptCommands.h:1015:    COMMAND_SET_UPSIDEDOWN_CAR_NOT_DAMAGED = 0x03ED,
-enums\eScriptCommands.h:1022:    COMMAND_SET_ALL_CARS_CAN_BE_DAMAGED = 0x03F4,
-enums\eScriptCommands.h:1023:    COMMAND_SET_CAR_CAN_BE_DAMAGED = 0x03F5,
-enums\eScriptCommands.h:1137:    COMMAND_CLEAR_CHAR_LAST_WEAPON_DAMAGE = 0x0467,
-enums\eScriptCommands.h:1138:    COMMAND_CLEAR_CAR_LAST_WEAPON_DAMAGE = 0x0468,
-enums\eScriptCommands.h:1310:    COMMAND_SET_CHAR_CAN_BE_DAMAGED_BY_MEMBERS_OF_GANG = 0x0514,
-enums\eScriptCommands.h:1316:    COMMAND_HAS_CHAR_BEEN_DAMAGED_BY_CHAR = 0x051A,
-enums\eScriptCommands.h:1317:    COMMAND_HAS_CHAR_BEEN_DAMAGED_BY_CAR = 0x051B,
-enums\eScriptCommands.h:1318:    COMMAND_HAS_CAR_BEEN_DAMAGED_BY_CHAR = 0x051C,
-enums\eScriptCommands.h:1319:    COMMAND_HAS_CAR_BEEN_DAMAGED_BY_CAR = 0x051D,
-enums\eScriptCommands.h:1368:    COMMAND_CLEAR_CHAR_LAST_DAMAGE_ENTITY = 0x054E,
-enums\eScriptCommands.h:1369:    COMMAND_CLEAR_CAR_LAST_DAMAGE_ENTITY = 0x054F,
-enums\eScriptCommands.h:1824:    COMMAND_IS_CLOSEST_OBJECT_OF_TYPE_SMASHED_OR_DAMAGED = 0x0716,
-enums\eScriptCommands.h:1850:    COMMAND_DAMAGE_CAR_PANEL = 0x0730,
-enums\eScriptCommands.h:1862:    COMMAND_DAMAGE_CAR_DOOR = 0x073C,
-enums\eScriptCommands.h:1931:    COMMAND_GET_WEAPONTYPE_MODEL = 0x0781,
-enums\eScriptCommands.h:1932:    COMMAND_GET_WEAPONTYPE_SLOT = 0x0782,
-enums\eScriptCommands.h:2049:    COMMAND_SET_OBJECT_COLLISION_DAMAGE_EFFECT = 0x07F7,
-enums\eScriptCommands.h:2139:    COMMAND_DAMAGE_CHAR = 0x0851,
-enums\eScriptCommands.h:2140:    COMMAND_SET_CAR_CAN_BE_VISIBLY_DAMAGED = 0x0852,
-enums\eScriptCommands.h:2175:    COMMAND_SET_OBJECT_ONLY_DAMAGED_BY_PLAYER = 0x0875,
-enums\eScriptCommands.h:2313:    COMMAND_HAS_OBJECT_BEEN_DAMAGED_BY_WEAPON = 0x08FF,
-enums\eScriptCommands.h:2314:    COMMAND_CLEAR_OBJECT_LAST_WEAPON_DAMAGE = 0x0900,
-enums\eScriptCommands.h:2356:    COMMAND_SET_PLAYER_CAN_BE_DAMAGED = 0x092A,
-enums\eScriptCommands.h:2376:    COMMAND_SET_CHAR_FIRE_DAMAGE_MULTIPLIER = 0x093E,
-enums\eScriptCommands.h:2384:    COMMAND_SET_CHAR_USES_UPPERBODY_DAMAGE_ANIMS_ONLY = 0x0946,
-enums\eScriptCommands.h:2501:    COMMAND_IS_CAR_DOOR_DAMAGED = 0x09BB,
-enums\eStats.h:101:    STAT_COST_OF_PROPERTY_DAMAGED = 125,
-enums\eTaskType.h:86:	TASK_SIMPLE_BE_DAMAGED,
-enums\eTaskType.h:352:	TASK_SIMPLE_STEALTH_KILL,
-enums\eTaskType.h:353:	TASK_COMPLEX_KILL_PED_ON_FOOT_STEALTH,
-enums\eWeaponModel.h:24:	MODEL_KNIFECUR,
-enums\eWeaponType.h:9:enum eWeaponType : unsigned int
-enums\eWeaponType.h:11:	WEAPONTYPE_UNARMED = 0x0,
-enums\eWeaponType.h:12:	WEAPONTYPE_BRASSKNUCKLE = 0x1,
-enums\eWeaponType.h:13:	WEAPONTYPE_GOLFCLUB = 0x2,
-enums\eWeaponType.h:14:	WEAPONTYPE_NIGHTSTICK = 0x3,
-enums\eWeaponType.h:15:	WEAPONTYPE_KNIFE = 0x4,
-enums\eWeaponType.h:16:	WEAPONTYPE_BASEBALLBAT = 0x5,
-enums\eWeaponType.h:17:	WEAPONTYPE_SHOVEL = 0x6,
-enums\eWeaponType.h:18:	WEAPONTYPE_POOLCUE = 0x7,
-enums\eWeaponType.h:19:	WEAPONTYPE_KATANA = 0x8,
-enums\eWeaponType.h:20:	WEAPONTYPE_CHAINSAW = 0x9,
-enums\eWeaponType.h:21:	WEAPONTYPE_DILDO1 = 0xA,
-enums\eWeaponType.h:22:	WEAPONTYPE_DILDO2 = 0xB,
-enums\eWeaponType.h:23:	WEAPONTYPE_VIBE1 = 0xC,
-enums\eWeaponType.h:24:	WEAPONTYPE_VIBE2 = 0xD,
-enums\eWeaponType.h:25:	WEAPONTYPE_FLOWERS = 0xE,
-enums\eWeaponType.h:26:	WEAPONTYPE_CANE = 0xF,
-enums\eWeaponType.h:27:	WEAPONTYPE_GRENADE = 0x10,
-enums\eWeaponType.h:28:	WEAPONTYPE_TEARGAS = 0x11,
-enums\eWeaponType.h:29:	WEAPONTYPE_MOLOTOV = 0x12,
-enums\eWeaponType.h:30:	WEAPONTYPE_ROCKET = 0x13,
-enums\eWeaponType.h:31:	WEAPONTYPE_ROCKET_HS = 0x14,
-enums\eWeaponType.h:32:	WEAPONTYPE_FREEFALL_BOMB = 0x15,
-enums\eWeaponType.h:33:	WEAPONTYPE_PISTOL = 0x16,
-enums\eWeaponType.h:34:	WEAPONTYPE_PISTOL_SILENCED = 0x17,
-enums\eWeaponType.h:35:	WEAPONTYPE_DESERT_EAGLE = 0x18,
-enums\eWeaponType.h:36:	WEAPONTYPE_SHOTGUN = 0x19,
-enums\eWeaponType.h:37:	WEAPONTYPE_SAWNOFF = 0x1A,
-enums\eWeaponType.h:38:	WEAPONTYPE_SPAS12 = 0x1B,
-enums\eWeaponType.h:39:	WEAPONTYPE_MICRO_UZI = 0x1C,
-enums\eWeaponType.h:40:	WEAPONTYPE_MP5 = 0x1D,
-enums\eWeaponType.h:41:	WEAPONTYPE_AK47 = 0x1E,
-enums\eWeaponType.h:42:	WEAPONTYPE_M4 = 0x1F,
-enums\eWeaponType.h:43:	WEAPONTYPE_TEC9 = 0x20,
-enums\eWeaponType.h:44:	WEAPONTYPE_COUNTRYRIFLE = 0x21,
-enums\eWeaponType.h:45:	WEAPONTYPE_SNIPERRIFLE = 0x22,
-enums\eWeaponType.h:46:	WEAPONTYPE_RLAUNCHER = 0x23,
-enums\eWeaponType.h:47:	WEAPONTYPE_RLAUNCHER_HS = 0x24,
-enums\eWeaponType.h:48:	WEAPONTYPE_FTHROWER = 0x25,
-enums\eWeaponType.h:49:	WEAPONTYPE_MINIGUN = 0x26,
-enums\eWeaponType.h:50:	WEAPONTYPE_SATCHEL_CHARGE = 0x27,
-enums\eWeaponType.h:51:	WEAPONTYPE_DETONATOR = 0x28,
-enums\eWeaponType.h:52:	WEAPONTYPE_SPRAYCAN = 0x29,
-enums\eWeaponType.h:53:	WEAPONTYPE_EXTINGUISHER = 0x2A,
-enums\eWeaponType.h:54:	WEAPONTYPE_CAMERA = 0x2B,
-enums\eWeaponType.h:55:	WEAPONTYPE_NIGHTVISION = 0x2C,
-enums\eWeaponType.h:56:	WEAPONTYPE_INFRARED = 0x2D,
-enums\eWeaponType.h:57:	WEAPONTYPE_PARACHUTE = 0x2E,
-enums\eWeaponType.h:58:	WEAPONTYPE_UNUSED = 0x2F,
-enums\eWeaponType.h:59:	WEAPONTYPE_ARMOUR = 0x30,
-enums\eWeaponType.h:62:    WEAPONTYPE_RAMMEDBYCAR = 0x31,
-enums\eWeaponType.h:63:    WEAPONTYPE_RUNOVERBYCAR = 0x32,
-enums\eWeaponType.h:64:    WEAPONTYPE_EXPLOSION = 0x33,
-enums\eWeaponType.h:65:    WEAPONTYPE_UZI_DRIVEBY = 0x34,
-enums\eWeaponType.h:66:	WEAPONTYPE_DROWNING = 0x35,
-enums\eWeaponType.h:67:	WEAPONTYPE_FALL = 0x36,
-enums\eWeaponType.h:68:	WEAPONTYPE_UNIDENTIFIED = 0x37, // Used for damage being done
-enums\eWeaponType.h:69:    WEAPONTYPE_ANYMELEE = 0x38,
-enums\eWeaponType.h:70:    WEAPONTYPE_ANYWEAPON = 0x39,
-enums\eWeaponType.h:71:    WEAPONTYPE_FLARE = 0x3A
-meta\meta.CFileLoader.h:918:META_BEGIN(GetNameAndDamage)
-rw\rpcollis.h:17: * circumstances, be liable for any lost revenue or other damages arising
-rw\rphanim.h:15: * circumstances, be liable for any lost revenue or other damages
-rw\rplodatm.h:16: * circumstances, be liable for any lost revenue or other damages
-rw\rplogo.h:21: * circumstances, be liable for any lost revenue or other damages arising
-rw\rpmorph.h:16: * circumstances, be liable for any lost revenue or other damages
-rw\rpptank.h:766: * Stealth functions *********************************************************
-rw\rppvs.h:20: * circumstances, be liable for any lost revenue or other damages arising
-rw\rprandom.h:16: * circumstances, be liable for any lost revenue or other damages arising
-rw\rpspline.h:22: * circumstances, be liable for any lost revenue or other damages
-rw\rpuvanim.h:16: * circumstances, be liable for any lost revenue or other damages arising
-rw\rpworld.h:15: * circumstances, be liable for any lost revenue or other damages
-rw\rpworld.h:3534:/* These stealth-API */
-rw\rtcmpkey.h:15: * circumstances, be liable for any lost revenue or other damages
-rw\rtdict.h:291:/* Stealth */
-rw\rtworld.h:69: * This function has been removed, however it still exists as a stealth
-rw\rwcore.h:15: * circumstances, be liable for any lost revenue or other damages
-rw\rwplcore.h:15: * circumstances, be liable for any lost revenue or other damages
-rw\skeleton.h:19: * circumstances, be liable for any lost revenue or other damages
-tHandlingData.h:48:    float         m_fCollisionDamageMultiplier; // 0.2 to 5.0
-tHandlingData.h:152:VALIDATE_OFFSET(tHandlingData, m_fCollisionDamageMultiplier, 0xC8);
+12:#include "eWeaponType.h"
+37:	void WeaponReload(eWeaponType weaptype, CPhysical* entity, int AudioEventId);
+38:	void WeaponFire(eWeaponType weaptype, CPhysical* entity, int AudioEventId);
+42:	void ReportStealthKill(eWeaponType weaptype, CPhysical* entity, int AudioEventId);
+11:#include "CDamageManager.h"
+53:    CDamageManager  m_damageManager;
+78:        bool bDoesNotGetDamagedUpsideDown : 1;
+79:        bool bCanBeVisiblyDamaged : 1;
+122:    float m_fCumulativeDamage; // previously m_fUpDownLightAngle[1]
+170:    // Set random damage to vehicle. Called when generating a vehicle @CCarCtrl::GenerateOneRandomCar
+171:    void SetRandomDamage(bool arg0);
+172:    // Make a vehicle fully damaged
+173:    void SetTotalDamage(bool arg0);
+207:    CPed* KnockPedOutCar(eWeaponType arg0, unsigned short arg1, CPed* arg2);
+217:    void dmgDrawCarCollidingParticles(CVector const&, float force, eWeaponType weapon);
+237:    void SetBumperDamage(ePanels panel, bool withoutVisualEffect);
+238:    void SetPanelDamage(ePanels panel, bool createWindowGlass);
+239:    void SetDoorDamage(eDoors door, bool withoutVisualEffect);
+245:VALIDATE_OFFSET(CAutomobile, m_damageManager, 0x5A0);
+293:VALIDATE_OFFSET(CAutomobile, m_fCumulativeDamage, 0x95C);
+76:	class CBaseModelInfo *AsDamageAtomicModelInfoPtr();
+94:    CEntity*    m_pDamager;
+110:    void dmgDrawCarCollidingParticles(CVector const& position, float power, eWeaponType weaponType); // dummy function
+111:    static bool DamageKnockOffRider(CVehicle* arg0, float arg1, unsigned short arg2, CEntity* arg3, CVector& arg4, CVector& arg5);
+112:    CPed* KnockOffRider(eWeaponType arg0, unsigned char arg1, CPed* arg2, bool arg3); // dummy function
+167:VALIDATE_OFFSET(CBike, m_pDamager, 0x800);
+11:#include "eWeaponType.h"
+16:    eWeaponType m_nWeaponType;
+25:    short    m_nDamage;
+32:    static bool AddBullet(CEntity* creator, eWeaponType weaponType, CVector position, CVector velocity);
+35:VALIDATE_OFFSET(CBulletInfo, m_nWeaponType, 0x0);
+41:VALIDATE_OFFSET(CBulletInfo, m_nDamage, 0x28);
+18:	static void AddTrace(CVector *start, CVector *end, int weaponType, CEntity *entity);
+11:class CDamageAtomicModelInfo : public CAtomicModelInfo {
+13:    RpAtomic* m_pDamagedAtomic;
+14:    static bool& ms_bCreateDamagedVersion;
+17:VALIDATE_OFFSET(CDamageAtomicModelInfo, m_pDamagedAtomic, 0x20);
+18:VALIDATE_SIZE(CDamageAtomicModelInfo, 0x24);
+13:enum PLUGIN_API eDamageState {
+16:    DAMSTATE_DAMAGED = 2,
+17:    DAMSTATE_OPENED_DAMAGED = 3,
+84:class PLUGIN_API CDamageManager {
+86:    float m_fWheelDamageEffect;
+121:    // damageCompId - eLights/ePanel/... id for this component
+122:    bool GetComponentGroup(tComponent component, tComponentGroup* group, unsigned char* damageCompId);
+123:    void ResetDamageStatus();
+140:    // damageCompId - eLights/ePanel/... id for this component
+141:    bool ProgressDoorDamage(unsigned char damageCompId, CAutomobile* car);
+143:    bool ProgressEngineDamage(float arg0);
+144:    // Set next level of damage to panel
+145:    bool ProgressPanelDamage(unsigned char panel);
+146:    // Set next level of damage to panel
+147:    bool ProgressWheelDamage(unsigned char wheel);
+148:    // Set next level of damage to aeroplane component
+149:    bool ProgressAeroplaneDamage(unsigned char component);
+150:    bool ApplyDamage(CAutomobile* car, tComponent component, float intensity, float arg3);
+158:VALIDATE_OFFSET(CDamageManager, m_fWheelDamageEffect, 0x0);
+159:VALIDATE_OFFSET(CDamageManager, m_nEngineStatus, 0x4);
+160:VALIDATE_OFFSET(CDamageManager, m_anWheelsStatus, 0x5);
+161:VALIDATE_OFFSET(CDamageManager, m_nRightRearWheelsStatus, 0x5);
+162:VALIDATE_OFFSET(CDamageManager, m_nRightFrontWheelsStatus, 0x6);
+163:VALIDATE_OFFSET(CDamageManager, m_nLeftRearWheelsStatus, 0x7);
+164:VALIDATE_OFFSET(CDamageManager, m_nLeftFrontWheelsStatus, 0x8);
+165:VALIDATE_OFFSET(CDamageManager, m_anDoorsStatus, 0x9);
+166:VALIDATE_OFFSET(CDamageManager, m_nBonnetStatus, 0x9);
+167:VALIDATE_OFFSET(CDamageManager, m_nBootStatus, 0xA);
+168:VALIDATE_OFFSET(CDamageManager, m_nLeftFrontDoorStatus, 0xB);
+169:VALIDATE_OFFSET(CDamageManager, m_nRightFrontDoorStatus, 0xC);
+170:VALIDATE_OFFSET(CDamageManager, m_nLeftRearDoorStatus, 0xD);
+171:VALIDATE_OFFSET(CDamageManager, m_nRightRearDoorStatus, 0xE);
+172:VALIDATE_OFFSET(CDamageManager, m_nLightsStatus, 0x10);
+173:VALIDATE_OFFSET(CDamageManager, m_nPanelsStatus, 0x14);
+174:VALIDATE_SIZE(CDamageManager, 0x18);
+17:	static eWeaponType& InterruptedWeaponType;				
+18:	static eWeaponType& InterruptedWeaponTypeSelected;		
+21:	static eWeaponType& WeaponType;				
+31:	static void StartFrenzy(eWeaponType weapontype, int Timelimit, unsigned short KillsNeeded, int ModelToKill, unsigned short* pStartMessage, int ModelToKill2, int ModelToKill3, int ModelToKill4, bool bStandardSoundAndMessages, bool bNeedHeadShot);
+36:	static bool CheckDamagedWeaponType(int damageWeaponID, int expectedDamageWeaponID);
+40:	static void RegisterKillByPlayer(CPed const* pKilledPed, eWeaponType damageWeaponID, bool bHeadShotted, int arg4);
+39:    bool bRenderDamaged : 1;       // use damaged LOD models for objects with applicable damage
+39:    float          m_fDamagePercentage;
+75:VALIDATE_OFFSET(CExplosion, m_fDamagePercentage, 0x24);
+83:SUPPORTED_10US void GetNameAndDamage(char const *nodeName, char *outName, bool &outDamage);
+12:#include "CDamageAtomicModelInfo.h"
+34:    static CDamageAtomicModelInfo* AddDamageAtomicModel(int modelId);
+65:    unsigned char   m_nColDamageEffect;
+66:    unsigned char   m_nStoredColDamageEffect;
+69:    unsigned char   m_nLastWeaponDamage;
+85:    float           m_fBurnDamage;
+118:    void ObjectDamage(float damage, CVector* fxOrigin, CVector* fxDirection, CEntity* damager, eWeaponType weaponType);
+120:    void ObjectFireDamage(float damage, CEntity* damager);
+141:VALIDATE_OFFSET(CObject, m_nColDamageEffect, 0x144);
+142:VALIDATE_OFFSET(CObject, m_nStoredColDamageEffect, 0x145);
+145:VALIDATE_OFFSET(CObject, m_nLastWeaponDamage, 0x148);
+159:VALIDATE_OFFSET(CObject, m_fBurnDamage, 0x178);
+21:	float          m_fColDamageMultiplier;
+22:	unsigned char  m_nColDamageEffect;
+41:VALIDATE_OFFSET(CObjectInfo, m_fColDamageMultiplier, 0x18);
+42:VALIDATE_OFFSET(CObjectInfo, m_nColDamageEffect, 0x1C);
+24:#include "ePedState.h"
+26:#include "eWeaponType.h"
+39:    STYLE_KNIFE,
+135:    bool bPushedAlongByCar : 1; // ped is getting pushed along by car collision (so don't take damage from horz velocity)
+150:    bool bKilledByStealth : 1;
+178:    bool bUpperBodyDamageAnimsOnly : 1;
+220:    ePedState           m_ePedState;
+222:    eMoveState          m_nSwimmingMoveState; // used for swimming in CTaskSimpleSwim::ProcessPed
+244:    eWeaponType         m_nSavedWeapon; // when we need to hide ped weapon, we save it temporary here
+245:    eWeaponType         m_nDelayedWeapon; // 'delayed' weapon is like an additional weapon, f.e., simple cop has a nitestick as current and pistol as delayed weapons
+272:    eWeaponType         m_nLastWeaponDamage;
+273:    CEntity*            m_pLastEntityDamage;
+323:    bool CanSetPedState();
+329:    int GetWeaponSlot(eWeaponType weaponType);
+330:    void GrantAmmo(eWeaponType weaponType, unsigned int ammo);
+331:    void SetAmmo(eWeaponType weaponType, unsigned int ammo);
+332:    bool DoWeHaveWeaponAvailable(eWeaponType weaponType);
+376:    char GetWeaponSkill(eWeaponType weaponType);
+377:    void SetWeaponSkill(eWeaponType weaponType, char skill);
+383:    void SetPedState(ePedState pedState);
+393:    void GiveWeapon(eWeaponType weaponType, unsigned int ammo, bool likeUnused);
+395:    void SetCurrentWeapon(eWeaponType weaponType);
+396:    void ClearWeapon(eWeaponType weaponType);
+408:    CEntity* AttachPedToEntity(CEntity* entity, CVector offset, unsigned short arg2, float arg3, eWeaponType weaponType);
+409:    CEntity* AttachPedToBike(CEntity* entity, CVector offset, unsigned short arg2, float arg3, float arg4, eWeaponType weaponType);
+414:    void GiveDelayedWeapon(eWeaponType weaponType, unsigned int ammo);
+468:VALIDATE_OFFSET(CPed, m_ePedState, 0x530);
+520:VALIDATE_OFFSET(CPed, m_nLastWeaponDamage, 0x760);
+521:VALIDATE_OFFSET(CPed, m_pLastEntityDamage, 0x764);
+10:class CPedDamageResponse {
+12:    float m_fDamageHealth;
+13:    float m_fDamageArmor;
+16:    bool  m_bDamageCalculated;
+19:    inline CPedDamageResponse() {
+20:        m_fDamageHealth = 0.0f;
+21:        m_fDamageArmor = 0.0f;
+24:        m_bDamageCalculated = false;
+28:VALIDATE_OFFSET(CPedDamageResponse, m_fDamageHealth, 0x0);
+29:VALIDATE_OFFSET(CPedDamageResponse, m_fDamageArmor, 0x4);
+30:VALIDATE_OFFSET(CPedDamageResponse, m_bHealthZero, 0x8);
+31:VALIDATE_OFFSET(CPedDamageResponse, m_bForceDeath, 0x9);
+32:VALIDATE_OFFSET(CPedDamageResponse, m_bDamageCalculated, 0xA);
+33:VALIDATE_OFFSET(CPedDamageResponse, m_bCheckIfAffectsPed, 0xB);
+34:VALIDATE_SIZE(CPedDamageResponse, 0xC);10:#include "CPedDamageResponse.h"
+11:#include "eWeaponType.h"
+16:class PLUGIN_API CPedDamageResponseCalculator
+19:    const CEntity* m_pDamager;
+20:    float          m_fDamageFactor;
+22:    eWeaponType    m_weaponType;
+25:    static float& ms_damageFactor;
+27:    CPedDamageResponseCalculator(CEntity* entity, float fDamage, eWeaponType weaponType, uint8_t bodyPart, bool bSpeak);
+30:    void AccountForPedDamageStats(CPed* ped, CPedDamageResponse& response);
+31:    void AccountForPedArmour(CPed* ped, CPedDamageResponse& response);
+32:    bool ComputeWillForceDeath(CPed* ped, CPedDamageResponse& response);
+33:    void ComputeWillKillPed(CPed* ped, CPedDamageResponse& response, bool bSpeak);
+34:    void ComputeDamageResponse(CPed* ped, CPedDamageResponse& response, bool bSpeak);
+36:VALIDATE_OFFSET(CPedDamageResponseCalculator, m_pDamager, 0x0);
+37:VALIDATE_OFFSET(CPedDamageResponseCalculator, m_fDamageFactor, 0x4);
+38:VALIDATE_OFFSET(CPedDamageResponseCalculator, m_bodyPart, 0x8);
+39:VALIDATE_OFFSET(CPedDamageResponseCalculator, m_weaponType, 0xC);
+40:VALIDATE_OFFSET(CPedDamageResponseCalculator, m_bSpeak, 0x10);
+41:VALIDATE_SIZE(CPedDamageResponseCalculator, 0x14);11:#include "CTaskManager.h"
+21:#include "CTaskSimpleFight.h"
+33:    CTaskManager       m_TaskMgr;
+56:    CVector            m_vecLastPedPosDuringDamageEntity;
+73:    CTaskSimpleFight* GetTaskFighting();
+100:    bool TestForStealthKill(CPed* pPed, bool arg2);
+137:VALIDATE_OFFSET(CPedIntelligence, m_vecLastPedPosDuringDamageEntity, 0x27C);
+15:#include "eWeaponType.h"
+81:    float            m_fDamageIntensity;
+82:    CEntity*         m_pDamageEntity;
+103:    void SetDamagedPieceRecord(float damageIntensity, CEntity* damagingEntity, CColPoint& colPoint, float distanceMult);
+122:    bool ApplyCollision(CEntity* entity, CColPoint& colPoint, float& outDamageIntensity);
+123:    bool ApplySoftCollision(CEntity* entity, CColPoint& colPoint, float& outDamageIntensity);
+134:    bool CanPhysicalBeDamaged(eWeaponType weapon, bool* bDamagedDueToFireOrExplosionOrBullet);
+137:    bool ApplyCollisionAlt(CPhysical* entity, CColPoint& colPoint, float& damageIntensity, CVector& outVecMoveSpeed, CVector& outVecTurnSpeed);
+182:VALIDATE_OFFSET(CPhysical, m_fDamageIntensity, 0xD8);
+183:VALIDATE_OFFSET(CPhysical, m_pDamageEntity, 0xDC);
+11:#include "eWeaponType.h"
+45:    static int GenerateNewOne_WeaponType(CVector coors, eWeaponType weaponType, unsigned char pickupType, unsigned int ammo, bool isEmpty, char* message);
+58:    static int ModelForWeapon(eWeaponType weaponType);
+63:    static bool PlayerCanPickUpThisWeaponTypeAtThisMoment(eWeaponType weaponType);
+77:    static bool TryToMerge_WeaponType(CVector posn, eWeaponType weaponType, unsigned char pickupType, unsigned int ammo, bool _IGNORED_ arg4);
+80:    // returns weapon type (see eWeaponType)
+134:extern float &PLANE_DAMAGE_WAVE_COUNTER_VAR;
+135:extern float &PLANE_DAMAGE_THRESHHOLD;
+136:extern float &PLANE_DAMAGE_SCALE_MASS;
+137:extern float &PLANE_DAMAGE_DESTROY_THRESHHOLD;
+42:    unsigned int m_bCanBeDamaged : 1;
+11:#include "eWeaponType.h"
+15:class CEventDamage;
+37:    bool DoesPlayerWantNewWeapon(eWeaponType weaponType, bool arg1);
+58:    void MakeGroupRespondToPlayerTakingDamage(CEventDamage const& damageEvent);
+69:    void MakeChangesForNewWeapon(eWeaponType weaponType);
+9:#include "eWeaponType.h"
+17:	unsigned int  m_nWeaponType; // see eWeaponType
+34:    static void RemoveNotAdd(CEntity* creator, eWeaponType weaponType, CVector posn);
+35:    static bool AddProjectile(CEntity* creator, eWeaponType eWeaponType, CVector posn, float force, CVector* direction, CEntity* victim);
+43:VALIDATE_OFFSET(CProjectileInfo, m_nWeaponType, 0x0);
+11:#include "eWeaponType.h"
+11:#include "eWeaponType.h"
+17:    int      m_nWeaponType;
+34:    static bool AddShot(CEntity* creator, eWeaponType weaponType, CVector origin, CVector target);
+38:VALIDATE_OFFSET(CShotInfo, m_nWeaponType, 0x0);
+18:    // unused function; for 'weaponType', see eWeaponType
+19:    static void AddWeaponStreak(int weaponType);
+70:    static unsigned int &m_LastWeaponTypeFired;
+117:    static void UpdateStatsWhenWeaponHit(int weaponType);
+10:#include "eWeaponType.h"
+17:    eWeaponType m_nWeaponType; // Means Of Death
+28:            unsigned int bBeingKilledByStealth : 1;
+37:    CTaskComplexDie(eWeaponType nWeaponType/*=WEAPONTYPE_UNARMED*/, int animGroup/*ANIM_STD_PED*/, int animID/*ANIM_STD_KO_FRONT*/,
+38:        float fBlendDelta, float fAnimSpeed, bool bBeingKilledByStealth, bool bFallingToDeath, int nFallToDeathDir, bool bFallToDeathOverRailing);
+41:VALIDATE_OFFSET(CTaskComplexDie, m_nWeaponType, 0xC);
+33:class PLUGIN_API CTaskManager {
+39:    CTaskManager(CPed* ped);
+40:    ~CTaskManager();
+60:VALIDATE_OFFSET(CTaskManager, m_aPrimaryTasks, 0x0);
+61:VALIDATE_OFFSET(CTaskManager, m_aSecondaryTasks, 0x14);
+62:VALIDATE_OFFSET(CTaskManager, m_pPed, 0x2C);
+63:VALIDATE_SIZE(CTaskManager, 0x30);17:	virtual bool ProcessPed(class CPed *ped);//=0
+15:class PLUGIN_API CTaskSimpleFight : public CTaskSimple {
+17:    CTaskSimpleFight(plugin::dummy_func_t a) : CTaskSimple(a) {}
+46:   CTaskSimpleFight(CEntity *pTargetEntity, int nCommand, unsigned int nIdlePeriod = 10000);
+48:VALIDATE_OFFSET(CTaskSimpleFight, m_bIsFinished, 0x8);
+49:VALIDATE_OFFSET(CTaskSimpleFight, m_bIsInControl, 0x9);
+50:VALIDATE_OFFSET(CTaskSimpleFight, m_bAnimsReferenced, 0xA);
+51:VALIDATE_OFFSET(CTaskSimpleFight, m_nRequiredAnimGroup, 0xC);
+52:VALIDATE_OFFSET(CTaskSimpleFight, m_nIdlePeriod, 0x10);
+53:VALIDATE_OFFSET(CTaskSimpleFight, m_nIdleCounter, 0x12);
+54:VALIDATE_OFFSET(CTaskSimpleFight, m_nContinueStrike, 0x14);
+55:VALIDATE_OFFSET(CTaskSimpleFight, m_nChainCounter, 0x15);
+56:VALIDATE_OFFSET(CTaskSimpleFight, m_pTargetEntity, 0x18);
+57:VALIDATE_OFFSET(CTaskSimpleFight, m_pAnim, 0x1C);
+58:VALIDATE_OFFSET(CTaskSimpleFight, m_pIdleAnim, 0x20);
+59:VALIDATE_OFFSET(CTaskSimpleFight, m_nComboSet, 0x24);
+60:VALIDATE_OFFSET(CTaskSimpleFight, m_nCurrentMove, 0x25);
+61:VALIDATE_OFFSET(CTaskSimpleFight, m_nNextCommand, 0x26);
+62:VALIDATE_OFFSET(CTaskSimpleFight, m_nLastCommand, 0x27);
+63:VALIDATE_SIZE(CTaskSimpleFight, 0x28);
+13:class CTaskSimpleStealthKill : public CTaskSimple
+16:    CTaskSimpleStealthKill(plugin::dummy_func_t a) : CTaskSimple(a) {}
+32:    CTaskSimpleStealthKill(bool bKeepTargetAlive,CPed *pTarget,int nAssocGroupId);
+34:VALIDATE_OFFSET(CTaskSimpleStealthKill, m_bKeepTargetAlive, 0x8);
+35:VALIDATE_OFFSET(CTaskSimpleStealthKill, m_pTarget, 0xC);
+36:VALIDATE_OFFSET(CTaskSimpleStealthKill, m_nAssocGroupId, 0x10);
+37:VALIDATE_OFFSET(CTaskSimpleStealthKill, b_bIsAborting, 0x14);
+38:VALIDATE_OFFSET(CTaskSimpleStealthKill, b_bIsFinished, 0x15);
+39:VALIDATE_OFFSET(CTaskSimpleStealthKill, m_pAnim, 0x18);
+40:VALIDATE_OFFSET(CTaskSimpleStealthKill, m_nTime, 0x1C);
+41:VALIDATE_SIZE(CTaskSimpleStealthKill, 0x20);
+27:    void ProcessPed(CPed* pPed, CVehicle* pVehicle, CAnimBlendAssociation* pAnimBlendAssoc);
+10:#include "CDamageManager.h"
+70:    VEHICLE_LIGHTS_IGNORE_DAMAGE = 4,
+166:    bool bTakeLessDamage : 1;       // this vehicle is stronger (takes about 1/4 of damage)
+168:    bool bIsDamaged : 1;            // this vehicle has been damaged and is displaying all its components
+173:    bool bCanBeDamaged : 1;         // set to FALSE during cut scenes to avoid explosions
+183:    bool bIsDrowning : 1;           // is vehicle occupants taking damage in water (i.e. vehicle is dead in water)
+285:    unsigned char m_nLastWeaponDamageType; // see eWeaponType, -1 if no damage
+286:    CEntity*      m_pLastDamageEntity;
+362:    void BlowUpCar(CEntity* damager, bool bHideExplosion);
+365:    // returns false if it's not possible to burst vehicle's tyre or it is already damaged. bPhysicalEffect=true applies random moving force to vehicle
+374:    void SetupDamageAfterLoad();
+379:    void VehicleDamage(float damageIntensity, unsigned short collisionComponent, CEntity* damager, CVector* vecCollisionCoors, CVector* vecCollisionDirection, eWeaponType weapon);
+412:    bool CanVehicleBeDamaged(CEntity* damager, eWeaponType weapon, unsigned char* arg2);
+431:    bool CanDoorsBeDamaged();
+449:    void AddDamagedVehicleParticles();
+460:    RpAtomic* CreateUpgradeAtomic(CBaseModelInfo* model, UpgradePosnDesc const* upgradePosn, RwFrame* parentComponent, bool isDamaged);
+464:    RpAtomic* CreateReplacementAtomic(CBaseModelInfo* model, RwFrame* component, int arg2, bool bDamaged, bool bIsWheel);
+495:    void ReactToVehicleDamage(CPed* ped);
+504:    void InflictDamage(CEntity* damager, eWeaponType weapon, float intensity, CVector coords);
+608:VALIDATE_OFFSET(CVehicle, m_nLastWeaponDamageType, 0x508);
+609:VALIDATE_OFFSET(CVehicle, m_pLastDamageEntity, 0x50C);
+665:extern float &fDamagePosSpeedShift; // 0.4
+178:	static RpAtomic *HideDamagedAtomicCB(RpAtomic *atomic, void *data);
+10:#include "eWeaponType.h"
+31:    eWeaponType m_eWeaponType;
+47:    CWeapon(eWeaponType weaponType, int ammo);
+58:    void Initialise(eWeaponType weaponType, int ammo, CPed* owner);
+78:    static void GenerateDamageEvent(CPed* victim, CEntity* creator, eWeaponType weaponType, int damageFactor, ePedPieceTypes pedPiece, int direction);
+79:    static bool CanBeUsedFor2Player(eWeaponType weaponType);
+86:    static bool CheckForShootingVehicleOccupant(CEntity** pCarEntity, CColPoint* colPoint, eWeaponType weaponType, CVector const& origin, CVector const& target);
+88:    static bool ProcessLineOfSight(CVector const& startPoint, CVector const& endPoint, CColPoint& outColPoint, CEntity*& outEntity, eWeaponType weaponType, CEntity* arg5, bool buildings, bool vehicles, bool peds, bool objects, bool dummies, bool arg11, bool doIgnoreCameraCheck);
+92:VALIDATE_OFFSET(CWeapon, m_eWeaponType, 0x0);
+11:#include "eWeaponType.h"
+62:	unsigned short m_nDamage; // damage inflicted per hit
+64:	unsigned int   m_nSkillLevel; // what's the skill level of this weapontype
+97:	static CWeaponInfo *GetWeaponInfo(eWeaponType weaponType, unsigned char skill = 0);
+99:	static eWeaponType FindWeaponType(char *name);
+116:VALIDATE_OFFSET(CWeaponInfo, m_nDamage, 0x22);
+10:#include "eWeaponType.h"
+14:	eWeaponType m_weaponInfo;
+79:	static void ProcessPedsAfterPreRender();
+127:	static void SetAllCarsCanBeDamaged(bool enable);
+136:	static void TriggerExplosionSectorList(CPtrList& ptrList, CVector const& point, float radius, float visibleDistance, CEntity* victim, CEntity* creator, bool processVehicleBombTimer, float damage);
+154:	static void TriggerExplosion(CVector const& point, float radius, float visibleDistance, CEntity* victim, CEntity* creator, bool processVehicleBombTimer, float damage);
+48:    float         m_fCollisionDamageMultiplier; // 0.2 to 5.0
+152:VALIDATE_OFFSET(tHandlingData, m_fCollisionDamageMultiplier, 0xC8);
+14:// Converted from thiscall void CAEWeaponAudioEntity::WeaponReload(eWeaponType weaptype,CPhysical *entity,int AudioEventId)	0x503690	
+15:void CAEWeaponAudioEntity::WeaponReload(eWeaponType weaptype, CPhysical* entity, int AudioEventId) {
+16:	plugin::CallMethod<0x503690, CAEWeaponAudioEntity *, eWeaponType, CPhysical*, int>(this, weaptype, entity, AudioEventId);
+19:// Converted from thiscall void CAEWeaponAudioEntity::WeaponFire(eWeaponType weaptype,CPhysical *entity,int AudioEventId)	0x504F80	
+20:void CAEWeaponAudioEntity::WeaponFire(eWeaponType weaptype, CPhysical* entity, int AudioEventId) {
+21:	plugin::CallMethod<0x504F80, CAEWeaponAudioEntity *, eWeaponType, CPhysical*, int>(this, weaptype, entity, AudioEventId);
+39:// Converted from thiscall void CAEWeaponAudioEntity::ReportStealthKill(eWeaponType weaptype,CPhysical *entity,int AudioEventId)	0x503B20	
+40:void CAEWeaponAudioEntity::ReportStealthKill(eWeaponType weaptype, CPhysical* entity, int AudioEventId) {
+41:	plugin::CallMethod<0x503B20, CAEWeaponAudioEntity *, eWeaponType, CPhysical*, int>(this, weaptype, entity, AudioEventId);
+108:// Converted from thiscall void CAutomobile::SetRandomDamage(bool) 0x6A2530
+109:void CAutomobile::SetRandomDamage(bool arg0)
+114:// Converted from thiscall void CAutomobile::SetTotalDamage(bool) 0x6A27F0
+115:void CAutomobile::SetTotalDamage(bool arg0)
+234:// Converted from thiscall CPed* CAutomobile::KnockPedOutCar(eWeaponType, ushort, CPed *) 0x6A44C0
+235:CPed* CAutomobile::KnockPedOutCar(eWeaponType arg0, unsigned short arg1, CPed* arg2)
+237:    return ((CPed* (__thiscall *)(CAutomobile*, eWeaponType, unsigned short, CPed*))0x6A44C0)(this, arg0, arg1, arg2);
+282:// Converted from thiscall void CAutomobile::dmgDrawCarCollidingParticles(CVector const& position, float force, eWeaponType weapon) 0x6A6DC0
+283:void CAutomobile::dmgDrawCarCollidingParticles(CVector const& position, float force, eWeaponType weapon)
+285:    ((void(__thiscall *)(CAutomobile*, CVector const&, float, eWeaponType))0x6A6DC0)(this, position, force, weapon);
+384:// Converted from thiscall void CAutomobile::SetBumperDamage(ePanels panel, bool withoutVisualEffect) 0x6B1350
+385:void CAutomobile::SetBumperDamage(ePanels panel, bool withoutVisualEffect)
+390:// Converted from thiscall void CAutomobile::SetPanelDamage(ePanels panel, bool createWindowGlass) 0x6B1480
+391:void CAutomobile::SetPanelDamage(ePanels panel, bool createWindowGlass)
+396:// Converted from thiscall void CAutomobile::SetDoorDamage(eDoors door, bool withoutVisualEffect) 0x6B1600
+397:void CAutomobile::SetDoorDamage(eDoors door, bool withoutVisualEffect)
+14:CBaseModelInfo *CBaseModelInfo::AsDamageAtomicModelInfoPtr()
+19:// Converted from thiscall void CBike::dmgDrawCarCollidingParticles(CVector const& position,float power,eWeaponType weaponType) 0x6B5A00
+20:void CBike::dmgDrawCarCollidingParticles(CVector const& position, float power, eWeaponType weaponType) {
+21:    ((void(__thiscall *)(CBike*, CVector const&, float, eWeaponType))0x6B5A00)(this, position, power, weaponType);
+24:// Converted from cdecl bool CBike::DamageKnockOffRider(CVehicle *,float,ushort,CEntity *,CVector &,CVector &) 0x6B5A10
+25:bool CBike::DamageKnockOffRider(CVehicle* arg0, float arg1, unsigned short arg2, CEntity* arg3, CVector& arg4, CVector& arg5) {
+29:// Converted from thiscall CPed* CBike::KnockOffRider(eWeaponType,uchar,CPed *,bool) 0x6B5F40
+30:CPed* CBike::KnockOffRider(eWeaponType arg0, unsigned char arg1, CPed* arg2, bool arg3) {
+31:    return ((CPed* (__thiscall *)(CBike*, eWeaponType, unsigned char, CPed*, bool))0x6B5F40)(this, arg0, arg1, arg2, arg3);
+24:// Converted from cdecl bool CBulletInfo::AddBullet(CEntity *creator,eWeaponType weaponType,CVector position,CVector velocity) 0x736010
+25:bool CBulletInfo::AddBullet(CEntity* creator, eWeaponType weaponType, CVector position, CVector velocity) {
+26:    return plugin::CallAndReturn<bool, 0x736010, CEntity*, eWeaponType, CVector, CVector>(creator, weaponType, position, velocity);
+13:// Converted from cdecl void CBulletTraces::AddTrace(CVector * start,CVector * end,int weaponType,CEntity * entity) 0x573D40
+14:void CBulletTraces::AddTrace(CVector* start, CVector* end, int weaponType, CEntity* entity) {
+15:    plugin::Call<0x726AF0, CVector*, CVector*, int, CEntity*>(start, end, weaponType, entity);
+7:#include "CDamageAtomicModelInfo.h"
+9:bool& CDamageAtomicModelInfo::ms_bCreateDamagedVersion = *(bool*)0xA9B0B0;
+7:#include "CDamageManager.h"
+9:// Converted from thiscall bool CDamageManager::GetComponentGroup(tComponent component, tComponentGroup* group, uchar *damageCompId) 0x6C2040
+10:bool CDamageManager::GetComponentGroup(tComponent component, tComponentGroup* group, unsigned char* damageCompId)
+12:    return ((bool(__thiscall *)(CDamageManager*, tComponent, tComponentGroup*, unsigned char*))0x6C2040)(this, component, group, damageCompId);
+15:// Converted from thiscall void CDamageManager::ResetDamageStatus(void) 0x6C20E0
+16:void CDamageManager::ResetDamageStatus()
+18:    ((void(__thiscall *)(CDamageManager*))0x6C20E0)(this);
+21:// Converted from thiscall void CDamageManager::SetLightStatus(eLights light, uint status) 0x6C2100
+22:void CDamageManager::SetLightStatus(eLights light, unsigned int status)
+24:    ((void(__thiscall *)(CDamageManager*, eLights, unsigned int))0x6C2100)(this, light, status);
+27:// Converted from thiscall uint CDamageManager::GetLightStatus(eLights light) 0x6C2130
+28:unsigned int CDamageManager::GetLightStatus(eLights light)
+30:    return ((unsigned int(__thiscall *)(CDamageManager*, eLights))0x6C2130)(this, light);
+33:// Converted from thiscall void CDamageManager::SetPanelStatus(int panel, uint status) 0x6C2150
+34:void CDamageManager::SetPanelStatus(int panel, unsigned int status)
+36:    ((void(__thiscall *)(CDamageManager*, int, unsigned int))0x6C2150)(this, panel, status);
+39:// Converted from thiscall uint CDamageManager::GetPanelStatus(int) 0x6C2180
+40:unsigned int CDamageManager::GetPanelStatus(int arg0)
+42:    return ((unsigned int(__thiscall *)(CDamageManager*, int))0x6C2180)(this, arg0);
+45:// Converted from thiscall void CDamageManager::SetWheelStatus(int wheel, uint status) 0x6C21A0
+46:void CDamageManager::SetWheelStatus(int wheel, unsigned int status)
+48:    ((void(__thiscall *)(CDamageManager*, int, unsigned int))0x6C21A0)(this, wheel, status);
+51:// Converted from thiscall uint CDamageManager::GetWheelStatus(int wheel) 0x6C21B0
+52:unsigned int CDamageManager::GetWheelStatus(int wheel)
+54:    return ((unsigned int(__thiscall *)(CDamageManager*, int))0x6C21B0)(this, wheel);
+57:// Converted from thiscall void CDamageManager::SetDoorStatus(eDoors door, uint status) 0x6C21C0
+58:void CDamageManager::SetDoorStatus(eDoors door, unsigned int status)
+60:    ((void(__thiscall *)(CDamageManager*, eDoors, unsigned int))0x6C21C0)(this, door, status);
+63:// Converted from thiscall void CDamageManager::SetDoorStatus(int doorNodeIndex, uint status) 0x6C21E0
+64:void CDamageManager::SetDoorStatus(int doorNodeIndex, unsigned int status)
+66:    ((void(__thiscall *)(CDamageManager*, int, unsigned int))0x6C21E0)(this, doorNodeIndex, status);
+69:// Converted from thiscall uint CDamageManager::GetDoorStatus(int doorNodeIndex) 0x6C2230
+70:unsigned int CDamageManager::GetDoorStatus(int doorNodeIndex)
+72:    return ((unsigned int(__thiscall *)(CDamageManager*, int))0x6C2250)(this, doorNodeIndex);
+75:// Converted from thiscall uint CDamageManager::GetDoorStatus(eDoors door) 0x6C2250
+76:unsigned int CDamageManager::GetDoorStatus(eDoors door)
+78:    return ((unsigned int(__thiscall *)(CDamageManager*, eDoors))0x6C2230)(this, door);
+81:// Converted from thiscall void CDamageManager::SetEngineStatus(uint status) 0x6C22A0
+82:void CDamageManager::SetEngineStatus(unsigned int status)
+84:    ((void(__thiscall *)(CDamageManager*, unsigned int))0x6C22A0)(this, status);
+87:// Converted from thiscall uint CDamageManager::GetEngineStatus(void) 0x6C22C0
+88:unsigned int CDamageManager::GetEngineStatus()
+90:    return ((unsigned int(__thiscall *)(CDamageManager*))0x6C22C0)(this);
+93:// Converted from thiscall void CDamageManager::SetAeroplaneCompStatus(int component, uint status) 0x6C22D0
+94:void CDamageManager::SetAeroplaneCompStatus(int component, unsigned int status)
+96:    ((void(__thiscall *)(CDamageManager*, int, unsigned int))0x6C22D0)(this, component, status);
+99:// Converted from thiscall uint CDamageManager::GetAeroplaneCompStatus(int component) 0x6C2300
+100:unsigned int CDamageManager::GetAeroplaneCompStatus(int component)
+102:    return ((unsigned int(__thiscall *)(CDamageManager*, int))0x6C2300)(this, component);
+105:// Converted from thiscall bool CDamageManager::ProgressDoorDamage(uchar damageCompId, CAutomobile *car) 0x6C2320
+106:bool CDamageManager::ProgressDoorDamage(unsigned char damageCompId, CAutomobile* car)
+108:    return ((bool(__thiscall *)(CDamageManager*, unsigned char, CAutomobile*))0x6C2320)(this, damageCompId, car);
+111:// Converted from thiscall bool CDamageManager::ProgressEngineDamage(float) 0x6C23B0
+112:bool CDamageManager::ProgressEngineDamage(float arg0)
+114:    return ((bool(__thiscall *)(CDamageManager*, float))0x6C23B0)(this, arg0);
+117:// Converted from thiscall bool CDamageManager::ProgressPanelDamage(uchar panel) 0x6C23C0
+118:bool CDamageManager::ProgressPanelDamage(unsigned char panel)
+120:    return ((bool(__thiscall *)(CDamageManager*, unsigned char))0x6C23C0)(this, panel);
+123:// Converted from thiscall bool CDamageManager::ProgressWheelDamage(uchar wheel) 0x6C2440
+124:bool CDamageManager::ProgressWheelDamage(unsigned char wheel)
+126:    return ((bool(__thiscall *)(CDamageManager*, unsigned char))0x6C2440)(this, wheel);
+129:// Converted from thiscall bool CDamageManager::ProgressAeroplaneDamage(uchar component) 0x6C2460
+130:bool CDamageManager::ProgressAeroplaneDamage(unsigned char component)
+132:    return ((bool(__thiscall *)(CDamageManager*, unsigned char))0x6C2460)(this, component);
+135:// Converted from thiscall bool CDamageManager::ApplyDamage(CAutomobile *car, tComponent component, float intensity, float) 0x6C24B0
+136:bool CDamageManager::ApplyDamage(CAutomobile* car, tComponent component, float intensity, float arg3)
+138:    return ((bool(__thiscall *)(CDamageManager*, CAutomobile*, tComponent, float, float))0x6C24B0)(this, car, component, intensity, arg3);
+141:// Converted from thiscall void CDamageManager::FuckCarCompletely(bool skipWheels) 0x6C25D0
+142:void CDamageManager::FuckCarCompletely(bool skipWheels)
+144:    ((void(__thiscall *)(CDamageManager*, bool))0x6C25D0)(this, skipWheels);
+147:// Converted from thiscall int CDamageManager::GetCarNodeIndexFromPanel(ePanels panel) 0x6C26A0
+148:int CDamageManager::GetCarNodeIndexFromPanel(ePanels panel)
+150:    return ((int(__thiscall *)(CDamageManager*, ePanels))0x6C26A0)(this, panel);
+153:// Converted from thiscall int CDamageManager::GetCarNodeIndexFromDoor(eDoors door) 0x6C26F0
+154:int CDamageManager::GetCarNodeIndexFromDoor(eDoors door)
+156:    return ((int(__thiscall *)(CDamageManager*, eDoors))0x6C26F0)(this, door);
+159:// Converted from thiscall void CDamageManager::Reset(void) 0x6A04E0
+160:void CDamageManager::Reset()
+162:    ((void(__thiscall *)(CDamageManager*))0x6A04E0)(this);
+12:eWeaponType& CDarkel::InterruptedWeaponType = *(eWeaponType*)0x96A6D8;
+13:eWeaponType& CDarkel::InterruptedWeaponTypeSelected = *(eWeaponType*)0x96A6DC;
+16:eWeaponType& CDarkel::WeaponType = *(eWeaponType*)0x96A700;
+54:// Converted from cdecl void CDarkel::StartFrenzy(eWeaponType weapontype,int Timelimit,ushort KillsNeeded,int ModelToKill,ushort *pStartMessage,int ModelToKill2, int ModelToKill3,int ModelToKill4,bool bStandardSoundAndMessages, bool bNeedHeadShot) 0x43D3B0 
+55:void CDarkel::StartFrenzy(eWeaponType weapontype, int Timelimit, unsigned short KillsNeeded, int ModelToKill, unsigned short* pStartMessage, int ModelToKill2, int ModelToKill3, int ModelToKill4, bool bStandardSoundAndMessages, bool bNeedHeadShot) {
+56:	plugin::Call<0x43D3B0, eWeaponType, int, unsigned short, int, unsigned short*, int, int, int, bool, bool>(weapontype, Timelimit, KillsNeeded, ModelToKill, pStartMessage, ModelToKill2, ModelToKill3, ModelToKill4, bStandardSoundAndMessages, bNeedHeadShot);
+79:// Converted from cdecl bool CDarkel::CheckDamagedWeaponType(int damageWeaponID, int expectedDamageWeaponID) 0x43D9E0 
+80:bool CDarkel::CheckDamagedWeaponType(int damageWeaponID, int expectedDamageWeaponID) {
+81:	return plugin::CallAndReturn<bool, 0x43D9E0, int, int>(damageWeaponID, expectedDamageWeaponID);
+99:// Converted from cdecl void CDarkel::RegisterKillByPlayer(CPed const*pKilledPed,eWeaponType damageWeaponID,bool bHeadShotted,int arg4) 0x43DCD0 
+100:void CDarkel::RegisterKillByPlayer(CPed const* pKilledPed, eWeaponType damageWeaponID, bool bHeadShotted, int arg4) {
+101:	plugin::Call<0x43DCD0, CPed const*, eWeaponType, bool, int>(pKilledPed, damageWeaponID, bHeadShotted, arg4);
+371:int addrof(GetNameAndDamage) = ADDRESS_BY_VERSION(0x5370A0, 0, 0, 0, 0, 0);
+372:int gaddrof(GetNameAndDamage) = GLOBAL_ADDRESS_BY_VERSION(0x5370A0, 0, 0, 0, 0, 0);
+374:void GetNameAndDamage(char const *nodeName, char *outName, bool &outDamage) {
+375:    plugin::CallDynGlobal<char const *, char *, bool &>(gaddrof(GetNameAndDamage), nodeName, outName, outDamage);
+28:CDamageAtomicModelInfo* CModelInfo::AddDamageAtomicModel(int modelId) {
+29:    return ((CDamageAtomicModelInfo* (__cdecl*)(int))0x4C6650)(modelId);
+151:// Converted from thiscall void CObject::ObjectDamage(float damage,CVector *fxOrigin,CVector *fxDirection,CEntity *damager,eWeaponType weaponType) 0x5A0D90
+152:void CObject::ObjectDamage(float damage, CVector* fxOrigin, CVector* fxDirection, CEntity* damager, eWeaponType weaponType) {
+153:    ((void(__thiscall *)(CObject*, float, CVector*, CVector*, CEntity*, eWeaponType))0x5A0D90)(this, damage, fxOrigin, fxDirection, damager, weaponType);
+161:// Converted from thiscall void CObject::ObjectFireDamage(float damage,CEntity *damager) 0x5A1580
+162:void CObject::ObjectFireDamage(float damage, CEntity* damager) {
+163:    ((void(__thiscall *)(CObject*, float, CEntity*))0x5A1580)(this, damage, damager);
+176:// Converted from thiscall bool CPed::CanSetPedState(void) 0x5DF030
+177:bool CPed::CanSetPedState()
+212:// Converted from thiscall int CPed::GetWeaponSlot(eWeaponType weaponType) 0x5DF200
+213:int CPed::GetWeaponSlot(eWeaponType weaponType)
+215:	return ((int (__thiscall *)(CPed*, eWeaponType))0x5DF200)(this, weaponType);
+218:// Converted from thiscall void CPed::GrantAmmo(eWeaponType weaponType,uint ammo) 0x5DF220
+219:void CPed::GrantAmmo(eWeaponType weaponType, unsigned int ammo)
+221:	((void (__thiscall *)(CPed*, eWeaponType, unsigned int))0x5DF220)(this, weaponType, ammo);
+224:// Converted from thiscall void CPed::SetAmmo(eWeaponType weaponType,uint ammo) 0x5DF290
+225:void CPed::SetAmmo(eWeaponType weaponType, unsigned int ammo)
+227:	((void (__thiscall *)(CPed*, eWeaponType, unsigned int))0x5DF290)(this, weaponType, ammo);
+230:// Converted from thiscall bool CPed::DoWeHaveWeaponAvailable(eWeaponType weaponType) 0x5DF300
+231:bool CPed::DoWeHaveWeaponAvailable(eWeaponType weaponType)
+233:	return ((bool (__thiscall *)(CPed*, eWeaponType))0x5DF300)(this, weaponType);
+476:// Converted from thiscall char CPed::GetWeaponSkill(eWeaponType weaponType) 0x5E3B60
+477:char CPed::GetWeaponSkill(eWeaponType weaponType)
+479:	return ((char (__thiscall *)(CPed*, eWeaponType))0x5E3B60)(this, weaponType);
+482:// Converted from thiscall void CPed::SetWeaponSkill(eWeaponType weaponType,char skill) 0x5E3C10
+483:void CPed::SetWeaponSkill(eWeaponType weaponType, char skill)
+485:	((void (__thiscall *)(CPed*, eWeaponType, char))0x5E3C10)(this, weaponType, skill);
+518:// Converted from thiscall void CPed::SetPedState(ePedState pedState) 0x5E4500
+519:void CPed::SetPedState(ePedState pedState)
+521:	((void (__thiscall *)(CPed*, ePedState))0x5E4500)(this, pedState);
+572:// Converted from thiscall void CPed::GiveWeapon(eWeaponType weaponType,uint ammo,bool likeUnused) 0x5E6080
+573:void CPed::GiveWeapon(eWeaponType weaponType, unsigned int ammo, bool likeUnused)
+575:	((void (__thiscall *)(CPed*, eWeaponType, unsigned int, bool))0x5E6080)(this, weaponType, ammo, likeUnused);
+584:// Converted from thiscall void CPed::SetCurrentWeapon(eWeaponType weaponType) 0x5E6280
+585:void CPed::SetCurrentWeapon(eWeaponType weaponType)
+587:	((void (__thiscall *)(CPed*, eWeaponType))0x5E6280)(this, weaponType);
+590:// Converted from thiscall void CPed::ClearWeapon(eWeaponType weaponType) 0x5E62B0
+591:void CPed::ClearWeapon(eWeaponType weaponType)
+593:	((void (__thiscall *)(CPed*, eWeaponType))0x5E62B0)(this, weaponType);
+662:// Converted from thiscall CEntity* CPed::AttachPedToEntity(CEntity *entity,CVector offset,ushort,float,eWeaponType weaponType) 0x5E7CB0
+663:CEntity* CPed::AttachPedToEntity(CEntity* entity, CVector offset, unsigned short arg2, float arg3, eWeaponType weaponType)
+665:	return ((CEntity* (__thiscall *)(CPed*, CEntity*, CVector, unsigned short, float, eWeaponType))0x5E7CB0)(this, entity, offset, arg2, arg3, weaponType);
+668:// Converted from thiscall CEntity* CPed::AttachPedToBike(CEntity *entity,CVector offset,ushort,float,float,eWeaponType weaponType) 0x5E7E60
+669:CEntity* CPed::AttachPedToBike(CEntity* entity, CVector offset, unsigned short arg2, float arg3, float arg4, eWeaponType weaponType)
+671:	return ((CEntity* (__thiscall *)(CPed*, CEntity*, CVector, unsigned short, float, float, eWeaponType))0x5E7E60)(this, entity, offset, arg2, arg3, arg4, weaponType);
+698:// Converted from thiscall void CPed::GiveDelayedWeapon(eWeaponType weaponType,uint ammo) 0x5E89B0
+699:void CPed::GiveDelayedWeapon(eWeaponType weaponType, unsigned int ammo)
+701:	((void (__thiscall *)(CPed*, eWeaponType, unsigned int))0x5E89B0)(this, weaponType, ammo);
+7:#include "CPedDamageResponseCalculator.h"
+9:float& CPedDamageResponseCalculator::ms_damageFactor = *(float*)0x8A6260; // 5555.5498
+12:CPedDamageResponseCalculator::CPedDamageResponseCalculator(CEntity* entity, float fDamage, eWeaponType weaponType, uint8_t bodyPart, bool bSpeak) {
+13:    ((void(__thiscall*)(CPedDamageResponseCalculator*, CEntity*, float, eWeaponType, uint8_t, bool))0x4AD3F0)(this, entity, fDamage, weaponType, bodyPart, bSpeak);
+17:void CPedDamageResponseCalculator::AccountForPedDamageStats(CPed* ped, CPedDamageResponse& response) {
+18:    plugin::CallMethod<0x4AD430, CPedDamageResponseCalculator*, CPed*, CPedDamageResponse&>(this, ped, response);
+22:void CPedDamageResponseCalculator::AccountForPedArmour(CPed* ped, CPedDamageResponse& response) {
+23:    plugin::CallMethod<0x4AD550, CPedDamageResponseCalculator*, CPed*, CPedDamageResponse&>(this, ped, response);
+27:bool CPedDamageResponseCalculator::ComputeWillForceDeath(CPed* ped, CPedDamageResponse& response) {
+28:    return plugin::CallMethodAndReturn<bool, 0x4AD610, CPedDamageResponseCalculator*, CPed*, CPedDamageResponse&>(this, ped, response);
+32:void CPedDamageResponseCalculator::ComputeWillKillPed(CPed* ped, CPedDamageResponse& response, bool bSpeak) {
+33:    plugin::CallMethod<0x4B3210, CPedDamageResponseCalculator*>(this, ped, response, bSpeak);
+37:void CPedDamageResponseCalculator::ComputeDamageResponse(CPed* ped, CPedDamageResponse& response, bool bSpeak)
+39:    plugin::CallMethod<0x4B5AC0, CPedDamageResponseCalculator*, CPed*, CPedDamageResponse&, bool>(this, ped, response, bSpeak);
+81:// Converted from thiscall CTaskSimpleFight* CPedIntelligence::GetTaskFighting(void) 0x600F30 
+82:CTaskSimpleFight* CPedIntelligence::GetTaskFighting() {
+83:	return plugin::CallMethodAndReturn<CTaskSimpleFight*, 0x600F30, CPedIntelligence *>(this);
+216:// Converted from thiscall bool CPedIntelligence::TestForStealthKill(CPed *pPed,bool arg2) 0x601E00 
+217:bool CPedIntelligence::TestForStealthKill(CPed* pPed, bool arg2) {
+32:// Converted from thiscall void CPhysical::SetDamagedPieceRecord(float damageIntensity,CEntity *damagingEntity,CColPoint &colPoint,float distanceMult) 0x5428C0
+33:void CPhysical::SetDamagedPieceRecord(float damageIntensity, CEntity* damagingEntity, CColPoint& colPoint, float distanceMult)
+35:	((void (__thiscall *)(CPhysical*, float, CEntity*, CColPoint&, float))0x5428C0)(this, damageIntensity, damagingEntity, colPoint, distanceMult);
+125:bool CPhysical::ApplyCollision(CEntity* entity, CColPoint& colPoint, float& outDamageIntensity)
+127:	return ((bool (__thiscall *)(CPhysical*, CEntity*, CColPoint&, float&))0x5435C0)(this, entity, colPoint, outDamageIntensity);
+131:bool CPhysical::ApplySoftCollision(CEntity* entity, CColPoint& colPoint, float& outDamageIntensity)
+133:	return ((bool (__thiscall *)(CPhysical*, CEntity*, CColPoint&, float&))0x543890)(this, entity, colPoint, outDamageIntensity);
+190:// Converted from thiscall bool CPhysical::CanPhysicalBeDamaged(eWeaponType weapon,bool *) 0x5448B0
+191:bool CPhysical::CanPhysicalBeDamaged(eWeaponType weapon, bool* bDamagedDueToFireOrExplosionOrBullet)
+193:	return ((bool (__thiscall *)(CPhysical*, eWeaponType, bool*))0x5448B0)(this, weapon, bDamagedDueToFireOrExplosionOrBullet);
+76:// Converted from cdecl int CPickups::GenerateNewOne_WeaponType(CVector coors,eWeaponType weaponType,uchar pickupType,uint ammo,bool isEmpty,char *message) 0x457380
+77:int CPickups::GenerateNewOne_WeaponType(CVector coors, eWeaponType weaponType, unsigned char pickupType, unsigned int ammo, bool isEmpty, char* message) {
+78:    return plugin::CallAndReturn<int, 0x457380, CVector, eWeaponType, unsigned char, unsigned int, bool, char*>(coors, weaponType, pickupType, ammo, isEmpty, message);
+116:// Converted from cdecl int CPickups::ModelForWeapon(eWeaponType weaponType) 0x454AC0
+117:int CPickups::ModelForWeapon(eWeaponType weaponType) {
+118:    return plugin::CallAndReturn<int, 0x454AC0, eWeaponType>(weaponType);
+141:// Converted from cdecl bool CPickups::PlayerCanPickUpThisWeaponTypeAtThisMoment(eWeaponType weaponType) 0x4554C0
+142:bool CPickups::PlayerCanPickUpThisWeaponTypeAtThisMoment(eWeaponType weaponType) {
+143:    return plugin::CallAndReturn<bool, 0x4554C0, eWeaponType>(weaponType);
+191:// Converted from cdecl bool CPickups::TryToMerge_WeaponType(CVector posn,eWeaponType weaponType,uchar pickupType,uint ammo, bool) 0x4555A0
+192:bool CPickups::TryToMerge_WeaponType(CVector posn, eWeaponType weaponType, unsigned char pickupType, unsigned int ammo, bool _IGNORED_ arg4) {
+193:    return plugin::CallAndReturn<bool, 0x4555A0, CVector, eWeaponType, unsigned char, unsigned int, bool>(posn, weaponType, pickupType, ammo, arg4);
+21:float &PLANE_DAMAGE_WAVE_COUNTER_VAR             = *(float *)0x8D33E0;
+22:float &PLANE_DAMAGE_THRESHHOLD                   = *(float *)0x8D33E4;
+23:float &PLANE_DAMAGE_SCALE_MASS                   = *(float *)0x8D33E8;
+24:float &PLANE_DAMAGE_DESTROY_THRESHHOLD           = *(float *)0x8D33EC;
+53:// Converted from thiscall bool CPlayerPed::DoesPlayerWantNewWeapon(eWeaponType weaponType, bool) 0x609710
+54:bool CPlayerPed::DoesPlayerWantNewWeapon(eWeaponType weaponType, bool arg1) {
+55:    return plugin::CallMethodAndReturn<bool, 0x609710, CPlayerPed *, eWeaponType, bool>(this, weaponType, arg1);
+153:// Converted from thiscall void CPlayerPed::MakeGroupRespondToPlayerTakingDamage(CEventDamage const& damageEvent) 0x60A110
+154:void CPlayerPed::MakeGroupRespondToPlayerTakingDamage(CEventDamage const& damageEvent) {
+155:    plugin::CallMethod<0x60A110, CPlayerPed *, CEventDamage const&>(this, damageEvent);
+208:// Converted from thiscall void CPlayerPed::MakeChangesForNewWeapon(eWeaponType weaponType) 0x60B460
+209:void CPlayerPed::MakeChangesForNewWeapon(eWeaponType weaponType) {
+210:    plugin::CallMethod<0x60B460, CPlayerPed *, eWeaponType>(this, weaponType);
+34:// Converted from cdecl void CProjectileInfo::RemoveNotAdd(CEntity *creator,eWeaponType weaponType,CVector posn) 0x737C00
+35:void CProjectileInfo::RemoveNotAdd(CEntity* creator, eWeaponType weaponType, CVector posn) {
+36:    plugin::Call<0x737C00, CEntity*, eWeaponType, CVector>(creator, weaponType, posn);
+39:// Converted from cdecl bool CProjectileInfo::AddProjectile(CEntity *creator,eWeaponType weaponType,CVector posn,float force,CVector *direction,CEntity *victim) 0x737C80
+40:bool CProjectileInfo::AddProjectile(CEntity* creator, eWeaponType weaponType, CVector posn, float force, CVector* direction, CEntity* victim) {
+41:    return plugin::CallAndReturn<bool, 0x737C80, CEntity*, eWeaponType, CVector, float, CVector*, CEntity*>(creator, weaponType, posn, force, direction, victim);
+23:// Converted from cdecl bool CShotInfo::AddShot(CEntity *creator,eWeaponType weaponType,CVector origin,CVector target) 0x739C30
+24:bool CShotInfo::AddShot(CEntity* creator, eWeaponType weaponType, CVector origin, CVector target) {
+25:    return plugin::CallAndReturn<bool, 0x739C30, CEntity*, eWeaponType, CVector, CVector>(creator, weaponType, origin, target);
+15:// Converted from cdecl void CSpecialFX::AddWeaponStreak(int weaponType) 0x7233F0
+16:void CSpecialFX::AddWeaponStreak(int weaponType) {
+17:    plugin::Call<0x7233F0, int>(weaponType);
+35:unsigned int &CStats::m_LastWeaponTypeFired = *(unsigned int*)0xB79514;
+262:// Converted from cdecl void CStats::UpdateStatsWhenWeaponHit(int weaponType) 0x55CEB0
+263:void CStats::UpdateStatsWhenWeaponHit(int weaponType) {
+264:    plugin::Call<0x55CEB0, int>(weaponType);
+9:CTaskComplexDie::CTaskComplexDie(eWeaponType nWeaponType, int animGroup, int animID, float fBlendDelta,
+10:    float fAnimSpeed, bool bBeingKilledByStealth, bool bFallingToDeath, int nFallToDeathDir, bool bFallToDeathOverRailing)
+13:    plugin::CallMethod<0x630040, CTaskComplexDie*, eWeaponType, int, int, float, float, bool, bool, int, bool>
+14:        (this, nWeaponType, animGroup, animID, fBlendDelta, fAnimSpeed, bBeingKilledByStealth,
+7:#include "CTaskManager.h"
+9:// Converted from thiscall void CTaskManager::CTaskManager(CPed *ped) 0x6816A0
+10:CTaskManager::CTaskManager(CPed* ped) {
+11:    ((void(__thiscall *)(CTaskManager*, CPed*))0x6816A0)(this, ped);
+14:// Converted from thiscall void CTaskManager::~CTaskManager() 0x6816D0
+15:CTaskManager::~CTaskManager() {
+16:    ((void(__thiscall *)(CTaskManager*))0x6816D0)(this);
+19:// Converted from thiscall CTask* CTaskManager::GetActiveTask(void) 0x681720
+20:CTask* CTaskManager::GetActiveTask() {
+21:    return ((CTask* (__thiscall *)(CTaskManager*))0x681720)(this);
+24:// Converted from thiscall CTask* CTaskManager::FindActiveTaskByType(int taskType) 0x681740
+25:CTask* CTaskManager::FindActiveTaskByType(int taskType) {
+26:    return ((CTask* (__thiscall *)(CTaskManager*, int))0x681740)(this, taskType);
+29:// Converted from thiscall CTask* CTaskManager::FindTaskByType(int taskIndex,int taskType) 0x6817D0
+30:CTask* CTaskManager::FindTaskByType(int taskIndex, int taskType) {
+31:    return ((CTask* (__thiscall *)(CTaskManager*, int, int))0x6817D0)(this, taskIndex, taskType);
+34:// Converted from thiscall CTask* CTaskManager::GetTaskSecondary(int taskIndex) 0x681810
+35:CTask* CTaskManager::GetTaskSecondary(int taskIndex) {
+36:    return ((CTask* (__thiscall *)(CTaskManager*, int))0x681810)(this, taskIndex);
+39:// Converted from thiscall bool CTaskManager::HasTaskSecondary(CTask const*task) 0x681820
+40:bool CTaskManager::HasTaskSecondary(CTask const* task) {
+41:    return ((bool(__thiscall *)(CTaskManager*, CTask const*))0x681820)(this, task);
+44:// Converted from thiscall void CTaskManager::Flush(void) 0x681850
+45:void CTaskManager::Flush() {
+46:    ((void(__thiscall *)(CTaskManager*))0x681850)(this);
+49:// Converted from thiscall void CTaskManager::FlushImmediately(void) 0x6818A0
+50:void CTaskManager::FlushImmediately() {
+51:    ((void(__thiscall *)(CTaskManager*))0x6818A0)(this);
+54:// Converted from thiscall void CTaskManager::SetNextSubTask(CTask *task) 0x681920
+55:void CTaskManager::SetNextSubTask(CTask* task) {
+56:    ((void(__thiscall *)(CTaskManager*, CTask*))0x681920)(this, task);
+59:// Converted from thiscall CTask* CTaskManager::GetSimplestTask(CTask *task) 0x681970
+60:CTask* CTaskManager::GetSimplestTask(CTask* task) {
+64:// Converted from thiscall void CTaskManager::StopTimers(CEvent const*_event) 0x6819A0
+65:void CTaskManager::StopTimers(CEvent const* _event) {
+66:    ((void(__thiscall *)(CTaskManager*, CEvent const*))0x6819A0)(this, _event);
+69:// Converted from thiscall CTask* CTaskManager::GetSimplestActiveTask(void) 0x6819D0
+70:CTask* CTaskManager::GetSimplestActiveTask() {
+71:    return ((CTask* (__thiscall *)(CTaskManager*))0x6819D0)(this);
+74:// Converted from thiscall CTask* CTaskManager::GetSimplestTask(int taskIndex) 0x681A00
+75:CTask* CTaskManager::GetSimplestTask(int taskIndex) {
+76:    return ((CTask* (__thiscall *)(CTaskManager*, int))0x681A00)(this, taskIndex);
+79:// Converted from thiscall void CTaskManager::AddSubTasks(CTask *task) 0x681A30
+80:void CTaskManager::AddSubTasks(CTask* task) {
+81:    ((void(__thiscall *)(CTaskManager*, CTask*))0x681A30)(this, task);
+84:// Converted from thiscall void CTaskManager::ParentsControlChildren(CTask *task) 0x681A80
+85:void CTaskManager::ParentsControlChildren(CTask* task) {
+86:    ((void(__thiscall *)(CTaskManager*, CTask*))0x681A80)(this, task);
+89:// Converted from thiscall void CTaskManager::SetTask(CTask *task,int taskIndex,bool) 0x681AF0
+90:void CTaskManager::SetTask(CTask* task, int taskIndex, bool arg2) {
+91:    ((void(__thiscall *)(CTaskManager*, CTask*, int, bool))0x681AF0)(this, task, taskIndex, arg2);
+94:// Converted from thiscall void CTaskManager::SetTaskSecondary(CTask *task,int taskIndex) 0x681B60
+95:void CTaskManager::SetTaskSecondary(CTask* task, int taskIndex) {
+96:    ((void(__thiscall *)(CTaskManager*, CTask*, int))0x681B60)(this, task, taskIndex);
+99:// Converted from thiscall void CTaskManager::ClearTaskEventResponse(void) 0x681BD0
+100:void CTaskManager::ClearTaskEventResponse() {
+101:    ((void(__thiscall *)(CTaskManager*))0x681BD0)(this);
+104:// Converted from thiscall void CTaskManager::ManageTasks(void) 0x681C10
+105:void CTaskManager::ManageTasks() {
+106:    ((void(__thiscall *)(CTaskManager*))0x681C10)(this);
+9:bool CTaskSimple::ProcessPed(class CPed *ped)
+7:#include "CTaskSimpleFight.h"
+9:CTaskSimpleFight::CTaskSimpleFight(CEntity *pTargetEntity, int nCommand, unsigned int nIdlePeriod)
+12:    plugin::CallMethod<0x61C470, CTaskSimpleFight*, CEntity*, int, unsigned int>(this, pTargetEntity, nCommand, nIdlePeriod);
+7:#include "CTaskSimpleStealthKill.h"
+9:CTaskSimpleStealthKill::CTaskSimpleStealthKill(bool bKeepTargetAlive, CPed *pTarget, int nAssocGroupId) : CTaskSimple(plugin::dummy)
+11:    plugin::CallMethod<0x6225F0, CTaskSimpleStealthKill*, bool, CPed*, int>(this, bKeepTargetAlive, pTarget, nAssocGroupId);
+18:// Converted from thiscall void CTaskUtilityLineUpPedWithCar::ProcessPed(CPed *pPed,CVehicle *pVehicle,CAnimBlendAssociation *pAnimBlendAssoc) 0x6513A0 
+19:void CTaskUtilityLineUpPedWithCar::ProcessPed(CPed* pPed, CVehicle* pVehicle, CAnimBlendAssociation* pAnimBlendAssoc) {
+41:float &fDamagePosSpeedShift                     = *(float *)0x8D3510;
+177:// Converted from void CVehicle::BlowUpCar(CEntity *damager,bool bHideExplosion) 0x871F24
+178:void CVehicle::BlowUpCar(CEntity* damager, bool bHideExplosion)
+180:	((void (__thiscall *)(CVehicle*, CEntity*, bool))(*(void ***)this)[41])(this, damager, bHideExplosion);
+239:// Converted from void CVehicle::SetupDamageAfterLoad(void) 0x871F4C
+240:void CVehicle::SetupDamageAfterLoad()
+269:// Converted from void CVehicle::VehicleDamage(float damageIntensity,ushort collisionComponent,CEntity *damager,CVector *vecCollisionCoors,CVector *vecCollisionDirection,eWeaponType weapon) 0x871F60
+270:void CVehicle::VehicleDamage(float damageIntensity, unsigned short collisionComponent, CEntity* damager, CVector* vecCollisionCoors, CVector* vecCollisionDirection, eWeaponType weapon)
+272:	((void (__thiscall *)(CVehicle*, float, unsigned short, CEntity*, CVector*, CVector*, eWeaponType))(*(void ***)this)[56])(this, damageIntensity, collisionComponent, damager, vecCollisionCoors, vecCollisionDirection, weapon);
+407:// Converted from thiscall bool CVehicle::CanVehicleBeDamaged(CEntity *damager,eWeaponType weapon,uchar *) 0x6D1280
+408:bool CVehicle::CanVehicleBeDamaged(CEntity* damager, eWeaponType weapon, unsigned char* arg2)
+410:	return ((bool (__thiscall *)(CVehicle*, CEntity*, eWeaponType, unsigned char*))0x6D1280)(this, damager, weapon, arg2);
+509:// Converted from thiscall bool CVehicle::CanDoorsBeDamaged(void) 0x6D1E60
+510:bool CVehicle::CanDoorsBeDamaged()
+641:// Converted from thiscall void CVehicle::AddDamagedVehicleParticles(void) 0x6D2A80
+642:void CVehicle::AddDamagedVehicleParticles()
+749:// Converted from thiscall RpAtomic* CVehicle::CreateUpgradeAtomic(CBaseModelInfo *model,UpgradePosnDesc const*upgradePosn,RwFrame *parentComponent,bool isDamaged) 0x6D3510
+750:RpAtomic* CVehicle::CreateUpgradeAtomic(CBaseModelInfo* model, UpgradePosnDesc const* upgradePosn, RwFrame* parentComponent, bool isDamaged)
+752:	return ((RpAtomic* (__thiscall *)(CVehicle*, CBaseModelInfo*, UpgradePosnDesc const*, RwFrame*, bool))0x6D3510)(this, model, upgradePosn, parentComponent, isDamaged);
+767:// Converted from thiscall RpAtomic* CVehicle::CreateReplacementAtomic(CBaseModelInfo *model,RwFrame *component,int,bool bDamaged,bool bIsWheel) 0x6D3700
+768:RpAtomic* CVehicle::CreateReplacementAtomic(CBaseModelInfo* model, RwFrame* component, int arg2, bool bDamaged, bool bIsWheel)
+770:	return ((RpAtomic* (__thiscall *)(CVehicle*, CBaseModelInfo*, RwFrame*, int, bool, bool))0x6D3700)(this, model, component, arg2, bDamaged, bIsWheel);
+951:// Converted from thiscall void CVehicle::ReactToVehicleDamage(CPed *ped) 0x6D5490
+952:void CVehicle::ReactToVehicleDamage(CPed* ped)
+999:// Converted from thiscall void CVehicle::InflictDamage(CEntity *damager,eWeaponType weapon,float intensity,CVector coords) 0x6D7C90
+1000:void CVehicle::InflictDamage(CEntity* damager, eWeaponType weapon, float intensity, CVector coords)
+1002:	((void (__thiscall *)(CVehicle*, CEntity*, eWeaponType, float, CVector))0x6D7C90)(this, damager, weapon, intensity, coords);
+46:RpAtomic * CVehicleModelInfo::HideDamagedAtomicCB(RpAtomic * atomic, void * data)
+47:// Converted from cdecl void CWeapon::GenerateDamageEvent(CPed *victim,CEntity *creator,eWeaponType weaponType,int damageFactor,ePedPieceTypes pedPiece,int direction) 0x73A530
+48:void CWeapon::GenerateDamageEvent(CPed* victim, CEntity* creator, eWeaponType weaponType, int damageFactor, ePedPieceTypes pedPiece, int direction) {
+49:    plugin::Call<0x73A530, CPed*, CEntity*, eWeaponType, int, ePedPieceTypes, int>(victim, creator, weaponType, damageFactor, pedPiece, direction);
+87:// Converted from cdecl bool CWeapon::CanBeUsedFor2Player(eWeaponType weaponType) 0x73B240
+88:bool CWeapon::CanBeUsedFor2Player(eWeaponType weaponType) {
+89:    return plugin::CallAndReturn<bool, 0x73B240, eWeaponType>(weaponType);
+97:// Converted from cdecl bool CWeapon::ProcessLineOfSight(CVector const&startPoint,CVector const&endPoint,CColPoint &outColPoint,CEntity *&outEntity,eWeaponType weaponType,CEntity *,bool buildings,bool vehicles,bool peds,bool objects,bool dummies,bool,bool doIgnoreCameraCheck) 0x73B300
+98:bool CWeapon::ProcessLineOfSight(CVector const& startPoint, CVector const& endPoint, CColPoint& outColPoint, CEntity*& outEntity, eWeaponType weaponType, CEntity* arg5, bool buildings, bool vehicles, bool peds, bool objects, bool dummies, bool arg11, bool doIgnoreCameraCheck) {
+99:    return plugin::CallAndReturn<bool, 0x73B300, CVector const&, CVector const&, CColPoint&, CEntity*&, eWeaponType, CEntity*, bool, bool, bool, bool, bool, bool, bool>(startPoint, endPoint, outColPoint, outEntity, weaponType, arg5, buildings, vehicles, peds, objects, dummies, arg11, doIgnoreCameraCheck);
+112:// Converted from thiscall void CWeapon::CWeapon(eWeaponType weaponType,int ammo) 0x73B430
+113:CWeapon::CWeapon(eWeaponType weaponType, int ammo) {
+114:    plugin::CallMethod<0x73B430, CWeapon *, eWeaponType, int>(this, weaponType, ammo);
+117:// Converted from thiscall void CWeapon::Initialise(eWeaponType weaponType,int ammo,CPed *owner) 0x73B4A0
+118:void CWeapon::Initialise(eWeaponType weaponType, int ammo, CPed* owner) {
+119:    plugin::CallMethod<0x73B4A0, CWeapon *, eWeaponType, int, CPed*>(this, weaponType, ammo, owner);
+192:// Converted from cdecl bool CWeapon::CheckForShootingVehicleOccupant(CEntity **pCarEntity,CColPoint *colPoint,eWeaponType weaponType,CVector const&origin,CVector const&target) 0x73F480
+193:bool CWeapon::CheckForShootingVehicleOccupant(CEntity** pCarEntity, CColPoint* colPoint, eWeaponType weaponType, CVector const& origin, CVector const& target) {
+194:    return plugin::CallAndReturn<bool, 0x73F480, CEntity**, CColPoint*, eWeaponType, CVector const&, CVector const&>(pCarEntity, colPoint, weaponType, origin, target);
+26:CWeaponInfo *CWeaponInfo::GetWeaponInfo(eWeaponType weaponType, unsigned char skill)
+28:	return ((CWeaponInfo *(__cdecl *)(eWeaponType, unsigned char))0x743C60)(weaponType, skill);
+31:eWeaponType CWeaponInfo::FindWeaponType(char *name)
+33:	return ((eWeaponType (__cdecl *)(char *))0x743D10)(name);
+70:// Converted from cdecl void CWorld::ProcessPedsAfterPreRender(void) 0x563430
+71:void CWorld::ProcessPedsAfterPreRender() {
+290:// Converted from cdecl void CWorld::SetAllCarsCanBeDamaged(bool enable) 0x5668F0
+291:void CWorld::SetAllCarsCanBeDamaged(bool enable) {
+335:// Converted from cdecl void CWorld::TriggerExplosionSectorList(CPtrList &ptrList,CVector const&point,float radius,float visibleDistance,CEntity *victim,CEntity *creator,bool processVehicleBombTimer,float damage) 0x567750
+336:void CWorld::TriggerExplosionSectorList(CPtrList& ptrList, CVector const& point, float radius, float visibleDistance, CEntity* victim, CEntity* creator, bool processVehicleBombTimer, float damage) {
+337:	plugin::Call<0x567750, CPtrList&, CVector const&, float, float, CEntity*, CEntity*, bool, float>(ptrList, point, radius, visibleDistance, victim, creator, processVehicleBombTimer, damage);
+420:// Converted from cdecl void CWorld::TriggerExplosion(CVector const&point,float radius,float visibleDistance,CEntity *victim,CEntity *creator,bool processVehicleBombTimer,float damage) 0x56B790
+421:void CWorld::TriggerExplosion(CVector const& point, float radius, float visibleDistance, CEntity* victim, CEntity* creator, bool processVehicleBombTimer, float damage) {
+422:	plugin::Call<0x56B790, CVector const&, float, float, CEntity*, CEntity*, bool, float>(point, radius, visibleDistance, victim, creator, processVehicleBombTimer, damage);
+50:    ANIM_GROUP_KNIFE_1 = 39,
+98:    ANIM_GROUP_STEALTH_KN = 87,
+751:// [GROUP] i = 39 | GroupName : knife_1 | Group ID: 39 | Total Animations: 10
+752:enum eknife_1AnimGroup
+754:    ANIM_KNIFE_1_KNIFE_1 = 214,
+755:    ANIM_KNIFE_1_KNIFE_2 = 215,
+756:    ANIM_KNIFE_1_KNIFE_3 = 216,
+757:    ANIM_KNIFE_1_KNIFE_G = 217,
+758:    ANIM_KNIFE_1_KNIFE_PART = 218,
+759:    ANIM_KNIFE_1_KNIFE_HIT_1 = 219,
+760:    ANIM_KNIFE_1_KNIFE_HIT_2 = 220,
+761:    ANIM_KNIFE_1_KNIFE_HIT_3 = 221,
+762:    ANIM_KNIFE_1_KNIFE_BLOCK = 222,
+763:    ANIM_KNIFE_1_WEAPON_KNIFEIDLE = 223,
+1257:// [GROUP] i = 87 | GroupName : stealth_kn | Group ID: 87 | Total Animations: 4
+1258:enum estealth_knAnimGroup
+1260:    ANIM_STEALTH_KN_KILL_PARTIAL = 347,
+1261:    ANIM_STEALTH_KN_KILL_KNIFE_PLAYER = 348,
+1262:    ANIM_STEALTH_KN_KILL_KNIFE_PED_DAMAGE = 349,
+1263:    ANIM_STEALTH_KN_KILL_KNIFE_PED_DIE = 350,
+168:    AE_WEAPON_STEALTH_KILL = 0x9C,
+11:    CRIME_DAMAGED_PED = 2,
+13:    CRIME_DAMAGE_CAR = 4,
+14:    CRIME_DAMAGE_COP_CAR = 5,
+12:    DM_EVENT_DAMAGE,
+26:    DM_EVENT_VEHICLE_DAMAGE_WEAPON,
+47:    DM_EVENT_VEHICLE_DAMAGE_COLLISION,
+18:    EVENT_DAMAGE = 9,
+47:    EVENT_VEHICLE_DAMAGE_WEAPON = 41,
+79:    EVENT_VEHICLE_DAMAGE_COLLISION = 73,
+333:    MODEL_KNIFECUR,
+425:    MODEL_HOTKNIFE,
+9:enum ePedState
+11:	PEDSTATE_NONE,
+12:	PEDSTATE_IDLE,
+13:	PEDSTATE_LOOK_ENTITY,
+14:	PEDSTATE_LOOK_HEADING,
+15:	PEDSTATE_WANDER_RANGE,
+16:	PEDSTATE_WANDER_PATH,
+17:	PEDSTATE_SEEK_POSITION,
+18:	PEDSTATE_SEEK_ENTITY,
+19:	PEDSTATE_FLEE_POSITION,
+20:	PEDSTATE_FLEE_ENTITY,
+21:	PEDSTATE_PURSUE,
+22:	PEDSTATE_FOLLOW_PATH,
+23:	PEDSTATE_SNIPER_MODE,
+24:	PEDSTATE_ROCKETLAUNCHER_MODE,
+25:	PEDSTATE_DUMMY,
+26:	PEDSTATE_PAUSE,
+27:	PEDSTATE_ATTACK,
+28:	PEDSTATE_FIGHT,
+29:	PEDSTATE_FACE_PHONE,
+30:	PEDSTATE_MAKE_PHONECALL,
+31:	PEDSTATE_CHAT,
+32:	PEDSTATE_MUG,
+33:	PEDSTATE_AIMGUN,
+34:	PEDSTATE_AI_CONTROL,
+35:	PEDSTATE_SEEK_CAR,
+36:	PEDSTATE_SEEK_BOAT_POSITION,
+37:	PEDSTATE_FOLLOW_ROUTE,
+38:	PEDSTATE_CPR,
+39:	PEDSTATE_SOLICIT,
+40:	PEDSTATE_BUY_ICE_CREAM,
+41:	PEDSTATE_INVESTIGATE_EVENT,
+42:	PEDSTATE_EVADE_STEP,
+43:	PEDSTATE_ON_FIRE,
+44:	PEDSTATE_SUNBATHE,
+45:	PEDSTATE_FLASH,
+46:	PEDSTATE_JOG,
+47:	PEDSTATE_ANSWER_MOBILE,
+48:	PEDSTATE_HANG_OUT,
+49:	PEDSTATE_STATES_NO_AI,
+50:	PEDSTATE_ABSEIL_FROM_HELI,
+51:	PEDSTATE_SIT,
+52:	PEDSTATE_JUMP,
+53:	PEDSTATE_FALL,
+54:	PEDSTATE_GETUP,
+55:	PEDSTATE_STAGGER,
+56:	PEDSTATE_EVADE_DIVE,
+57:	PEDSTATE_STATES_CAN_SHOOT,
+58:	PEDSTATE_ENTER_TRAIN,
+59:	PEDSTATE_EXIT_TRAIN,
+60:	PEDSTATE_ARREST_PLAYER,
+61:	PEDSTATE_DRIVING,
+62:	PEDSTATE_PASSENGER,
+63:	PEDSTATE_TAXI_PASSENGER,
+64:	PEDSTATE_OPEN_DOOR,
+65:	PEDSTATE_DIE,
+66:	PEDSTATE_DEAD,
+67:	PEDSTATE_DIE_BY_STEALTH,
+68:	PEDSTATE_CARJACK,
+69:	PEDSTATE_DRAGGED_FROM_CAR,
+70:	PEDSTATE_ENTER_CAR,
+71:	PEDSTATE_STEAL_CAR,
+72:	PEDSTATE_EXIT_CAR,
+73:	PEDSTATE_HANDS_UP,
+74:	PEDSTATE_ARRESTED,
+75:	PEDSTATE_DEPLOY_STINGER
+691:    COMMAND_SET_CHAR_ONLY_DAMAGED_BY_PLAYER = 0x02A9,
+692:    COMMAND_SET_CAR_ONLY_DAMAGED_BY_PLAYER = 0x02AA,
+807:    COMMAND_HAS_CHAR_BEEN_DAMAGED_BY_WEAPON = 0x031D,
+808:    COMMAND_HAS_CAR_BEEN_DAMAGED_BY_WEAPON = 0x031E,
+880:    COMMAND_HAS_OBJECT_BEEN_DAMAGED = 0x0366,
+979:    COMMAND_IS_CAR_VISIBLY_DAMAGED = 0x03C9,
+1015:    COMMAND_SET_UPSIDEDOWN_CAR_NOT_DAMAGED = 0x03ED,
+1022:    COMMAND_SET_ALL_CARS_CAN_BE_DAMAGED = 0x03F4,
+1023:    COMMAND_SET_CAR_CAN_BE_DAMAGED = 0x03F5,
+1137:    COMMAND_CLEAR_CHAR_LAST_WEAPON_DAMAGE = 0x0467,
+1138:    COMMAND_CLEAR_CAR_LAST_WEAPON_DAMAGE = 0x0468,
+1310:    COMMAND_SET_CHAR_CAN_BE_DAMAGED_BY_MEMBERS_OF_GANG = 0x0514,
+1316:    COMMAND_HAS_CHAR_BEEN_DAMAGED_BY_CHAR = 0x051A,
+1317:    COMMAND_HAS_CHAR_BEEN_DAMAGED_BY_CAR = 0x051B,
+1318:    COMMAND_HAS_CAR_BEEN_DAMAGED_BY_CHAR = 0x051C,
+1319:    COMMAND_HAS_CAR_BEEN_DAMAGED_BY_CAR = 0x051D,
+1368:    COMMAND_CLEAR_CHAR_LAST_DAMAGE_ENTITY = 0x054E,
+1369:    COMMAND_CLEAR_CAR_LAST_DAMAGE_ENTITY = 0x054F,
+1824:    COMMAND_IS_CLOSEST_OBJECT_OF_TYPE_SMASHED_OR_DAMAGED = 0x0716,
+1850:    COMMAND_DAMAGE_CAR_PANEL = 0x0730,
+1862:    COMMAND_DAMAGE_CAR_DOOR = 0x073C,
+1931:    COMMAND_GET_WEAPONTYPE_MODEL = 0x0781,
+1932:    COMMAND_GET_WEAPONTYPE_SLOT = 0x0782,
+2049:    COMMAND_SET_OBJECT_COLLISION_DAMAGE_EFFECT = 0x07F7,
+2139:    COMMAND_DAMAGE_CHAR = 0x0851,
+2140:    COMMAND_SET_CAR_CAN_BE_VISIBLY_DAMAGED = 0x0852,
+2175:    COMMAND_SET_OBJECT_ONLY_DAMAGED_BY_PLAYER = 0x0875,
+2313:    COMMAND_HAS_OBJECT_BEEN_DAMAGED_BY_WEAPON = 0x08FF,
+2314:    COMMAND_CLEAR_OBJECT_LAST_WEAPON_DAMAGE = 0x0900,
+2356:    COMMAND_SET_PLAYER_CAN_BE_DAMAGED = 0x092A,
+2376:    COMMAND_SET_CHAR_FIRE_DAMAGE_MULTIPLIER = 0x093E,
+2384:    COMMAND_SET_CHAR_USES_UPPERBODY_DAMAGE_ANIMS_ONLY = 0x0946,
+2501:    COMMAND_IS_CAR_DOOR_DAMAGED = 0x09BB,
+101:    STAT_COST_OF_PROPERTY_DAMAGED = 125,
+86:	TASK_SIMPLE_BE_DAMAGED,
+352:	TASK_SIMPLE_STEALTH_KILL,
+353:	TASK_COMPLEX_KILL_PED_ON_FOOT_STEALTH,
+24:	MODEL_KNIFECUR,
+9:enum eWeaponType : unsigned int
+11:	WEAPONTYPE_UNARMED = 0x0,
+12:	WEAPONTYPE_BRASSKNUCKLE = 0x1,
+13:	WEAPONTYPE_GOLFCLUB = 0x2,
+14:	WEAPONTYPE_NIGHTSTICK = 0x3,
+15:	WEAPONTYPE_KNIFE = 0x4,
+16:	WEAPONTYPE_BASEBALLBAT = 0x5,
+17:	WEAPONTYPE_SHOVEL = 0x6,
+18:	WEAPONTYPE_POOLCUE = 0x7,
+19:	WEAPONTYPE_KATANA = 0x8,
+20:	WEAPONTYPE_CHAINSAW = 0x9,
+21:	WEAPONTYPE_DILDO1 = 0xA,
+22:	WEAPONTYPE_DILDO2 = 0xB,
+23:	WEAPONTYPE_VIBE1 = 0xC,
+24:	WEAPONTYPE_VIBE2 = 0xD,
+25:	WEAPONTYPE_FLOWERS = 0xE,
+26:	WEAPONTYPE_CANE = 0xF,
+27:	WEAPONTYPE_GRENADE = 0x10,
+28:	WEAPONTYPE_TEARGAS = 0x11,
+29:	WEAPONTYPE_MOLOTOV = 0x12,
+30:	WEAPONTYPE_ROCKET = 0x13,
+31:	WEAPONTYPE_ROCKET_HS = 0x14,
+32:	WEAPONTYPE_FREEFALL_BOMB = 0x15,
+33:	WEAPONTYPE_PISTOL = 0x16,
+34:	WEAPONTYPE_PISTOL_SILENCED = 0x17,
+35:	WEAPONTYPE_DESERT_EAGLE = 0x18,
+36:	WEAPONTYPE_SHOTGUN = 0x19,
+37:	WEAPONTYPE_SAWNOFF = 0x1A,
+38:	WEAPONTYPE_SPAS12 = 0x1B,
+39:	WEAPONTYPE_MICRO_UZI = 0x1C,
+40:	WEAPONTYPE_MP5 = 0x1D,
+41:	WEAPONTYPE_AK47 = 0x1E,
+42:	WEAPONTYPE_M4 = 0x1F,
+43:	WEAPONTYPE_TEC9 = 0x20,
+44:	WEAPONTYPE_COUNTRYRIFLE = 0x21,
+45:	WEAPONTYPE_SNIPERRIFLE = 0x22,
+46:	WEAPONTYPE_RLAUNCHER = 0x23,
+47:	WEAPONTYPE_RLAUNCHER_HS = 0x24,
+48:	WEAPONTYPE_FTHROWER = 0x25,
+49:	WEAPONTYPE_MINIGUN = 0x26,
+50:	WEAPONTYPE_SATCHEL_CHARGE = 0x27,
+51:	WEAPONTYPE_DETONATOR = 0x28,
+52:	WEAPONTYPE_SPRAYCAN = 0x29,
+53:	WEAPONTYPE_EXTINGUISHER = 0x2A,
+54:	WEAPONTYPE_CAMERA = 0x2B,
+55:	WEAPONTYPE_NIGHTVISION = 0x2C,
+56:	WEAPONTYPE_INFRARED = 0x2D,
+57:	WEAPONTYPE_PARACHUTE = 0x2E,
+58:	WEAPONTYPE_UNUSED = 0x2F,
+59:	WEAPONTYPE_ARMOUR = 0x30,
+62:    WEAPONTYPE_RAMMEDBYCAR = 0x31,
+63:    WEAPONTYPE_RUNOVERBYCAR = 0x32,
+64:    WEAPONTYPE_EXPLOSION = 0x33,
+65:    WEAPONTYPE_UZI_DRIVEBY = 0x34,
+66:	WEAPONTYPE_DROWNING = 0x35,
+67:	WEAPONTYPE_FALL = 0x36,
+68:	WEAPONTYPE_UNIDENTIFIED = 0x37, // Used for damage being done
+69:    WEAPONTYPE_ANYMELEE = 0x38,
+70:    WEAPONTYPE_ANYWEAPON = 0x39,
+71:    WEAPONTYPE_FLARE = 0x3A
+918:META_BEGIN(GetNameAndDamage)
+17: * circumstances, be liable for any lost revenue or other damages arising
+15: * circumstances, be liable for any lost revenue or other damages
+16: * circumstances, be liable for any lost revenue or other damages
+21: * circumstances, be liable for any lost revenue or other damages arising
+16: * circumstances, be liable for any lost revenue or other damages
+766: * Stealth functions *********************************************************
+20: * circumstances, be liable for any lost revenue or other damages arising
+16: * circumstances, be liable for any lost revenue or other damages arising
+22: * circumstances, be liable for any lost revenue or other damages
+16: * circumstances, be liable for any lost revenue or other damages arising
+15: * circumstances, be liable for any lost revenue or other damages
+3534:/* These stealth-API */
+15: * circumstances, be liable for any lost revenue or other damages
+291:/* Stealth */
+69: * This function has been removed, however it still exists as a stealth
+15: * circumstances, be liable for any lost revenue or other damages
+15: * circumstances, be liable for any lost revenue or other damages
+19: * circumstances, be liable for any lost revenue or other damages
